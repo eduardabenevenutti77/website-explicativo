@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #8a6ab8; /* Cor de fundo roxa */
+  padding: 22px 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff; /* Cor do texto branco */
+  background-color: #a786de; /* Cor de fundo dos botões */
+  padding: 5px 0;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  flex: 0.08; /* Faz os botões terem o mesmo tamanho */
+  text-align: center; /* Centraliza o texto */
+}
+
+.navbar a:hover {
+  background-color: #f3f8ff; /* Cor de fundo ao passar o mouse */
+  color: #8a6ab8;
+}
