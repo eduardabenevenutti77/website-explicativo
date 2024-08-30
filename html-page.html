@@ -7,14 +7,16 @@
   <title>HTML</title>
   <link rel="stylesheet" href="./style/html-page.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-
   <main class="main">
     <div class="navbar">
-      <a href="#html">HTML</a>
+      <a href="/html-page.html">HTML</a>
       <a href="/css-page.html">CSS</a>
       <a href="#js">JS</a>
       <a href="#react">REACT</a>
@@ -35,8 +37,8 @@
       <nav class="nav">
         <ul>
           <li class="active"><a href="#home">HOME</a></li>
-          <li><a href="#html">HTML</a></li>
-          <li><a href="#css">CSS</a></li>
+          <li><a href="/html-page.html">HTML</a></li>
+          <li><a href="/css-page.html">CSS</a></li>
           <li><a href="#javascript">JS</a></li>
           <li><a href="#react">React</a></li>
           <li><a href="#node">Node</a></li>
@@ -46,30 +48,52 @@
     </aside>
 
     <section id="html" class="sections">
-      <p></p>
+      <p class="title">Como Funciona a Estruturação do HTML: </p>
+
+      <p class="texto-info">O HTML significa <strong>Hyper Text Markup Language</strong>, ou seja é a linguagem de marcação padrão para criar páginas da Web. HTML não é considerado uma linguagem de programação, já que ele não pode criar funcionalidades dinâmicas. Ao invés disso, com o HTML, os usuários podem criar e estruturar seções, parágrafos e links usando elementos, tags e atributos.</p>
+
+      <p class="sub-title">Exemplo 1:</p>
+
+      <p class="texto-info">A tag <strong>&lt;html&gt; é a raiz de um documento HTML</strong> e indica ao navegador que o conteúdo dentro dela é um documento HTML.</p>
+
+      <p class="texto-info">Exemplo de estrutura básica do HTML:</p>
+      <img id="img-estrutura-html" src="./imgs/html-page/estrurura-html.png" alt="estrutura-HTML">
+
+      <p class="texto-info">Na imagem acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a abertura e fechamento da tag, que delimita o documento. Sendo assim, todas as demais tags da página devem estar neste espaço.
+      <p>
+
+      <p class="sub-title">Exemplo 2:</p>
+
+      <p class="texto-info">A tag <strong>&lt;head&gt; define o cabeçalho do documento</strong>, o conteúdo nesse espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag, por exemplo, podem ser inseridas folhas de estilo, scripts, título e metadados. Os navegadores que oferecem suporte a essa tag são: <br><strong>Chrome - Microsoft Edge - Firefox - Safari - Opera.</strong></p>
+
+      <p class="texto-info">Na imagem acima temos um exemplo de uso desta tag, nas linhas <strong>3 e 6</strong> é onde começa a abertura da tag e o fechamento.</p>
+
     </section>
 
-    <section id="css" class="sections">
+    <!-- <section id="css" class="sections">
       <p>CSS</p>
-    </section>
+    </section> -->
 
-    <section id="js" class="sections">
+    <!-- <section id="js" class="sections">
       <p>JS</p>
-    </section>
+    </section> -->
 
-    <section id="node" class="sections">
+    <!-- <section id="react" class="sections">
+      <p>REACT</p>
+    </section> -->
+
+    <!-- <section id="node" class="sections">
       <p>NODE</p>
-    </section>
+    </section> -->
 
-    <section id="devops" class="sections">
-      <p>DEVOPS</p>
-      <p id="main">Main</p>
-    </section>
+    <!-- <section>
+      <p id="devops" class="sections">DEVOPS</p>
+    </section> -->
 
   </main>
 
 
-  <script src="./js/html-page.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
