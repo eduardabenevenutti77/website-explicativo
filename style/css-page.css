@@ -156,6 +156,8 @@ body {
 }
 .container {
     margin: 50px;
+    /* padding: 50px; */
+    /* width: 90%; */
 }
 #title {
     text-align: center;
@@ -165,7 +167,7 @@ body {
     text-transform: capitalize;
     color: #8271c1;
 }
-#texto-info {
+.texto-info {
     text-align: justify;
     margin: 25px;
     font-family: "Poppins";
@@ -194,4 +196,34 @@ strong {
 img {
     border-radius: 10px;
     width: 100%;
+}
+#elemento {
+  margin-left: 5%;
+}
+.title-selecao {
+  font-family: "Poppins";
+  /* text-transform: lowercase; */
+  font-weight: 800;
+  color: #5e42a6;
+}
+.texto-elemento {
+  text-align: justify;
+  margin: 25px;
+  font-family: "Poppins";
+  width: 80%;
+}
+.line {
+  border: 1px solid #5e42a6;
+  width: 50%;
+  margin-left: 22%;
+  margin-top: 5px;
+}
+#class {
+  margin-left: 5%;
+}
+.title-class {
+  font-family: "Poppins";
+  /* text-transform: lowercase; */
+  font-weight: 800;
+  color: #5e42a6;
 }
