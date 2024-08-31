@@ -45,43 +45,127 @@
             <li class="li"> Necessitamos do objeto a ser alterado, suponha que seja um elemento de texto, como: parágrafo "p"</li>
             <li class="li"> Ao delimitar tal objeto, necessitamos <strong>informar qual vai ser o estilo que será alterado</strong>, neste caso, podemos usar como exemplo a cor de um parágrafo.</li>
         </ul>
-        <div id="display-img">
-          <p>incluir as imagens</p>
-            <!-- <img src="/imgs/css-page/exemplo-1.png">
-            <img src="/imgs/css-page/exemplo-2.png" alt=""> -->
+        <div id="display-teste">
+          <div class="display-example">
+            <pre><code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="pt-br"&gt;
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
+                &lt;style&gt;
+                  p {
+                    color: yellow; 
+                  }
+                &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+              </code></pre>
+            </div>
+            <p class="texto-info">
+              Vale-se ponderar que as propriedades: <strong>color</strong>, <strong>background</strong>, <strong>font</strong>, <strong>display</strong>, <strong>position</strong>, <strong>width</strong>, <strong>height</strong>, <strong>none</strong>, <strong>block</strong>, <strong>inline</strong>, <strong>flex</strong>, <strong>grid</strong>, <strong>absolute</strong>, <strong>relative</strong>, <strong>fixed</strong>, <strong>auto</strong>, <strong>inherit</strong>, <strong>initial</strong>, <strong>transparent</strong>, <strong>red</strong>, <strong>blue</strong>, <strong>green</strong>, <strong>yellow</strong>, entre outras, são palavras de uso restrito do CSS. Então, devemos evitar o uso dessas palavras em outras partes do desenvolvimento para evitar conflitos!
+            </p>                       
         </div>
-        <p  class="texto-info">Vale-se ponderar que a propriedade <strong>COLOR</strong> e o valor <strong>YELLOW</strong> são palavras de uso restrito do CSS. Então, devemos evitar o uso em outras partes do desenvolvimento!</p>
         <p class="texto-info">Mas como podemos selecionar um elemento para realizar a sua alteração? Atualmente existe três maneiras para realizar a estilização de um determinado elemento. A seguir iremos demonstrar na prática o uso, por meio de: elemento, classe e identificador.</p>
         <div id="elemento">
           <p class="title-selecao">1º - Elemento HTML</p>
           <p class="texto-elemento">Podemos modelar o visual de um elemento html pela sua própria tag, neste caso suponha-se que há um mini código desenvolvimento em HTML e desejamos alterar o estilo da fonte, a cor e o tamanho de uma tag 'p'</p>
-          <div id="display-img">
-            <p>incluir as imagens</p>
-              <!-- <img src="/imgs/css-page/exemplo-1.png">
-              <img src="/imgs/css-page/exemplo-2.png" alt=""> -->
-          </div>
+          <div class="display-example">
+            <pre><code class="styles-example">
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="pt-br"&gt;
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
+                &lt;style&gt;
+                  p {
+                    color: yellow; 
+                    font-style: italic;
+                    font-size: 15px;
+                  }
+                &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+              </code></pre>
+            </div>
         </div>
         <div class="line"></div>
         <div id="class">
           <p class="title-class">2º - Class</p>
           <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p>
-          <div id="display-img">
-            <p>incluir as imagens</p>
-              <!-- <img src="/imgs/css-page/exemplo-1.png">
-              <img src="/imgs/css-page/exemplo-2.png" alt=""> -->
-          </div>
-          <p class="texto-elemento">Todos os elementos que possuírem no HTML a propriedade class 'fix-color' terão sua cor alterada para vermelho. Isso facilitará a vida do programador quando desejar que apenas alguns elementos de sua aplicação tenham determinada estilização.</p>
+            <div class="display-example">
+              <pre><code class="styles-example">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
+                  &lt;style&gt;
+                    p {
+                      color: yellow; 
+                      font-style: italic;
+                      font-size: 15px;
+                    }
+                    .fix-color {
+                      color: red;
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
+                  &lt;p class="fix-color"&gt;Exemplo de estilização usando classes&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+              </div>
+              <p class="texto-elemento">Todos os elementos que possuírem no HTML a propriedade class 'fix-color' terão sua cor alterada para vermelho. Isso facilitará a vida do programador quando desejar que apenas alguns elementos de sua aplicação tenham determinada estilização.</p>
         </div>
         <div class="line"></div>
         <div id="class">
           <p class="title-class">3º - ID</p>
           <p class="texto-elemento">Existe também a possibilidade de estilizar apenas um único elemento dentro de uma página, mas como isso ocorre?  </p>
           <!-- <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p> -->
-          <div id="display-img">
-            <p>incluir as imagens</p>
-              <!-- <img src="/imgs/css-page/exemplo-1.png">
-              <img src="/imgs/css-page/exemplo-2.png" alt=""> -->
-          </div>
+          <div class="display-example">
+            <pre><code class="styles-example">
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="pt-br"&gt;
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
+                &lt;style&gt;
+                  p {
+                    color: yellow; 
+                    font-style: italic;
+                    font-size: 15px;
+                  }
+                  .fix-color {
+                    color: red;
+                  }
+                  #change-id {
+                    font-weight: 800;
+                    color: #5e42a6;
+                  }
+                &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
+                &lt;p class="fix-color"&gt;Exemplo de estilização usando classes&lt;/p&gt;
+                &lt;p id="change-id"&gt;Exemplo de estilização usando ID&lt;/p&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+              </code></pre>
+            </div>
+          <p class="texto-elemento">Com o uso de delimitadores por identificação fica <strong>restrito o uso para somente aquele elemento em específico</strong>. Podemos grifar pontos extremamentes importantes do uso de ID na estilização, como: Quando existe conflito em nossa estilização, o <strong>elemento que possuir id será priorizado</strong>. Outro ponto interessante é <strong>desempenho em comparação ao uso de classes</strong>;</p>
         </div>
     </div>
   </main>
