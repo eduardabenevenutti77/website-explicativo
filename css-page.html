@@ -47,25 +47,30 @@
         </ul>
         <div id="display-teste">
           <div class="display-example">
-            <pre><code>
-              &lt;!DOCTYPE html&gt;
-              &lt;html lang="pt-br"&gt;
-              &lt;head&gt;
-                &lt;meta charset="UTF-8"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
-                &lt;style&gt;
-                  p {
-                    color: yellow; 
-                  }
-                &lt;/style&gt;
-              &lt;/head&gt;
-              &lt;body&gt;
-                &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
-              &lt;/body&gt;
-              &lt;/html&gt;
-              </code></pre>
-            </div>
+            <button class="toggle-btn">
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <pre class="code-card" style="display: none;">
+              <code id="first-example">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Exemplo de Uso CSS&lt;/title&gt;
+                  &lt;style&gt;
+                    p {
+                      color: yellow; 
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;p&gt;Exemplo de estilização de uma tag p&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+              </code>
+            </pre>
+          </div>          
             <p class="texto-info">
               Vale-se ponderar que as propriedades: <strong>color</strong>, <strong>background</strong>, <strong>font</strong>, <strong>display</strong>, <strong>position</strong>, <strong>width</strong>, <strong>height</strong>, <strong>none</strong>, <strong>block</strong>, <strong>inline</strong>, <strong>flex</strong>, <strong>grid</strong>, <strong>absolute</strong>, <strong>relative</strong>, <strong>fixed</strong>, <strong>auto</strong>, <strong>inherit</strong>, <strong>initial</strong>, <strong>transparent</strong>, <strong>red</strong>, <strong>blue</strong>, <strong>green</strong>, <strong>yellow</strong>, entre outras, são palavras de uso restrito do CSS. Então, devemos evitar o uso dessas palavras em outras partes do desenvolvimento para evitar conflitos!
             </p>                       
@@ -74,7 +79,7 @@
         <div id="elemento">
           <p class="title-selecao">1º - Elemento HTML</p>
           <p class="texto-elemento">Podemos modelar o visual de um elemento html pela sua própria tag, neste caso suponha-se que há um mini código desenvolvimento em HTML e desejamos alterar o estilo da fonte, a cor e o tamanho de uma tag 'p'</p>
-          <div class="display-example">
+          <div class="display-example-selection">
             <pre><code class="styles-example">
               &lt;!DOCTYPE html&gt;
               &lt;html lang="pt-br"&gt;
@@ -101,7 +106,7 @@
         <div id="class">
           <p class="title-class">2º - Class</p>
           <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p>
-            <div class="display-example">
+            <div class="display-example-selection">
               <pre><code class="styles-example">
                 &lt;!DOCTYPE html&gt;
                 &lt;html lang="pt-br"&gt;
@@ -135,7 +140,7 @@
           <p class="texto-elemento">Existe também a possibilidade de estilizar apenas um único elemento dentro de uma página, mas como isso ocorre?  </p>
           <!-- <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p> -->
           <div class="display-example">
-            <pre><code class="styles-example">
+            <pre><code class="styles-example-selection">
               &lt;!DOCTYPE html&gt;
               &lt;html lang="pt-br"&gt;
               &lt;head&gt;
@@ -169,6 +174,7 @@
         </div>
     </div>
   </main>
+  <script src="./js/cards-css.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
