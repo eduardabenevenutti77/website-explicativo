@@ -192,7 +192,6 @@ body {
   max-width: 100%; /* A imagem nunca será maior que o contêiner pai */
   height: auto; /* Mantém a proporção da imagem */
 }
-
 #img-exemplo3 {
   border-radius: 10px;
   width: 800px;
