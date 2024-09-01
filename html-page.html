@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
+  <title>HTML Exemplos</title>
   <link rel="stylesheet" href="./style/html-page.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -48,7 +48,7 @@
     </aside>
 
     <section id="html" class="sections">
-      <p class="title">Como Funciona a Estruturação do HTML: </p>
+      <p id="title">Como Funciona a Estruturação do HTML:</p>
 
       <p class="texto-info">O HTML significa <strong>Hyper Text Markup Language</strong>, ou seja é a linguagem de marcação padrão para criar páginas da Web. HTML não é considerado uma linguagem de programação, já que ele não pode criar funcionalidades dinâmicas. Ao invés disso, com o HTML, os usuários podem criar e estruturar seções, parágrafos e links usando elementos, tags e atributos.</p>
 
@@ -59,15 +59,40 @@
       <p class="texto-info">Exemplo de estrutura básica do HTML:</p>
       <img id="img-estrutura-html" src="./imgs/html-page/estrurura-html.png" alt="estrutura-HTML">
 
-      <p class="texto-info">Na imagem acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a abertura e fechamento da tag, que delimita o documento. Sendo assim, todas as demais tags da página devem estar neste espaço.
-      <p>
+      <p class="texto-info">Na imagem acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a <strong>abertura e fechamento da tag, que delimita o documento</strong>. O atributo <strong>lang</strong> define uma linguagem a página, neste caso em PT-BR. Sendo assim, todas as demais tags da página devem estar neste espaço.</p>
 
       <p class="sub-title">Exemplo 2:</p>
 
-      <p class="texto-info">A tag <strong>&lt;head&gt; define o cabeçalho do documento</strong>, o conteúdo nesse espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag, por exemplo, podem ser inseridas folhas de estilo, scripts, título e metadados. Os navegadores que oferecem suporte a essa tag são: <br><strong>Chrome - Microsoft Edge - Firefox - Safari - Opera.</strong></p>
+      <p class="texto-info">A tag <strong>&lt;head&gt; define o cabeçalho do documento</strong>, o conteúdo nesse espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag, por exemplo, podem ser inseridas folhas de estilo, scripts, título e metadados. Os navegadores que oferecem suporte a essa tag são: <strong>Chrome - Microsoft Edge - Firefox - Safari - Opera.</strong></p>
 
-      <p class="texto-info">Na imagem acima temos um exemplo de uso desta tag, nas linhas <strong>3 e 6</strong> é onde começa a abertura da tag e o fechamento.</p>
+      <p class="texto-info">Na primeira imagem logo acima, temos um exemplo de uso desta tag, nas linhas <strong>3 e 6</strong> é onde começa a abertura da tag e o fechamento da mesma, o símbolo <code><strong>&lt;/&gt;</strong></code>
+        indica o fechamento da tag.</p>
+      <p class="sub-title">Exemplo 3 (meta):</p>
 
+      <p class="texto-info">A tag <strong>&lt;meta&gt;</strong> pode ser usada acompanhada de alguns atributos, sendo eles o <strong>charset ou (character)</strong> que é utilizado para definir qual será o conjunto de caracteres para renderizar o texto da página, neste caso foi o UTF-8 que contém todos os caracteres dos padrões Unicode e ASCII, sendo portanto, o mais utilizado em páginas web.</p>
+
+      <p class="texto-info">Porém com outros atributos, pode ser utilizada para outros fins, como na <strong>SEO (Search Engine Optimization)</strong>, ou seja é um conjunto de técnicas e estratégias usadas para melhorar a visibilidade de um site nos resultados de busca do Google e outros mecanismos de busca.</p>
+      <p class="texto-info">Segue abaixo um exemplo usando atributos com palavras chaves para buscas:</p>
+      <img id="img-exemplo3" src="./imgs/html-page/exemplo3.png" alt="tag-meta-exemplo">
+
+      <p class="sub-title">Exemplo 4 (link):</p>
+      <p class="texto-info">A tag <strong>&lt;link&gt;</strong> especifica as relações entre o documento atual e um recurso externo. Possíveis usos para esta tag incluem a definição de uma estrutura relacional para navegação ou incluir estilos de links externos. Esta tag é mais <strong>usada para vincular as folhas de estilo</strong>.</p>
+      <p class="texto-info">Esta tag inclui os atributos como o <strong>rel</strong> que especifica a relação entre o documento HTML atual e o recurso vinculado. E o <strong>href</strong> especifica o caminho ou URL do recurso vinculado, ele pode ser um caminho absoluto (URL completo) ou um caminho relativo (relativo à localização atual do documento HTML).</p>
+      <p class="texto-info">Segue abaixo um exemplo:</p>
+      <img id="img-exemplo4" src="./imgs/html-page/exemplo4.png" alt="tag-link-exemplo">
+      <p class="texto-info">Neste caso o link esta sendo utilizado pra vincular a uma folha de estilo.</p>
+
+      <p class="sub-title">Exemplo 5 (body):</p>
+      <p class="texto-info">A tag <strong>&lt;body&gt;</strong> é um dos elementos mais fundamentais em um documento HTML. Ela representa o <strong>corpo do documento e contém todo o conteúdo visível para o usuário no navegador</strong>. É o principal contêiner para o conteúdo da página e é fundamental para o layout, interatividade e experiência do usuário no site. Sem essa tag, o navegador não teria um lugar claro para renderizar o conteúdo que deve ser exibido ao usuário.</p>
+      <p class="texto-info">Segue abaixo um exemplo:</p>
+
+      <img id="img-exemplo5" src="./imgs/html-page/exemplo5.png" alt="tag-body-exemplo">
+
+      <p class="texto-info">Resultado na web:</p>
+      <img id="img-saida-body" src="./imgs/html-page/saida-web.png" alt="saida-web">
+
+      <p class="sub-title">Exemplo 6 (header):</p>
+      <p class="texto-info">Resultado na web:</p>
     </section>
 
     <!-- <section id="css" class="sections">
