@@ -1,0 +1,60 @@
+.code-card {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+  width: 700px;
+  height: 490px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px; /* Diminuindo a largura do ícone */
+  height: 20px; /* Diminuindo a altura do ícone */
+}
+
+.code-block-1 {
+  font-family: "Poppins";
+  background-color: #f0f0f0;
+  padding: 8px; /* Diminuindo o padding */
+  border-radius: 5px;
+  height: 375px;
+  line-height: 2;
+  white-space: pre;
+  position: relative;
+}
+
+#code-1 {
+  padding: 0%;
+  height: 380px;
+}
+
+.code-block-1 code {
+  font-family: "Poppins";
+  padding: 0;
+  margin-top: 0px;
+}
+
+.line-number {
+  color: #8a6ab8; /* Cor dos números das linhas */
+  padding-right: 8px; /* Diminuindo o padding à direita */
+  border-right: 1px solid #ccc;
+  margin-right: 8px; /* Diminuindo a margem à direita */
+  display: inline-block;
+  text-align: right;
+  width: 25px; /* Diminuindo a largura dos números das linhas */
+  user-select: none; /* Impede que os números sejam copiados */
+}

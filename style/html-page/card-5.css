@@ -1,0 +1,134 @@
+.card {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+  width: 700px;
+  height: 540px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.code-block {
+  font-family: "Poppins", monospace;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 2;
+  margin-top: 10px;
+}
+
+.code-block code {
+  margin-top: 50px;
+}
+
+#code-5 {
+  padding: 30px 0;
+  height: 390px;
+}
+
+.card h2 {
+  color: #8271c1;
+  font-family: "Poppins";
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(57%) sepia(21%) saturate(4683%) hue-rotate(226deg)
+    brightness(99%) contrast(104%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* 
+.code-block .code-body {
+  font-family: "Poppins";
+  color: #8271c1;
+  padding: 0;
+  margin: 0;
+} */
+
+/* Estlios Cards Resultado de Saida */
+
+.expandable-card {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 760px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-header h3 {
+  color: #8271c1;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+  transform: rotate(180deg); /* Rotaciona o ícone ao expandir */
+}
+
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.example-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+}
