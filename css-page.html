@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
+  <title>CSS</title>
   <link rel="stylesheet" href="./style/css-page.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,6 +171,51 @@
               </code></pre>
             </div>
           <p class="texto-elemento">Com o uso de delimitadores por identificação fica <strong>restrito o uso para somente aquele elemento em específico</strong>. Podemos grifar pontos extremamentes importantes do uso de ID na estilização, como: Quando existe conflito em nossa estilização, o <strong>elemento que possuir id será priorizado</strong>. Outro ponto interessante é <strong>desempenho em comparação ao uso de classes</strong>;</p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade de texto no CSS: </p>
+          <p class="subtitle-text">1ª - Color: Está propriedade define qual cor o nosso elemento de texto irá possuir. Para utilizar, podemos informar os seguintes valores: O nome da cor <strong>(`red`)</strong>, hexadecimais <strong>(`#ff000`)</strong> e até valores RGB/RGBA<strong>(`rgb(255, 0, 0)`)</strong></p>
+          <p class="subtitle-text">2ª - Font-size: O tamanho que o texto terá, podemos usar: pixels <strong>(`15px`)</strong>, em <strong>(`15em`)</strong>, porcentagem <strong>(`15%`)</strong></p>
+          <p class="subtitle-text">3ª - Font-style: O estilo do texto, podendo ser em negrito, normal, itálico e etc</p>
+          <p class="subtitle-text">4ª - Text-aling: Define o alinhamento do texto dentro da página, podemos definir como: esquerdo -> <strong>left</strong>, direito -> <strong>right</strong>, centralizado -> <strong>center</strong>, justificado -> <strong>justify</strong></p>
+          <p class="subtitle-text">5ª - Text-transform: Controla a capitalização do texto, mas o que é isso? É o estilo em qual as frases estarão. De tal modo, podemos deixar tudo em maiúsculas, minúsculas, cada começo de frase e etc</p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade de layouts no CSS: </p>
+          <p class="subtitle-layouts">Display: Essa propriedade defina a maneira pela qual o nosso elemento será disposto na tela do usuário, dentro dessa propriedade podemos definir em: blocos -> <strong>block</strong>, linha -> <strong>inline</strong>, flexível -> <strong>flex</strong> e em grade -> <strong>grid</strong></p>
+          <p class="subtitle-layouts">Position: A posição de um elemento dentro da página, podemos utilizar o valor padrão -> <strong>static</strong>, relativo -> <strong>relative</strong>, absoluto -> <strong>absolute</strong> e por fim podemos utilizar o valor fixo -> <strong>fixed</strong></p>
+          <p class="subtitle-layouts">Os elementos <strong>top</strong>, <strong>left</strong>, <strong>right</strong>, <strong>bottom</strong> define a posição do elemento filho dentro do seu elemento pai, essa posição é amplamente dependente do position delimitado a ele</p>
+          <p class="subtitle-layouts">Já o elemento <strong>z-index</strong> delimita a ordem de empilhamento dos elementos. Conforme mais alto for o valor informado a ele, mais perto da tela ele estará!</p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade do box model no CSS: </p>
+          <p class="subtitle-model">1ª Margin: Define o espaçamento ao redor do elemento;</p>
+          <p class="subtitle-model">2ª Padding: Define o espaçamento interno do elemento;</p>
+          <p class="subtitle-model">3ª Border: Define a borda de um elemento, podendo ter um estilo, cor e espessura;</p>
+          <p class="subtitle-model">4ª Width e Height: Definem a largura e a altura de um elemento;</p>
+          <p class="subtitle-model">5ª Box-sizing: Define como a largura e a altura de elemento serão calculadas, pode ser utilizado as seguintes opções: <strong>border-box</strong> -> inclui o padding e borda, e o <strong>content-box</strong> -> esse não possui nada junto;</p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade de background no CSS: </p>
+          <p class="subtitle-back">Background-color: A cor de fundo do elemento;</p>
+          <p class="subtitle-back">Background-image: Define uma imagem para o fundo;</p>
+          <p class="subtitle-back">Background-size: Define como a imagem irá ocupar o elemento;</p>
+          <p class="subtitle-back">Background-position: Delimita a posição da imagem de fundo;</p>
+          <p class="subtitle-back">Background-repeat: Define se a imagem do fundo será repetida, e a posição: repeat-x -> <strong>linha</strong> e repeat-y -> <strong>coluna</strong></p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade Flexbox no CSS</p>
+          <p class="subtitle-flex">Display: flex | Delimita o container como flexbox, o que permite o alinhamento e distribuição flexíveis dos elementos filhos</p>
+          <p class="subtitle-flex">Justify-content: Delimita a maneira pela qual os elementos filhos serão distribuídos no eixo principal</p>
+          <p class="subtitle-flex">Align-items: O alinhamento dos elementos filhos ao longo do eixo transversal</p>
+          <p class="subtitle-flex">Flex-wrap: Define se os itens devem quebrar para uma nova linha quando não houver espaço suficiente -> <strong>wrap</strong> ou permanecerem em uma linha -> <strong>nowrap</strong></p>
+        </div>
+        <div>
+          <p id="title">Como funciona a propriedade Grid no CSS</p>
+          <p class="subtitle-grid">Display: grid | Define um contêiner como um Grid, permitindo criar layouts baseados em colunas e linhas</p>
+          <p class="subtitle-grid">Grid-template-columns: Define o número de colunas e a largura de cada uma</p>
+          <p class="subtitle-grid">Grid-template-rows: Define o número de linhas e a altura de cada uma</p>
+          <p class="subtitle-grid">Gap: Define o espaçamento entre colunas e/ou linhas</p>
         </div>
     </div>
   </main>

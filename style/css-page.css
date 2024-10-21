@@ -222,3 +222,28 @@ img {
   padding: 10px;
   background-color: #f5f5f5;
 }
+.subtitle-text {
+  font-family: "Poppins";
+  text-align: justify;
+}
+.subtitle-layouts {
+  font-family: "Poppins";
+  text-align: justify;
+}
+.subtitle-model {
+  font-family: "Poppins";
+  text-align: justify;
+}
+.subtitle-back {
+  font-family: "Poppins";
+  text-align: justify;
+}
+.subtitle-flex {
+  font-family: "Poppins";
+  text-align: justify;
+}
+.subtitle-grid {
+  font-family: "Poppins";
+  text-align: justify;
+  margin-bottom: 25px;
+}
