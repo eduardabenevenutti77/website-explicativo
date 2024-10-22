@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./style/html-page/card-4.css">
   <link rel="stylesheet" href="./style/html-page/card-5.css">
   <link rel="stylesheet" href="./style/html-page/card-6.css">
+  <link rel="stylesheet" href="./style/html-page/card-7.css">
 
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -58,12 +59,13 @@
 
       <p class="texto-info">O HTML significa <strong>Hyper Text Markup Language</strong>, ou seja é a linguagem de marcação padrão para criar páginas da Web. HTML não é considerado uma linguagem de programação, já que ele não pode criar funcionalidades dinâmicas. Ao invés disso, com o HTML, os usuários podem criar e estruturar seções, parágrafos e links usando elementos, tags e atributos.</p>
 
+      <p class="texto-info">Logo abaixo vou listar exemplos de tags html de como elas funcionam e onde podemos utiliza-lás em nosso dia a dia na programação, desde de tags mais básicas até as mais avançadas.</p>
       <p class="sub-title">Exemplo 1 (html):</p>
 
       <p class="texto-info">A tag <strong>&lt;html&gt; é a raiz de um documento HTML</strong> e indica ao navegador que o conteúdo dentro dela é um documento HTML.</p>
 
       <p class="texto-info">Exemplo de estrutura básica do HTML:</p>
-      <div class="code-card">
+      <div class="card-1">
         <div class="card-header">
           <h3>Para copiar, clique no ícone ao lado</h3>
           <button class="copy-btn" onclick="copyCode('code-1')">
@@ -86,7 +88,7 @@
         </pre>
       </div>
 
-      <p class="texto-info">No card acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a <strong>abertura e fechamento da tag, que delimita o documento</strong>. O atributo <strong>lang</strong> define uma linguagem a página, neste caso em PT-BR. Sendo assim, todas as demais tags da página devem estar neste espaço.</p>
+      <p class="texto-info">No card acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a abertura e fechamento da tag, que <strong>delimita o documento</strong>. O atributo <strong>lang</strong> define uma linguagem a página, neste caso em PT-BR. Sendo assim, todas as demais tags da página devem estar neste espaço.</p>
 
       <p class="sub-title">Exemplo 2 (head):</p>
 
@@ -238,8 +240,8 @@
         <span class="line-number">16</span>      &lt;/ul&gt;
         <span class="line-number">17</span>    &lt;/nav&gt;
         <span class="line-number">18</span>  &lt;<strong>/header</strong>&gt;
-        <span class="line-number">23</span>&lt;/body&gt;
-        <span class="line-number">24</span>&lt;/html&gt;
+        <span class="line-number">19</span>&lt;/body&gt;
+        <span class="line-number">20</span>&lt;/html&gt;
         </code>
         </pre>
       </div>
@@ -258,8 +260,59 @@
       </div>
 
 
+      <p class="sub-title">Exemplo 7 (div):</p>
+      <p class="texto-info">As divs são normalmente utilizados para <strong>representar containers para outros elementos, agrupando-os visualmente dentro de um bloco que pode conter dimensões e posição definidas</strong>. Por padrão, uma div não possui aparência características visuais definidas, isso precisa ser feito via CSS ao atribuir bordas, cores etc.</p>
+      <p class="texto-info">Sua principal característica, no entanto, é que essa tag representa um elemento do tipo bloco, ou seja, que quando adicionado na página, automaticamente gera uma nova linha no layout (semelhante a um parágrafo), ao invés de ser alocado lateralmente nos demais componentes.</p>
 
-      <p class="sub-title">Exemplo 7 ():</p>
+      <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+      <div class="code-card-7">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-7')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-7" id="code-7">
+            <code>
+            <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+            <span class="line-number">2</span>&lt;html lang="pt-BR"&gt;
+            <span class="line-number">3</span>&lt;head&gt;
+            <span class="line-number">4</span>  &lt;meta charset="UTF-8"&gt;
+            <span class="line-number">5</span>  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            <span class="line-number">6</span>  &lt;title&gt;Exemplo de Div&lt;/title&gt;
+            <span class="line-number">7</span>&lt;/head&gt;
+            <span class="line-number">8</span>&lt;body&gt;
+
+            <span class="line-number">9</span>  &lt;<strong>div</strong> class="header"&gt;
+            <span class="line-number">10</span>    &lt;h1&gt;Meu Site&lt;/h1&gt;
+            <span class="line-number">11</span>  &lt;<strong>/div</strong>&gt;
+            <span class="line-number">12</span>  
+            <span class="line-number">13</span>  &lt;<strong>div</strong> class="content"&gt;
+            <span class="line-number">14</span>    &lt;p&gt;Este é o conteúdo principal da página.&lt;/p&gt;
+            <span class="line-number">15</span>  &lt;<strong>/div</strong>&gt;
+            <span class="line-number">16</span>  
+            <span class="line-number">17</span>  &lt;<strong>div</strong> class="footer"&gt;
+            <span class="line-number">18</span>    &lt;p&gt;Rodapé da página&lt;/p&gt;
+            <span class="line-number">19</span>  &lt;<strong>/div</strong>&gt;
+            
+            <span class="line-number">20</span>&lt;/body&gt;
+            <span class="line-number">21</span>&lt;/html&gt;
+            </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">Resultado de saída:</p>
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content">
+          <img src="./imgs/html-page/saida-7.png" alt="saida-header" class="example-image">
+        </div>
+      </div>
+
       <p class="sub-title">Exemplo 8 ():</p>
       <p class="sub-title">Exemplo 9 ():</p>
       <p class="sub-title">Exemplo 10 ():</p>
