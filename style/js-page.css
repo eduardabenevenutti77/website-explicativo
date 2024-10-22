@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 .navbar {
@@ -136,14 +136,6 @@ body {
   float: right;
   /* height: 100vh; NÃO REMOVER*/
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
   a {
     position: relative;
 
@@ -161,4 +153,9 @@ body {
     font-weight: bold;
     margin-top: 20px;
   }
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

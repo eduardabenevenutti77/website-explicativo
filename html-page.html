@@ -4,22 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
-  <link rel="stylesheet" href="./style/html-page.css">
+  <title>HTML Exemplos</title>
+  <link rel="stylesheet" href="./style/html-page/html-page.css">
+  <link rel="stylesheet" href="./style/html-page/card-1.css">
+  <link rel="stylesheet" href="./style/html-page/card-3.css">
+  <link rel="stylesheet" href="./style/html-page/card-4.css">
+  <link rel="stylesheet" href="./style/html-page/card-5.css">
+  <link rel="stylesheet" href="./style/html-page/card-6.css">
+  <link rel="stylesheet" href="./style/html-page/card-7.css">
+
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-
   <main class="main">
     <div class="navbar">
-      <a href="#html">HTML</a>
+      <a href="/html-page.html">HTML</a>
       <a href="/css-page.html">CSS</a>
-      <a href="#js">JS</a>
-      <a href="#react">REACT</a>
-      <a href="#node">NODE</a>
-      <a href="#devops">DEVOPS</a>
+      <a href="/js-page.html">JS</a>
+      <a href="/react-page.html">REACT</a>
+      <a href="/node-page.html">NODE</a>
+      <a href="/devops-page.html">DEVOPS</a>
     </div>
 
     <aside class="sidebar">
@@ -35,41 +44,315 @@
       <nav class="nav">
         <ul>
           <li class="active"><a href="#home">HOME</a></li>
-          <li><a href="#head">Head</a></li>
-          <li><a href="#body">Body</a></li>
-          <li><a href="#main">Main</a></li>
-
+          <li><a href="/html-page.html">HTML</a></li>
+          <li><a href="/css-page.html">CSS</a></li>
+          <li><a href="#javascript">JS</a></li>
+          <li><a href="#react">React</a></li>
+          <li><a href="#node">Node</a></li>
+          <li><a href="#devops">DevOps</a></li>
         </ul>
       </nav>
     </aside>
 
     <section id="html" class="sections">
-      <p>O que é HTML?</p>
-      <p>HTML significa Hyper Text Markup Language, ou seja é a linguagem de marcação padrão para criar páginas da Web.</p>
-      <p>A tag &lt;html&gt; é a raiz de um documento HTML e indica ao navegador que o conteúdo dentro dela é um documento HTML.</p>
+      <p id="title">Como Funciona a Estruturação do HTML:</p>
+
+      <p class="texto-info">O HTML significa <strong>Hyper Text Markup Language</strong>, ou seja é a linguagem de marcação padrão para criar páginas da Web. HTML não é considerado uma linguagem de programação, já que ele não pode criar funcionalidades dinâmicas. Ao invés disso, com o HTML, os usuários podem criar e estruturar seções, parágrafos e links usando elementos, tags e atributos.</p>
+
+      <p class="texto-info">Logo abaixo vou listar exemplos de tags html de como elas funcionam e onde podemos utiliza-lás em nosso dia a dia na programação, desde de tags mais básicas até as mais avançadas.</p>
+      <p class="sub-title">Exemplo 1 (html):</p>
+
+      <p class="texto-info">A tag <strong>&lt;html&gt; é a raiz de um documento HTML</strong> e indica ao navegador que o conteúdo dentro dela é um documento HTML.</p>
+
+      <p class="texto-info">Exemplo de estrutura básica do HTML:</p>
+      <div class="card-1">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-1')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-1" id="code-1">
+          <code>
+            <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+            <span class="line-number">2</span>&lt;<strong>html lang="pt-br"</strong>&gt;
+            <span class="line-number">3</span>&lt;head&gt;
+            <span class="line-number">4</span>  &lt;meta charset="UTF-8"&gt;
+            <span class="line-number">5</span>  &lt;title&gt;Document&lt;/title&gt;
+            <span class="line-number">6</span>&lt;/head&gt;
+            <span class="line-number">7</span>&lt;body&gt;
+            <span class="line-number">8</span>  &lt;!-- Conteúdo do Body --&gt;
+            <span class="line-number">9</span>&lt;/body&gt;
+            <span class="line-number">10</span>&lt;<strong>/html</strong>&gt;
+          </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">No card acima temos um exemplo da tag <strong>html</strong>, nas linhas <strong>2 e 10</strong> podemos ver a abertura e fechamento da tag, que <strong>delimita o documento</strong>. O atributo <strong>lang</strong> define uma linguagem a página, neste caso em PT-BR. Sendo assim, todas as demais tags da página devem estar neste espaço.</p>
+
+      <p class="sub-title">Exemplo 2 (head):</p>
+
+      <p class="texto-info">A tag <strong>&lt;head&gt; define o cabeçalho do documento</strong>, o conteúdo nesse espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag por exemplo, podem ser inseridas folhas de estilo, scripts, título e metadados. Os navegadores que oferecem suporte a essa tag são: <strong>Chrome - Microsoft Edge - Firefox - Safari - Opera.</strong></p>
+
+      <p class="texto-info">No primeiro card logo acima, temos um exemplo de uso desta tag, nas linhas <strong>3 e 6</strong> é onde começa a abertura da tag e o fechamento da mesma, o símbolo <code><strong>&lt;/&gt;</strong></code>
+        indica o fechamento da tag.</p>
+
+
+      <p class="sub-title">Exemplo 3 (meta):</p>
+
+      <p class="texto-info">A tag <strong>&lt;meta&gt;</strong> pode ser usada acompanhada de alguns atributos, sendo eles o <strong>charset ou (character)</strong> que é utilizado para definir qual será o conjunto de caracteres para renderizar o texto da página, neste caso foi o UTF-8 que contém todos os caracteres dos padrões Unicode e ASCII, sendo portanto, o mais utilizado em páginas web.</p>
+
+      <p class="texto-info">Porém com outros atributos, pode ser utilizada para outros fins, como na <strong>SEO (Search Engine Optimization)</strong>, ou seja é um conjunto de técnicas e estratégias usadas para melhorar a visibilidade de um site nos resultados de busca do Google e outros mecanismos de busca.</p>
+      <p class="texto-info">Segue abaixo um exemplo usando atributos com palavras chaves para buscas:</p>
+
+      <div class="code-card-3">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-3')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-3" id="code-3">
+        <code>
+        <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+        <span class="line-number">2</span>&lt;html lang="pt-br"&gt;
+        <span class="line-number">3</span>&lt;head&gt;
+        <span class="line-number">4</span>&lt;<strong>meta charset="UTF-8"</strong>&gt;
+        <span class="line-number">5</span>&lt;<strong>meta name="author" content="Seu Nome"</strong>&gt;
+        <span class="line-number">6</span>&lt;<strong>meta name="description" content="Exemplo Tag Meta"</strong>&gt;
+        <span class="line-number">7</span>&lt;<strong>meta name="viewport" content="exampleHtml, ads, tagMeta"</strong>&gt;
+        <span class="line-number">8</span>&lt;<strong>meta name="viewport" content="width=device-width, initial-scale=1.0"</strong>&gt;
+        <span class="line-number">9</span> &lt;title&gt;Document&lt;/title&gt;
+        <span class="line-number">10</span> &lt;/head&gt;
+        <span class="line-number">11</span> &lt;body&gt;
+        <span class="line-number">12</span>     &lt;!-- Conteúdo --&gt;
+        <span class="line-number">13</span> &lt;/body&gt;
+        <span class="line-number">14</span> &lt;/html&gt;
+        </code>
+        </pre>
+      </div>
+
+      <p class="sub-title">Exemplo 4 (link):</p>
+      <p class="texto-info">A tag <strong>&lt;link&gt;</strong> especifica as relações entre o documento atual e um recurso externo. Possíveis usos para esta tag incluem a definição de uma estrutura relacional para navegação ou incluir estilos de links externos. Esta tag é mais <strong>usada para vincular as folhas de estilo</strong>.</p>
+      <p class="texto-info">Esta tag inclui os atributos como o <strong>rel</strong> que especifica a relação entre o documento HTML atual e o recurso vinculado. E o <strong>href</strong> especifica o caminho ou URL do recurso vinculado, ele pode ser um caminho absoluto (URL completo) ou um caminho relativo (relativo à localização atual do documento HTML).</p>
+
+      <p class="texto-info">Segue abaixo um exemplo:</p>
+
+      <div class="code-card">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-4')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-4" id="code-4">
+        <code>
+        <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+        <span class="line-number">2</span>&lt;html lang="pt-br"&gt;
+        <span class="line-number">3</span>&lt;head&gt;
+        <span class="line-number">4</span>&lt;meta charset="UTF-8"&gt;
+        <span class="line-number">5</span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;     
+        <span class="line-number">6</span>&lt;<strong>link rel="stylesheet" href="./style/index.css"</strong>&gt;
+        <span class="line-number">7</span>&lt;title&gt;Document&lt;/title&gt
+        <span class="line-number">8</span>&lt;/head&gt;
+        <span class="line-number">9</span>&lt;body&gt;
+        <span class="line-number">10</span> &lt;!-- Conteúdo --&gt;
+        <span class="line-number">11</span>&lt;/body&gt;
+        <span class="line-number">12</span>&lt;/html&gt;
+        </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">No card acima, o link esta sendo utilizado pra vincular a uma folha de estilo.</li>
+      </p>
+
+      <p class="sub-title">Exemplo 5 (body):</p>
+      <p class="texto-info">A tag <strong>&lt;body&gt;</strong> é um dos elementos mais fundamentais em um documento HTML. Ela representa o <strong>corpo do documento e contém todo o conteúdo visível para o usuário no navegador</strong>. É o principal contêiner para o conteúdo da página e é fundamental para o layout, interatividade e experiência do usuário no site. Sem essa tag, o navegador não teria um lugar claro para renderizar o conteúdo que deve ser exibido ao usuário.</p>
+      <p class="texto-info">Segue abaixo um exemplo:</p>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Para copiar, clique no ícone ao lado</h2>
+          <button class="copy-btn" onclick="copyCode('code-5')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block" id="code-5">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="pt-br"&gt;
+          &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;<strong>body</strong>&gt;
+             &lt;h2&gt;<strong>Meu Texto dentro do Body</strong>&lt;/h2&gt;
+             &lt;h3&gt;<strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</strong>&lt;/h3&gt;
+          &lt;<strong>/body</strong>&gt;
+        &lt;/html&gt;
+        </pre>
+      </div>
+
+      <p class="texto-info">Resultado de saída:</p>
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content" id="expandable-content">
+          <img src="./imgs/html-page/saida-5.png" alt="Exemplo do Resultado" class="example-image">
+        </div>
+      </div>
+
+
+      <p class="sub-title">Exemplo 6 (header):</p>
+      <p class="texto-info">A tag <strong>&lt;header&gt;</strong> é usada para definir a parte superior ou o cabeçalho de uma página ou seção. Normalmente, o conteúdo do header inclui elementos como logo do site, menus de navegação, títulos, ou qualquer outro tipo de informação introdutória.</p>
+
+      <p class="texto-info">Pode ser usada mais de uma vez em uma página, ou seja, você pode ter um header global para o site e outro para seções internas, e também não se limita a conter elementos de navegação.</p>
+
+      <p class="texto-info">Aqui esta um exemplo de como ele funciona:</p>
+
+      <div class="code-card-6">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-6')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-6" id="code-6">
+        <code>
+        <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+        <span class="line-number">2</span>&lt;html lang="pt-BR"&gt;
+        <span class="line-number">3</span>&lt;head&gt;
+        <span class="line-number">4</span>  &lt;meta charset="UTF-8"&gt;
+        <span class="line-number">5</span>  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        <span class="line-number">6</span>  &lt;title&gt;Exemplo de Header&lt;/title&gt;
+        <span class="line-number">7</span>&lt;/head&gt;
+        <span class="line-number">8</span>&lt;body&gt;
+        <span class="line-number">9</span>  &lt;<strong>header</strong>&gt;
+        <span class="line-number">10</span>    &lt;h1&gt;Meu Site&lt;/h1&gt;
+        <span class="line-number">11</span>    &lt;nav&gt;
+        <span class="line-number">12</span>      &lt;ul&gt;
+        <span class="line-number">13</span>        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        <span class="line-number">14</span>        &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        <span class="line-number">15</span>        &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+        <span class="line-number">16</span>      &lt;/ul&gt;
+        <span class="line-number">17</span>    &lt;/nav&gt;
+        <span class="line-number">18</span>  &lt;<strong>/header</strong>&gt;
+        <span class="line-number">19</span>&lt;/body&gt;
+        <span class="line-number">20</span>&lt;/html&gt;
+        </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">Resultado de saída:</p>
+
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content">
+          <img src="./imgs/html-page/saida-6.png" alt="saida-header" class="example-image">
+        </div>
+      </div>
+
+
+      <p class="sub-title">Exemplo 7 (div):</p>
+      <p class="texto-info">As divs são normalmente utilizados para <strong>representar containers para outros elementos, agrupando-os visualmente dentro de um bloco que pode conter dimensões e posição definidas</strong>. Por padrão, uma div não possui aparência características visuais definidas, isso precisa ser feito via CSS ao atribuir bordas, cores etc.</p>
+      <p class="texto-info">Sua principal característica, no entanto, é que essa tag representa um elemento do tipo bloco, ou seja, que quando adicionado na página, automaticamente gera uma nova linha no layout (semelhante a um parágrafo), ao invés de ser alocado lateralmente nos demais componentes.</p>
+
+      <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+      <div class="code-card-7">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-7')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-7" id="code-7">
+            <code>
+            <span class="line-number">1</span>&lt;!DOCTYPE html&gt;
+            <span class="line-number">2</span>&lt;html lang="pt-BR"&gt;
+            <span class="line-number">3</span>&lt;head&gt;
+            <span class="line-number">4</span>  &lt;meta charset="UTF-8"&gt;
+            <span class="line-number">5</span>  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            <span class="line-number">6</span>  &lt;title&gt;Exemplo de Div&lt;/title&gt;
+            <span class="line-number">7</span>&lt;/head&gt;
+            <span class="line-number">8</span>&lt;body&gt;
+            
+            <span class="line-number">9</span>  &lt;<strong>div</strong> class="header"&gt;
+            <span class="line-number">10</span>    &lt;h1&gt;Meu Site&lt;/h1&gt;
+            <span class="line-number">11</span>  &lt;<strong>/div</strong>&gt;
+            <span class="line-number">12</span>  
+            <span class="line-number">13</span>  &lt;<strong>div</strong> class="content"&gt;
+            <span class="line-number">14</span>    &lt;p&gt;Este é o conteúdo principal da página.&lt;/p&gt;
+            <span class="line-number">15</span>  &lt;<strong>/div</strong>&gt;
+            <span class="line-number">16</span>  
+            <span class="line-number">17</span>  &lt;<strong>div</strong> class="footer"&gt;
+            <span class="line-number">18</span>    &lt;p&gt;Rodapé da página&lt;/p&gt;
+            <span class="line-number">19</span>  &lt;<strong>/div</strong>&gt;
+            <span class="line-number">20</span>&lt;/body&gt;
+            <span class="line-number">21</span>&lt;/html&gt;
+            </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">Resultado de saída:</p>
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content">
+          <img src="./imgs/html-page/saida-7.png" alt="saida-header" class="example-image">
+        </div>
+      </div>
+
+      <p class="sub-title">Exemplo 8 ():</p>
+      <p class="sub-title">Exemplo 9 ():</p>
+      <p class="sub-title">Exemplo 10 ():</p>
+      <p class="sub-title">Exemplo 11 ():</p>
+      <p class="sub-title">Exemplo 12 ():</p>
+      <p class="sub-title">Exemplo 13 ():</p>
+      <p class="sub-title">Exemplo 14 ():</p>
+      <p class="sub-title">Exemplo 15 ():</p>
+      <p class="sub-title">Exemplo 16 ():</p>
+      <p class="sub-title">Exemplo 17 ():</p>
+      <p class="sub-title">Exemplo 18 ():</p>
+      <p class="sub-title">Exemplo 19 ():</p>
+      <p class="sub-title">Exemplo 20 ():</p>
     </section>
 
-    <section id="css" class="sections">
+    <!-- <section id="css" class="sections">
       <p>CSS</p>
-    </section>
+    </section> -->
 
-    <section id="js" class="sections">
+    <!-- <section id="js" class="sections">
       <p>JS</p>
-    </section>
+    </section> -->
 
-    <section id="node" class="sections">
+    <!-- <section id="react" class="sections">
+      <p>REACT</p>
+    </section> -->
+
+    <!-- <section id="node" class="sections">
       <p>NODE</p>
-    </section>
+    </section> -->
 
-    <section id="devops" class="sections">
-      <p>DEVOPS</p>
-      <p id="main">Main</p>
-    </section>
+    <!-- <section>
+      <p id="devops" class="sections">DEVOPS</p>
+    </section> -->
 
   </main>
 
 
-  <script src="./js/sidebar-toggle.js"></script>
+  <script src="./js/html-page/funcao-copy.js"></script>
+  <script src="./js/html-page/resultado-5.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
