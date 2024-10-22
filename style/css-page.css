@@ -21,7 +21,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.7s ease;
-  flex: 0.08; 
+  flex: 0.08;
   text-align: center;
 }
 .navbar a:hover {
@@ -95,8 +95,8 @@ body {
 }
 .container {
   display: grid;
-  place-items: center;  /* Centraliza horizontalmente e verticalmente */
-  height: 100vh;
+  place-items: center; /* Centraliza horizontalmente e verticalmente */
+  min-height: 100vh;
   /* margin: 50px; */
   padding-left: 250px;
   padding-right: 250px;
@@ -129,9 +129,9 @@ strong {
 }
 #display-teste {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  align-items: start; 
+  align-items: start;
   width: 80%;
   margin-left: 10%;
 }
@@ -141,8 +141,8 @@ strong {
   border-radius: 15px;
   background-color: #f4f3fb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px; 
-  overflow-x: auto; 
+  max-width: 600px;
+  overflow-x: auto;
 }
 .display-example-selection {
   padding: 20px;
