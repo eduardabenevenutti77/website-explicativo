@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="./style/html-page/card-5.css">
   <link rel="stylesheet" href="./style/html-page/card-6.css">
   <link rel="stylesheet" href="./style/html-page/card-7.css">
+  <link rel="stylesheet" href="./style/html-page/card-8.css">
+  <link rel="stylesheet" href="./style/html-page/card-9.css">
+  <link rel="stylesheet" href="./style/html-page/card-10.css">
 
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -193,7 +196,7 @@
         </pre>
       </div>
 
-      <p class="texto-info">Resultado de saída:</p>
+      <p class="texto-info">Exemplo de saída:</p>
       <div class="expandable-card">
         <div class="card-header">
           <button class="expand-btn" onclick="toggleCard(this)">
@@ -246,7 +249,7 @@
         </pre>
       </div>
 
-      <p class="texto-info">Resultado de saída:</p>
+      <p class="texto-info">Exemplo de saída:</p>
 
       <div class="expandable-card">
         <div class="card-header">
@@ -300,7 +303,7 @@
         </pre>
       </div>
 
-      <p class="texto-info">Resultado de saída:</p>
+      <p class="texto-info">Exemplo de saída:</p>
       <div class="expandable-card">
         <div class="card-header">
           <button class="expand-btn" onclick="toggleCard(this)">
@@ -308,16 +311,126 @@
           </button>
         </div>
         <div class="card-content">
-          <img src="./imgs/html-page/saida-7.png" alt="saida-header" class="example-image">
+          <img src="./imgs/html-page/saida-7.png" alt="saida-div" class="example-image">
         </div>
       </div>
 
-      <p class="sub-title">Exemplo 8 ():</p>
-      <p class="sub-title">Exemplo 9 ():</p>
-      <p class="sub-title">Exemplo 10 ():</p>
-      <p class="sub-title">Exemplo 11 ():</p>
-      <p class="sub-title">Exemplo 12 ():</p>
-      <p class="sub-title">Exemplo 13 ():</p>
+      <p class="sub-title">Exemplo 8 (span):</p>
+      <p class="texto-info">A tag span é um elemento do tipo <strong>inline, ou seja, quando adicionado na página, ele é inserido lateralmente após os demais componentes</strong>, diferente das divs que são elementos do tipo bloco.</p>
+
+      <p class="texto-info">Elementos span, por padrão, também não possuem nenhuma característica visual definida, isso precisa ser feito via CSS para destacar ou aplicar uma formatação especial para um certo trecho do texto.</p>
+
+      <p class="texto-info">No card abaixo, o trecho de código possui uso do span em dois casos. No primeiro, a tag não conta com nenhum atributo adicional, porém no segundo, adicionamos a ela uma aparência diferenciada via CSS.</p>
+
+      <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+
+      <div class="code-card-8">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-8')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-8" id="code-8">
+              <code>
+              <span class="line-number">1</span>&lt;p&gt;Este é um texto com um &lt;<strong>span</strong>&gt;
+              <span class="line-number">2</span>trecho em destaque&lt;<strong>/span</strong>&gt;
+                         .&lt;/p&gt;
+
+              <span class="line-number">3</span>&lt;p&gt;
+              <span class="line-number">4</span>Este é um texto com um &lt;<strong>span</strong> 
+              <span class="line-number">5</span>style="background: #9c89e0; border-radius:5px; padding:5px"&gt;
+              <span class="line-number">6</span>trecho em destaque&lt;<strong>/span</strong>&gt;
+                        .&lt;/p&gt;
+              </code>
+          </pre>
+      </div>
+
+      <p class="texto-info">Exemplo de saída:</p>
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content">
+          <img src="./imgs/html-page/saida-8.png" alt="saida-span" class="example-image">
+        </div>
+      </div>
+
+
+      <p class="sub-title">Exemplo 9 (H1 ao H6):</p>
+
+      <p class="texto-info">As tags
+        <strong>h1 até h6 são usadas para criar títulos e subtítulos em uma página web.</strong> Cada uma dessas tags tem um nível de importância, indo do mais importante ao menos importante. O título mais destacado é
+        <strong>h1</strong>, e o menos destacado é <strong>h6.</strong>
+      </p>
+      <p class="texto-info">Essas tags ajudam a organizar o conteúdo de uma página e melhorar sua estrutura tanto para os leitores quanto para os motores de busca (como o Google), que usam essa hierarquia para entender a relevância do conteúdo.</p>
+
+      <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+
+      <div class="code-card-9">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-9')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-9" id="code-9">
+            <code>
+            <span class="line-number">1</span>&lt;h1&gt;Título de nível 1&lt;/h1&gt;
+            <span class="line-number">2</span>&lt;h2&gt;Título de nível 2&lt;/h2&gt;
+            <span class="line-number">3</span>&lt;h3&gt;Título de nível 3&lt;/h3&gt;
+            <span class="line-number">4</span>&lt;h4&gt;Título de nível 4&lt;/h4&gt;
+            <span class="line-number">5</span>&lt;h5&gt;Título de nível 5&lt;/h5&gt;
+            <span class="line-number">6</span>&lt;h6&gt;Título de nível 6&lt;/h6&gt;
+            </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">Exemplo de saída:</p>
+      <div class="expandable-card">
+        <div class="card-header">
+          <button class="expand-btn" onclick="toggleCard(this)">
+            <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+          </button>
+        </div>
+        <div class="card-content">
+          <img src="./imgs/html-page/saida-9.png" alt="saida-h1-h6" class="example-image">
+        </div>
+      </div>
+
+      <p class="sub-title">Exemplo 10 (a):</p>
+      <p class="texto-info">Esta tag <strong>A</strong> é utilizada para criar <strong>links em uma página web,</strong> permitindo a navegação entre diferentes páginas ou partes de um documento, ou até mesmo o <strong>redirecionamento para outros sites.</strong>
+      <p class="texto-info">A tag a é uma das mais importantes em HTML, pois possibilita a interconexão entre conteúdos na web. Os principais atributos da tag a incluem o "href" que define o destino do link e pode ser um endereço se site completo (url), ou um caminho para um arquivo da mesma página.</p>
+
+      <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+      <div class="code-card-10">
+        <div class="card-header">
+          <h3>Para copiar, clique no ícone ao lado</h3>
+          <button class="copy-btn" onclick="copyCode('code-10')">
+            <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+          </button>
+        </div>
+        <pre class="code-block-10" id="code-10">
+            <code>
+              <span class="line-number">1</span>&lt;<strong>a</strong> href="https://www.exemplo.com"&gt;Visite o site Exemplo&lt;<strong>/a</strong>&gt;
+            </code>
+        </pre>
+      </div>
+
+      <p class="texto-info">No exemplo acima, foi utiliz
+        ado para redirecionar para um site.</p>
+
+
+
+
+      <p class="sub-title">Exemplo 11 (p):</p>
+
+      <p class="sub-title">Exemplo 12 (em):</p>
+
+      <p class="sub-title">Exemplo 13 (strong):</p>
+
       <p class="sub-title">Exemplo 14 ():</p>
       <p class="sub-title">Exemplo 15 ():</p>
       <p class="sub-title">Exemplo 16 ():</p>
@@ -325,30 +438,9 @@
       <p class="sub-title">Exemplo 18 ():</p>
       <p class="sub-title">Exemplo 19 ():</p>
       <p class="sub-title">Exemplo 20 ():</p>
+
     </section>
-
-    <!-- <section id="css" class="sections">
-      <p>CSS</p>
-    </section> -->
-
-    <!-- <section id="js" class="sections">
-      <p>JS</p>
-    </section> -->
-
-    <!-- <section id="react" class="sections">
-      <p>REACT</p>
-    </section> -->
-
-    <!-- <section id="node" class="sections">
-      <p>NODE</p>
-    </section> -->
-
-    <!-- <section>
-      <p id="devops" class="sections">DEVOPS</p>
-    </section> -->
-
   </main>
-
 
   <script src="./js/html-page/funcao-copy.js"></script>
   <script src="./js/html-page/resultado-5.js"></script>

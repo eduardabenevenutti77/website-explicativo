@@ -1,0 +1,67 @@
+.code-card-8 {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+  width: 700px;
+  height: 470px;
+  position: relative;
+}
+
+.line-number .style-8 {
+  font-family: "Poppins";
+  color: #8271c1;
+  padding: 0;
+  margin: 0;
+  height: -80px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.code-block-8 {
+  font-family: "Poppins";
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 5px;
+  white-space: pre;
+  position: relative;
+  line-height: 2;
+}
+
+.code-block-8 code {
+  font-family: "Poppins";
+  margin-top: 0px;
+  padding: 0;
+}
+
+#code-8 {
+  padding: 0%;
+  height: 360px;
+}
+
+.line-number {
+  color: #8a6ab8;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+  margin-right: 8px;
+  display: inline-block;
+  text-align: right;
+  width: 25px;
+  user-select: none;
+}
