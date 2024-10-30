@@ -53,7 +53,8 @@
   background-color: #f0f0f0;
   border-radius: 5px;
   line-height: 2;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
   position: relative;
 }
 
