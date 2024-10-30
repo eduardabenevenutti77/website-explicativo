@@ -1,0 +1,107 @@
+.card {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header h3 {
+  color: #8271c1;
+  font-family: "Poppins";
+  font-size: 18px;
+  margin: 0;
+}
+
+.card h2 {
+  color: #8271c1;
+  font-family: "Poppins";
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(57%) sepia(21%) saturate(4683%) hue-rotate(226deg)
+    brightness(99%) contrast(104%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+.code-block {
+  margin-top: 20px;
+  font-family: "Poppins";
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  line-height: 2;
+  white-space: pre;
+  position: relative;
+}
+
+.line-number {
+  color: #8a6ab8;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+  margin-right: 8px;
+  display: inline-block;
+  text-align: right;
+  width: 25px;
+  user-select: none;
+}
+
+/* Estlios Cards Resultado de Saida */
+
+.expand-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.icon.rotate {
+  transform: rotate(180deg);
+}
+.expandable-card {
+  border: solid 1px #8271c1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 760px;
+  position: relative;
+  overflow: hidden;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.example-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+}
