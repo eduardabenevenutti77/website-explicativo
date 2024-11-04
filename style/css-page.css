@@ -247,3 +247,14 @@ img {
   text-align: justify;
   margin-bottom: 25px;
 }
+.display-background {
+  background-color: #eae2f7;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+.display-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

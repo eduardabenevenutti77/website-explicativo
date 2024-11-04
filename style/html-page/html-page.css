@@ -150,10 +150,14 @@ body {
 
   .sub-title {
     color: #8271c1;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Poppins";
     font-weight: 700;
     margin-top: 60px;
+  }
+
+  li {
+    font-family: "Poppins";
   }
 
   .texto-info {
@@ -169,29 +173,6 @@ body {
 
 #img-estrutura-html {
   border-radius: 10px;
-  max-width: 100%; /* A imagem nunca será maior que o contêiner pai */
-  height: auto; /* Mantém a proporção da imagem */
-}
-#img-exemplo3 {
-  border-radius: 10px;
-  width: 800px;
-  height: 350px;
-  max-width: 100%;
-  height: auto;
-}
-
-#img-exemplo4 {
-  border-radius: 10px;
-  width: 800px;
-  height: 50px;
-  max-width: 100%;
-  height: auto;
-}
-
-#img-exemplo5 {
-  border-radius: 10px;
-  width: 800px;
-  height: 50px;
   max-width: 100%;
   height: auto;
 }
@@ -202,4 +183,28 @@ body {
   height: 350px;
   max-width: 100%;
   height: auto;
+}
+
+.gato-img {
+  width: 400;
+  height: 400;
+  border-radius: 10px;
+}
+
+/*** ESTILOS DO FOOTER ****/
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sections .footer .footer {
+  margin-top: 90%px;
+  background-color: #8271c1;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: auto; /* Coloca o footer na parte inferior */
 }

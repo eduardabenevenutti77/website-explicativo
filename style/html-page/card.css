@@ -3,10 +3,7 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px 50px;
-  width: 700px;
-  height: 540px;
-  position: relative;
+  padding: 40px;
 }
 
 .card-header {
@@ -14,36 +11,11 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.copy-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.copy-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-.code-block {
-  font-family: "Poppins", monospace;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 5px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  line-height: 2;
-  margin-top: 10px;
-}
-
-.code-block code {
-  margin-top: 50px;
-}
-
-#code-5 {
-  padding: 30px 0;
-  height: 390px;
+.card-header h3 {
+  color: #8271c1;
+  font-family: "Poppins";
+  font-size: 18px;
+  margin: 0;
 }
 
 .card h2 {
@@ -53,6 +25,17 @@
   margin-bottom: 15px;
 }
 
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
 .icon {
   width: 24px;
   height: 24px;
@@ -64,22 +47,37 @@
 .icon:hover {
   transform: scale(1.2);
 }
+.code-block {
+  margin-top: 20px;
+  font-family: "Poppins";
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  line-height: 2;
+  white-space: pre;
+  position: relative;
+}
 
-.copy-btn {
+.line-number {
+  color: #8a6ab8;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+  margin-right: 8px;
+  display: inline-block;
+  text-align: right;
+  width: 25px;
+  user-select: none;
+}
+
+/* Estlios Card Resultado de Saida */
+
+.expand-btn {
   background: none;
   border: none;
   cursor: pointer;
 }
-/* 
-.code-block .code-body {
-  font-family: "Poppins";
-  color: #8271c1;
-  padding: 0;
-  margin: 0;
-} */
-
-/* Estlios Cards Resultado de Saida */
-
+.icon.rotate {
+  transform: rotate(180deg);
+}
 .expandable-card {
   border: solid 1px #8271c1;
   background-color: #fff;
@@ -90,42 +88,17 @@
   position: relative;
   overflow: hidden;
 }
-
-.card-header h3 {
-  color: #8271c1;
-  font-family: "Poppins";
-  font-size: 18px;
-}
-
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-
-.expand-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-
-.icon.rotate {
-  transform: rotate(180deg); /* Rotaciona o ícone ao expandir */
-}
-
 .card-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
-
 .example-image {
   width: 100%;
   height: auto;
