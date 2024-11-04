@@ -789,7 +789,6 @@
 
       </div>
 
-
       <div>
         <p class="sub-title">Exemplo 21 (button):</p>
         <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
@@ -860,11 +859,111 @@
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 22 ():</p>
+        <p class="sub-title">Exemplo 22 (table):</p>
+        <p class="texto-info">A tag
+          <strong>table</strong> é utilizada para criar tabelas, que são estruturas que organizam dados em linhas e colunas. As tabelas são frequentemente usadas para <strong>apresentar dados tabulares de forma clara e acessível</strong>. Os elementos principais que compõem uma tabela são:
+        </p>
 
+        <div>
+          <ul>
+            <li><strong>table:</strong> esta é a tag principal que define a tabela.</li>
+            <li><strong>tr (Table Row):</strong> representa uma linha na tabela.</li>
+            <li><strong>th (Table Header):</strong> define uma célula de cabeçalho na tabela, geralmente exibida em negrito e centralizada. É usada para descrever os dados em uma coluna.</li>
+            <li><strong>td (Table Data):</strong> define uma célula de dados na tabela, que contém informações.</li>
+          </ul>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-22')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-22">
+            <span class="line-number">1</span>&lt;<strong>table</strong> border="1"&gt;
+            <span class="line-number">2</span>&nbsp;&nbsp;&lt;<strong>tr</strong>&gt;
+            <span class="line-number">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>th</strong>&gt;Fruta&lt;/<strong>th</strong>&gt;
+            <span class="line-number">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>th</strong>&gt;Cor&lt;/<strong>th</strong>&gt;
+            <span class="line-number">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>th</strong>&gt;Preço&lt;/<strong>th</strong>&gt;
+            <span class="line-number">6</span>&nbsp;&nbsp;&lt;/<strong>tr</strong>&gt;
+            <span class="line-number">7</span>&nbsp;&nbsp;&lt;<strong>tr</strong>&gt;
+            <span class="line-number">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Maçã&lt;/<strong>td</strong>&gt;
+            <span class="line-number">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Vermelha&lt;/<strong>td</strong>&gt;
+            <span class="line-number">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;R$ 2,00&lt;/<strong>td</strong>&gt;
+            <span class="line-number">11</span>&nbsp;&nbsp;&lt;/<strong>tr</strong>&gt;
+            <span class="line-number">12</span>&nbsp;&nbsp;&lt;<strong>tr</strong>&gt;
+            <span class="line-number">13</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Banana&lt;/<strong>td</strong>&gt;
+            <span class="line-number">14</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Amarela&lt;/<strong>td</strong>&gt;
+            <span class="line-number">15</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;R$ 1,50&lt;/<strong>td</strong>&gt;
+            <span class="line-number">16</span>&nbsp;&nbsp;&lt;/<strong>tr</strong>&gt;
+            <span class="line-number">17</span>&nbsp;&nbsp;&lt;<strong>tr</strong>&gt;
+            <span class="line-number">18</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Laranja&lt;/<strong>td</strong>&gt;
+            <span class="line-number">19</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;Laranja&lt;/<strong>td</strong>&gt;
+            <span class="line-number">20</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>td</strong>&gt;R$ 1,80&lt;/<strong>td</strong>&gt;
+            <span class="line-number">21</span>&nbsp;&nbsp;&lt;/<strong>tr</strong>&gt;
+            <span class="line-number">22</span>&lt;/<strong>table</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)" style="background: none; border: none; cursor: pointer;">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content" style="margin-top: 10px;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Fruta</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Cor</th>
+                  <th style="border: 1px solid #ddd; padding: 8px;">Preço</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Maçã</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Vermelha</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">R$ 2,00</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Banana</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Amarela</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">R$ 1,50</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Laranja</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Laranja</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">R$ 1,80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
+      <div>
+        <p class="sub-title">Exemplo 23 ():</p>
+        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+      </div>
 
+      <div>
+        <p class="sub-title">Exemplo 24 ():</p>
+        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+      </div>
+
+      <div>
+        <p class="sub-title">Exemplo 25 ():</p>
+        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+      </div>
+
+      <div>
+        <p class="sub-title">Exemplo 26 ():</p>
+        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+      </div>
 
       </div>
 
