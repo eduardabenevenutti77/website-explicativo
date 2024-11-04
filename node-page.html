@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML</title>
-  <link rel="stylesheet" href="./style/node-page.css">
+  <link rel="stylesheet" href="./style/node-page/node-page.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <main class="main">
     <div class="navbar">
@@ -20,6 +22,7 @@
       <a href="/node-page.html">NODE</a>
       <a href="/devops-page.html">DEVOPS</a>
     </div>
+
     <aside class="sidebar">
       <div class="svg-icon-sidebar">
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +32,7 @@
           <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
         </svg>
       </div>
+
       <nav class="nav">
         <ul>
           <li class="active"><a href="#home">HOME</a></li>
@@ -38,7 +42,26 @@
         </ul>
       </nav>
     </aside>
+
+    <section id="html" class="sections">
+      <!-- INTRO -->
+      <div>
+        <p id="title">Como Funciona o Node:</p>
+
+        <p class="texto-info">Node.js é uma plataforma de execução de JavaScript no lado do servidor. Ele permite que desenvolvedores utilizem JavaScript para construir aplicações backend, o que antes era feito apenas no navegador. Node.js é baseado no motor V8 do Google Chrome, que compila o JavaScript para código de máquina, tornando-o rápido e eficiente.</p>
+
+        <p class="texto-info">Uma das principais características do Node.js é sua arquitetura orientada a eventos e seu modelo de I/O (entrada/saída) não bloqueante, o que o torna ideal para aplicações que exigem alta escalabilidade e trabalham com muitas requisições simultâneas, como servidores de aplicativos em tempo real, APIs, e sistemas de streaming de dados.</p>
+
+        <p class="texto-info">Com um grande ecossistema de bibliotecas disponíveis através do npm (Node Package Manager), Node.js é amplamente utilizado para desenvolver aplicações modernas e escaláveis, incluindo sistemas web e serviços baseados em microservices.</p>
+      </div>
+
+
+    </section>
   </main>
-  <script src="./js/sidebar-toggle.js"></script>
+
+  <script src="./js/html-page/funcao-copy.js"></script>
+  <script src="./js/html-page/resultado-5.js"></script>
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
