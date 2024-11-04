@@ -617,7 +617,7 @@
 
         <div>
           <li><strong>action</strong> - define o URL para onde os dados do formulário serão enviados após o envio. Se não for especificado, os dados serão enviados para a mesma URL da página;</li><br>
-          <li><strong>method</strong> - especifica o método HTTP (GET - POST) que será utilizado ao enviar os dados.;</li><br>
+          <li><strong>method</strong> - especifica o método HTTP (GET - POST) que será utilizado ao enviar os dados;</li><br>
           <li><strong>enctype</strong> - ndica como os dados do formulário devem ser codificados quando enviados. É especialmente importante ao enviar arquivos;</li><br>
           <li><strong>target</strong> - especifica onde a resposta será exibida após o envio do formulário. Pode ter valores como _blank (nova aba), _self (mesma aba) ou _parent (pai do frame).</li><br>
         </div>
@@ -656,8 +656,21 @@
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 18 ():</p>
-        <p class="texto-info"></p>
+        <p class="sub-title">Exemplo 18 (input):</p>
+        <p class="texto-info">A tag <strong>input</strong> é um dos elementos mais fundamentais para <strong>coletar dados do usuário</strong>. Ela é usada dentro de formulários para criar diferentes tipos de campos de entrada, como <strong>texto, senhas, e-mails, botões, caixas de seleção</strong>, entre outros. Dependendo do atributo type especificado, a tag input pode assumir comportamentos variados.</p>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-19')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-19">
+            <span class="line-number">1</span>&lt;<strong>input</strong> type="text" placeholder="Digite algo aqui"&gt;
+          </div>
+        </div>
 
         <p class="texto-info">Exemplo de saída:</p>
         <div class="expandable-card">
@@ -667,15 +680,98 @@
             </button>
           </div>
           <div class="card-content">
-            <img src="./imgs/html-page/saida-15.png" alt="saida-tag-img" class="example-audio">
+            <label for="input-example" style="display: block; margin-top: 15px; margin-bottom: 5px;">Seu texto aqui:</label>
+            <input type="text" id="input-example" placeholder="Digite algo aqui" style="width: 96%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;">
           </div>
         </div>
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 19 ():</p>
-        <p class="texto-info"></p>
+        <p class="sub-title">Exemplo 19 (select):</p>
+        <p class="texto-info">Esta tag é utilizada em HTML para criar menus suspensos (drop-down lists), permitindo que os usuários escolham uma opção a partir de um conjunto pré-definido. A tag <strong>select é frequentemente utilizada em formulários</strong> para capturar dados onde a entrada do usuário deve ser limitada a opções específicas.</p>
         <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-19')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-19">
+            <span class="line-number">1</span>&lt;<strong>label</strong> for="fruta"&gt;Escolha sua fruta favorita:&lt;/<strong>label</strong>&gt;
+            <span class="line-number">2</span>&lt;<strong>select</strong> id="fruta" name="fruta"&gt;
+            <span class="line-number">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>option</strong> value="maca"&gt;Maçã&lt;/<strong>option</strong>&gt;
+            <span class="line-number">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>option</strong> value="banana"&gt;Banana&lt;/<strong>option</strong>&gt;
+            <span class="line-number">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>option</strong> value="laranja"&gt;Laranja&lt;/<strong>option</strong>&gt;
+            <span class="line-number">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>option</strong> value="uva"&gt;Uva&lt;/<strong>option</strong>&gt;
+            <span class="line-number">7</span>&lt;/<strong>select</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content" style="margin-top: 15px;">
+            <label for="fruta" style="
+                display: block; 
+                margin-bottom: 5px; 
+                font-weight: bold; 
+                color: #8271c1; /* Cor do texto */
+            ">
+              Escolha sua fruta favorita:
+            </label>
+            <select id="fruta" name="fruta" style="
+                    padding: 8px; 
+                    border-radius: 5px; 
+                    border: 1px solid #8271c1; 
+                    width: 90%; 
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+                    font-size: 16px; 
+                    color: #333; 
+                    transition: border-color 0.3s; 
+                " onfocus="this.style.borderColor='#735fba'" onblur="this.style.borderColor='#8271c1'">
+              <option value="maca">Maçã</option>
+              <option value="banana">Banana</option>
+              <option value="laranja">Laranja</option>
+              <option value="uva">Uva</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div>
+        <p class="sub-title">Exemplo 20 (textarea):</p>
+        <p class="texto-info">Esta tag é usada para <strong>criar uma área de texto onde os usuários podem inserir um texto de múltiplas linhas</strong>. É especialmente útil para formulários que requerem entradas mais longas, como comentários, descrições ou feedback. Ao contrário de um "input" do tipo "text", que é limitado a uma única linha de entrada, a tag <strong>textarea</strong> permite que o usuário digite quantas linhas quiser. Os atributos incluem:</p>
+
+        <div>
+          <li><strong>rows</strong> - especifica o número de linhas visíveis na área de texto;</li><br>
+          <li><strong>cols</strong> - especifica a largura da área de texto em termos de número de caracteres visíveis por linha;</li><br>
+          <li><strong>placeholder</strong> - fornece uma dica ou exemplo de texto que desaparece quando o usuário começa a digitar;</li><br>
+          <li><strong>required</strong> - indica que o campo é obrigatório e deve ser preenchido antes do envio do formulário;</li><br>
+          <li><strong>name</strong> - o nome do campo, que será enviado ao servidor quando o formulário for enviado.</li><br>
+        </div>
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-20')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-20">
+            <span class="line-number">1</span>&lt;<strong>label</strong> for="mensagem"&gt;Mensagem:&lt;/<strong>label</strong>&gt;
+            <span class="line-number">2</span>&lt;<strong>textarea</strong> id="mensagem" name="mensagem"
+            <span class="line-number">3</span>&lt;rows="4" cols="50" placeholder="Digite sua mensagem aqui..." required&gt;
+            <span class="line-number">5</span>&lt;/<strong>textarea</strong>&gt;
+          </div>
+        </div>
 
         <p class="texto-info">Exemplo de saída:</p>
         <div class="expandable-card">
@@ -685,29 +781,91 @@
             </button>
           </div>
           <div class="card-content">
-            <img src="./imgs/html-page/saida-15.png" alt="saida-tag-img" class="example-audio">
+            <label for="mensagem" style="margin-top: 0;">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..." required></textarea>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div>
+        <p class="sub-title">Exemplo 21 (button):</p>
+        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+
+        <div>
+          <li>
+            <strong>type</strong> - especifica o tipo de botão. Os tipos mais comuns são:
+            <ul>
+              <li>(reset) - redefine os valores dos campos do formulário para seus valores iniciais;</li><br>
+              <li>(button) - botão genérico que não tem um comportamento padrão ou seja não envia um formulário;</li><br>
+              <li>(submit) - envia o formulário associado quando clicado, este é o tipo padrão se nenhum tipo for especificado;</li>
+            </ul>
+          </li>
+          <br>
+          <li><strong>name</strong> - define um nome para o botão, que pode ser útil ao enviar dados de formulários;</li>
+          <br>
+          <li><strong>value</strong> - define um valor associado ao botão, que é enviado com o formulário quando ele é submetido;</li>
+          <br>
+          <li><strong>disabled</strong> - se presente, o botão será desativado e não poderá ser clicado;</li>
+          <br>
+          <li><strong>onclick</strong> - um evento JavaScript que é acionado quando o botão é clicado, permitindo a execução de uma função.</li>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-21')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-21">
+            <span class="line-number">1</span>&lt;<strong>form</strong>&gt;
+            <span class="line-number">2</span>&nbsp;&nbsp;<strong>button</strong> type="button" onclick="alert('Botão clicado!')"&gt;Clique aqui&lt;/<strong>button</strong>&gt;
+            <span class="line-number">3</span>&lt;/<strong>form</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content">
+            <form>
+              <button type="button" style="
+                      background-color: #8271c1; 
+                      color: white; 
+                      width: 20%;
+                      border: none; 
+                      padding: 10px 20px; 
+                      text-align: center; 
+                      text-decoration: none; 
+                      display: inline-block; 
+                      font-size: 16px; 
+                      margin: 15px 2px; 
+                      border-radius: 5px; 
+                      cursor: pointer; 
+                  " onclick="alert('Botão clicado!')">
+                Clique aqui
+              </button>
+            </form>
+
           </div>
         </div>
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 20 ():</p>
-        <p class="texto-info"></p>
-        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <p class="sub-title">Exemplo 22 ():</p>
+
+      </div>
 
 
 
-        <p class="texto-info">Exemplo de saída:</p>
-        <div class="expandable-card">
-          <div class="card-header">
-            <button class="expand-btn" onclick="toggleCard(this)">
-              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
-            </button>
-          </div>
-          <div class="card-content">
-            <img src="./imgs/html-page/saida-15.png" alt="saida-tag-img" class="example-audio">
-          </div>
-        </div>
       </div>
 
     </section>
