@@ -53,8 +53,7 @@
   background-color: #f0f0f0;
   border-radius: 5px;
   line-height: 2;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
+  white-space: pre;
   position: relative;
 }
 
@@ -69,7 +68,7 @@
   user-select: none;
 }
 
-/* Estlios Cards Resultado de Saida */
+/* Estlios Card Resultado de Saida */
 
 .expand-btn {
   background: none;
