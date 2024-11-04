@@ -171,10 +171,6 @@ body {
   }
 }
 
-/* max-width: 100%; 
-A imagem nunca será maior que o 
-contêiner pai */
-
 #img-estrutura-html {
   border-radius: 10px;
   max-width: 100%;
@@ -193,4 +189,22 @@ contêiner pai */
   width: 400;
   height: 400;
   border-radius: 10px;
+}
+
+/*** ESTILOS DO FOOTER ****/
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sections .footer .footer {
+  margin-top: 90%px;
+  background-color: #8271c1;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: auto; /* Coloca o footer na parte inferior */
 }
