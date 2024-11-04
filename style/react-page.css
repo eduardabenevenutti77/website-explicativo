@@ -1,11 +1,12 @@
+/* Reset */
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
+/* Navbar */
 .navbar {
-  /* background-color: #8a6ab8; */
   background-color: #8271c1;
   padding: 22px;
   display: flex;
@@ -24,7 +25,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.7s ease;
-  flex: 0.08; /* Faz os botões terem o mesmo tamanho */
+  flex: 0.08;
   text-align: center;
 }
 
@@ -33,132 +34,92 @@ body {
   color: #8a6ab8;
 }
 
-/* SideBar */
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
-/* html {
-  font-family: Arial;
-  font-size: 16px;
-  background: #eeeeee;
-} */
-
-.svg-icon-sidebar {
-  display: flex;
-  margin-top: 12px;
-  justify-content: flex-end;
-  margin-right: -16px;
-}
-
+/* Sidebar */
 .sidebar {
   background-color: #8271c1;
-  font-size: 0.65em;
-  height: 100%;
-  background-color: #8271c1;
   position: fixed;
-  left: -120px; /* Esconde o menu fora da tela inicialmente */
+  width: 200px;
+  height: 100%;
+  left: -200px;
   transition: left 0.8s ease;
-  /* margin-top: 72px; */
+  padding-top: 20px;
 }
 
 .sidebar.open {
-  left: 0; /* Mostra o menu quando a classe 'open' é adicionada */
+  left: 0;
+}
+
+.svg-icon-sidebar {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  margin-bottom: 20px;
 }
 
 .nav {
-  position: relative;
-  margin: 0 32px;
   text-align: right;
-  /* margin-top: 62px; */
-  /* transform: translateY(-50%); */
   font-weight: bold;
+  padding-right: 15px;
 }
-
-/* .nav li {
-  width: 100%;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.2em;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(to right, #5e42a6, #b74e91);
-    
-  }
-} */
 
 .nav ul {
   list-style: none;
-
-  li {
-    position: relative;
-    /* margin: 3.2em 0; */
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 0.2em;
-      /* background: black; */
-      left: 0;
-      bottom: 0;
-      background-image: linear-gradient(to right, #5e42a6, #b74e91);
-      /* background-color: red; */
-    }
-    margin-top: 20px;
-  }
-  a {
-    line-height: 5em;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.4em;
-    color: rgba(#fff, 0.35);
-    display: block;
-    transition: all ease-out 300ms;
-  }
-
-  &.active a {
-    color: white;
-  }
-
-  &:not(.active)::after {
-    opacity: 0.2;
-  }
-
-  &:not(.active):hover a {
-    color: rgba(#fff, 0.75);
-  }
+  padding: 0;
 }
 
-.sections {
-  position: relative;
-  width: 75%;
-  float: right;
-  /* height: 100vh; NÃO REMOVER*/
-
-  a {
-    position: relative;
-
-    img {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  p {
-    text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    /* color: #fff; */
-    font-weight: bold;
-    margin-top: 20px;
-  }
+.nav li {
+  margin: 20px 0;
 }
+
+.nav a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  display: block;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav li.active a,
+.nav li:hover a {
+  color: #f3f8ff;
+}
+
+.nav li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #5e42a6, #b74e91);
+  opacity: 0.5;
+}
+
+/* Container */
 .container {
-    margin: 50px;
+  margin: 60px;
+  text-align: center;
 }
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+
+.container p {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.container button {
+  background-color: #a786de;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #f3f8ff;
+  color: #8a6ab8;
 }
