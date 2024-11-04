@@ -150,10 +150,14 @@ body {
 
   .sub-title {
     color: #8271c1;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Poppins";
     font-weight: 700;
     margin-top: 60px;
+  }
+
+  li {
+    font-family: "Poppins";
   }
 
   .texto-info {
@@ -183,4 +187,10 @@ contêiner pai */
   height: 350px;
   max-width: 100%;
   height: auto;
+}
+
+.gato-img {
+  width: 400;
+  height: 400;
+  border-radius: 10px;
 }
