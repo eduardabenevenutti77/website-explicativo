@@ -426,7 +426,7 @@
           <div class="code-block" id="code-12">
             <span class="line-number">1</span>&lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;<br>
             <span class="line-number">2</span>&lt;p&gt;Aqui está outro parágrafo onde queremos
-            <span class="line-number">3</span>&nbsp;&nbsp;enfatizar uma palavra usando a tag
+            <span class="line-number">3</span>enfatizar uma palavra usando a tag
             <span class="line-number">4</span>&nbsp;&nbsp;&lt;<strong>em</strong>&gt;ênfase&lt;<strong>/em</strong>&gt;.&lt;/p&gt;
           </div>
         </div>
@@ -741,9 +741,7 @@
               <option value="uva">Uva</option>
             </select>
           </div>
-
         </div>
-
       </div>
 
       <div>
@@ -785,8 +783,6 @@
             <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..." required></textarea>
           </div>
         </div>
-
-
       </div>
 
       <div>
@@ -946,29 +942,264 @@
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 23 ():</p>
-        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+        <p class="sub-title">Exemplo 23 (article):</p>
+        <p class="texto-info"> É uma parte semântica da linguagem HTML5 que permite que os desenvolvedores estruturem o conteúdo de forma mais significativa. O article pode conter textos, imagens, vídeos, e outros elementos que têm significado próprio.</p>
+
+        <p class="texto-info"> Esta tag é muito <strong>utilizada em blogs, sites de notícias, publicações científicas, fóruns e qualquer lugar onde conteúdo independente é apresentado</strong>. Isso ajuda tanto na organização do código quanto na acessibilidade e SEO, facilitando a navegação e compreensão do conteúdo por usuários e motores de busca.</p>
+
+        <p class="texto-info">As características desta tag incluem:</p>
+        <div>
+          <ul>
+            <li><strong>Independência:</strong> O conteúdo dentro de um article deve fazer sentido por conta própria e deve ser capaz de ser distribuído de forma independente. Por exemplo, um post de blog, uma notícia ou um comentário podem ser considerados artigos.</li><br>
+            <li><strong>Uso em Agrupamentos:</strong> A tag article é frequentemente utilizada dentro de seções mais amplas, como <strong>section, aside, ou main</strong>, para organizar melhor o conteúdo de uma página.</li><br>
+            <li><strong>SEO e Acessibilidade:</strong> O uso de article melhora a estrutura semântica da página, tornando-a mais compreensível para motores de busca e para tecnologias assistivas, como leitores de tela.</li>
+          </ul>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-23')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-23">
+            <span class="line-number">1</span>&lt;<strong>article</strong>&gt;
+            <span class="line-number">2</span>&lt;h2&gt;Título do Artigo&lt;/h2&gt;
+            <span class="line-number">3</span>&lt;p&gt;Este é o conteúdo principal do artigo.
+            <span class="line-number">4</span>&lt;/p&gt;
+            <span class="line-number">5</span>&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;
+            <span class="line-number">6</span>&lt;footer&gt;
+            <span class="line-number">7</span>&lt;p&gt;Publicado em: &lt;time datetime="2024-11-01"&gt;1 de Novembro de 2024&lt;/time&gt;
+            <span class="line-number">8</span>&lt;/p&gt;
+            <span class="line-number">9</span>&lt;p&gt;Autor: Nome do Autor&lt;/p&gt;
+            <span class="line-number">10</span>&lt;/footer&gt;
+            <span class="line-number">11</span>&lt;/<strong>article</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content">
+            <article style="border: 1px solid #ccc; padding: 10px; border-radius: 4px;">
+              <h2 style="margin-top: 0;">Título do Artigo</h2>
+              <p>Este é o conteúdo principal do artigo.</p>
+              <img src="https://via.placeholder.com/150" alt="Descrição da imagem" style="width: 100%; max-width: 150px; display: block; margin: 10px 0;">
+              <footer>
+                <p>Publicado em: <time datetime="2024-11-01">1 de Novembro de 2024</time></p>
+                <p>Autor: Nome do Autor</p>
+              </footer>
+            </article>
+          </div>
+        </div>
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 24 ():</p>
-        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+        <p class="sub-title">Exemplo 24 (section):</p>
+        <p class="texto-info">A tag
+          <strong>section</strong> é utilizada para agrupar conteúdo relacionado dentro de uma seção do documento. Esse agrupamento facilita a organização do conteúdo e é particularmente útil quando se deseja separar partes específicas de uma página, como artigos, capítulos, ou blocos temáticos que podem ter títulos ou cabeçalhos. Uso comum desta tag incluem:
+        </p>
+
+        <div>
+          <ul>
+            <li><strong>Conteúdo Temático:</strong> a section é ideal para dividir uma página em blocos temáticos. Cada seção pode ter seu próprio título com uma tag h1 a h6;</li><br>
+            <li><strong>Semântica:</strong> é importante usar a section quando o conteúdo tem relação semântica, ou seja, quando os elementos dentro da seção tratam de um mesmo tema.</li>
+          </ul>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no icone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-24')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-24">
+            <span class="line-number">1</span>&lt;<strong>section</strong>&gt;
+            <span class="line-number">2</span>&lt;<strong>h2</strong>&gt;Introdução ao Tema&lt;/<strong>h2</strong>&gt;
+            <span class="line-number">3</span>&lt;<strong>p</strong>&gt;
+            <span class="line-number">4</span>Esta seção aborda os conceitos fundamentais
+            <span class="line-number">5</span>relacionados ao tema discutido nesta página.
+            <span class="line-number">6</span>&lt;/<strong>p</strong>&gt;
+            <span class="line-number">7</span>&lt;/<strong>section</strong>&gt;
+            <span class="line-number">8</span>&lt;<strong>section</strong>&gt;
+            <span class="line-number">9</span>&lt;<strong>h2</strong>&gt;Detalhes Adicionais&lt;/<strong>h2</strong>&gt;
+            <span class="line-number">10</span>&lt;<strong>p</strong>&gt;
+            <span class="line-number">11</span>Aqui você encontra informações mais detalhadas
+            <span class="line-number">12</span>sobre o assunto, com exemplos e explicações.
+            <span class="line-number">13</span>&lt;/<strong>p</strong>&gt;
+            <span class="line-number">14</span>&lt;/<strong>section</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content">
+            <section>
+              <h2>Introdução ao Tema</h2>
+              <p>
+                Esta seção aborda os conceitos fundamentais
+                relacionados ao tema discutido nesta página.
+              </p>
+            </section>
+            <section>
+              <h2>Detalhes Adicionais</h2>
+              <p>
+                Aqui você encontra informações mais detalhadas
+                sobre o assunto, com exemplos e explicações.
+              </p>
+            </section>
+          </div>
+        </div>
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 25 ():</p>
-        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+        <p class="sub-title">Exemplo 25 (nav):</p>
+        <p class="texto-info">A tag <strong>nav</strong> é uma das tags semânticas do HTML5 que é utilizada para definir uma seção de navegação dentro de um documento. Seu objetivo principal é <strong>agrupar links de navegação que permitem ao usuário se mover entre diferentes partes de uma página ou para outras páginas do site</strong>. O uso da tag nav ajuda tanto na organização do código quanto na acessibilidade, permitindo que tecnologias assistivas identifiquem facilmente a área de navegação.</p>
+
+        <p class="texto-info">Características da tag nav:</p>
+        <div>
+          <ul>
+            <li>
+              <strong>Semântica:</strong> Ao usar nav, você indica que o conteúdo dentro dela está relacionado à navegação, o que ajuda os mecanismos de busca e leitores de tela a entenderem melhor a estrutura da página.
+            </li><br>
+            <li>
+              <strong>Acessibilidade:</strong> O uso dessa tag melhora a experiência de navegação para usuários com deficiências, pois leitores de tela podem saltar diretamente para a seção de navegação.
+            </li><br>
+            <li>
+              <strong>Conteúdo:</strong> A tag nav pode conter uma variedade de elementos, como listas de links (ul), links diretos (a), ou outras tags que façam referência a seções do site.
+            </li>
+          </ul>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no ícone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-25')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-25">
+            <span class="line-number">1</span>&lt;<strong>nav</strong>&gt;
+            <span class="line-number">2</span>&nbsp;&nbsp;&lt;<strong>ul</strong>&gt;
+            <span class="line-number">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>li</strong>&gt;<span style="text-decoration: underline; display: inline;">Home</span>&lt;/<strong>li</strong>&gt;
+            <span class="line-number">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>li</strong>&gt;<span style="text-decoration: underline; display: inline;">Sobre</span>&lt;/<strong>li</strong>&gt;
+            <span class="line-number">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>li</strong>&gt;<span style="text-decoration: underline; display: inline;">Serviços</span>&lt;/<strong>li</strong>&gt;
+            <span class="line-number">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<strong>li</strong>&gt;<span style="text-decoration: underline; display: inline;">Contato</span>&lt;/<strong>li</strong>&gt;
+            <span class="line-number">7</span>&nbsp;&nbsp;&lt;/<strong>ul</strong>&gt;
+            <span class="line-number">8</span>&lt;/<strong>nav</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content">
+            <nav>
+              <ul>
+                <li><span style="text-decoration: underline; display: inline;">Home</span></li>
+                <li><span style="text-decoration: underline; display: inline;">Sobre</span></li>
+                <li><span style="text-decoration: underline; display: inline;">Serviços</span></li>
+                <li><span style="text-decoration: underline; display: inline;">Contato</span></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <p class="texto-info">No exemplo acima, apresentamos a tag <strong>nav</strong>, que é utilizada para definir uma seção de navegação em um documento HTML. Essa seção contém uma lista de links que orientam os usuários pelas diferentes páginas ou seções do site. A lista é organizada com a tag <strong>ul</strong> (lista não ordenada), e cada item da lista é criado com a tag <strong>li</strong> (item de lista).</p>
+        <p class="texto-info">Os itens de navegação são apresentados de forma sublinhada, destacando suas funções e facilitando a identificação das opções disponíveis. Esse tipo de estrutura é fundamental para a usabilidade de um site, pois permite que os visitantes naveguem de maneira intuitiva e eficiente.</p>
       </div>
 
       <div>
-        <p class="sub-title">Exemplo 26 ():</p>
-        <p class="texto-info">A tag <strong>button</strong> em HTML é usada para criar botões que podem ser clicados pelo usuário. Os botões podem ser utilizados para executar ações, como enviar um formulário, disparar uma função em JavaScript ou interagir com outros elementos na página. Os atributos incluem:</p>
+        <p class="sub-title">Exemplo 26 (footer):</p>
+        <p class="texto-info">A tag
+          <strong>footer</strong> é utilizada para definir o <strong>rodapé de um documento ou de uma seção específica de uma página</strong>. Essa tag é essencial para a organização do conteúdo e para melhorar a acessibilidade, pois permite agrupar informações que geralmente são relevantes para o usuário, como:
+        </p>
+
+        <div>
+          <ul>
+            <li>
+              <strong>Informações de Contato:</strong> Ao usar nav, você indica que o conteúdo dentro dela está relacionado à navegação, o que ajuda os mecanismos de busca e leitores de tela a entenderem melhor a estrutura da página.
+            </li><br>
+            <li>
+              <strong>Créditos e Direitos Autorais:</strong> O uso dessa tag melhora a experiência de navegação para usuários com deficiências, pois leitores de tela podem saltar diretamente para a seção de navegação.
+            </li><br>
+            <li>
+              <strong>Links de Navegação:</strong> A tag nav pode conter uma variedade de elementos, como listas de links (ul), links diretos (a), ou outras tags que façam referência a seções do site.
+            </li>
+          </ul>
+        </div>
+
+        <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+        <div class="card">
+          <div class="card-header">
+            <h3>Para copiar, clique no icone ao lado</h3>
+            <button class="copy-btn" onclick="copyCode('code-26')">
+              <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+            </button>
+          </div>
+          <div class="code-block" id="code-26">
+            <span class="line-number">1</span>&lt;<strong>footer</strong>&gt;
+            <span class="line-number">2</span> &lt;p&gt;&copy; 2024 Meu Site. Todos os direitos reservados.&lt;/p&gt;
+            <span class="line-number">3</span> &lt;p&gt;Entre em contato: &lt;a href="mailto:contato@meusite.com"&gt;
+            <span class="line-number">4</span> contato@meusite.com&lt;/a&gt;&lt;/p&gt;
+            <span class="line-number">5</span> &lt;ul&gt;
+            <span class="line-number">6</span> &lt;li&gt;&lt;a href="#sobre"&gt;Sobre nós&lt;/a&gt;&lt;/li&gt;
+            <span class="line-number">7</span> &lt;li&gt;&lt;a href="#privacidade"&gt;Política de Privacidade&lt;/a&gt;&lt;/li&gt;
+            <span class="line-number">8</span> &lt;li&gt;&lt;a href="#termos"&gt;Termos de Serviço&lt;/a&gt;&lt;/li&gt;
+            <span class="line-number">9</span> &lt;/ul&gt;
+            <span class="line-number">10</span>&lt;/<strong>footer</strong>&gt;
+          </div>
+        </div>
+
+        <p class="texto-info">Exemplo de saída:</p>
+        <div class="expandable-card">
+          <div class="card-header">
+            <button class="expand-btn" onclick="toggleCard(this)">
+              <img class="icon" src="https://img.icons8.com/ios-filled/24/000000/chevron-down.png" alt="Expandir">
+            </button>
+          </div>
+          <div class="card-content">
+            <footer style="padding: 10px; background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 4px;">
+              <p>© 2024 Meu Site. Todos os direitos reservados.</p>
+              <p>Entre em contato: <a href="mailto:contato@meusite.com">contato@meusite.com</a></p>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#privacidade">Política de Privacidade</a></li>
+                <li><a href="#termos">Termos de Serviço</a></li>
+              </ul>
+            </footer>
+          </div>
+        </div>
       </div>
 
-      </div>
 
+
+      <footer class="footer">
+        <p>© 2024, desenvolvedoras - Carolaine / Maria / Emanuele. Todos os direitos reservados.</p>
+      </footer>
     </section>
+
   </main>
+
+
 
   <script src="./js/html-page/funcao-copy.js"></script>
   <script src="./js/html-page/resultado-5.js"></script>
