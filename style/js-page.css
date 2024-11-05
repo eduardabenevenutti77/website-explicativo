@@ -1,11 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar {
-  /* background-color: #8a6ab8; */
   background-color: #8271c1;
   padding: 22px;
   display: flex;
@@ -15,7 +14,6 @@ body {
   top: 0;
   z-index: 1000;
 }
-
 .navbar a {
   text-decoration: none;
   color: #fff;
@@ -24,45 +22,34 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.7s ease;
-  flex: 0.08; /* Faz os botões terem o mesmo tamanho */
+  flex: 0.08;
   text-align: center;
 }
-
 .navbar a:hover {
   background-color: #f3f8ff;
   color: #8a6ab8;
 }
 
-/* SideBar */
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
-/* html {
-  font-family: Arial;
-  font-size: 16px;
-  background: #eeeeee;
-} */
-
 .svg-icon-sidebar {
   display: flex;
   margin-top: 12px;
   justify-content: flex-end;
   margin-right: -16px;
 }
-
 .sidebar {
   background-color: #8271c1;
   font-size: 0.65em;
   height: 100%;
   background-color: #8271c1;
   position: fixed;
-  left: -120px; /* Esconde o menu fora da tela inicialmente */
+  left: -142px; /* Esconde o menu fora da tela inicialmente */
   transition: left 0.8s ease;
   /* margin-top: 72px; */
 }
 
 .sidebar.open {
-  left: 0; /* Mostra o menu quando a classe 'open' é adicionada */
+  left: 0;
 }
 
 .nav {
@@ -74,23 +61,22 @@ body {
   font-weight: bold;
 }
 
-/* .nav li {
+.nav li {
   width: 100%;
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 500px;
     height: 0.2em;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to right, #5e42a6, #b74e91);
-    
+    /* background-image: linear-gradient(to right, #5e42a6, #b74e91); */
+    background-color: rgba(255, 255, 255, 0.5);
   }
-} */
+}
 
 .nav ul {
   list-style: none;
-
   li {
     position: relative;
     /* margin: 3.2em 0; */
@@ -116,25 +102,29 @@ body {
     display: block;
     transition: all ease-out 300ms;
   }
-
   &.active a {
     color: white;
   }
-
   &:not(.active)::after {
     opacity: 0.2;
   }
-
   &:not(.active):hover a {
     color: rgba(#fff, 0.75);
   }
 }
-
 .sections {
   position: relative;
   width: 75%;
   float: right;
   /* height: 100vh; NÃO REMOVER*/
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 
   a {
     position: relative;
@@ -146,16 +136,103 @@ body {
   }
 
   p {
-    text-transform: uppercase;
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: 16px;
     letter-spacing: 0.1em;
-    /* color: #fff; */
-    font-weight: bold;
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+
+  #title {
+    text-align: start;
+    margin-right: 200px;
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Poppins";
+    text-transform: initial;
+    color: #8271c1;
+  }
+
+  .sub-title {
+    color: #8271c1;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 700;
+    margin-top: 60px;
+  }
+
+  .texto-info {
+    text-align: justify;
+    margin-right: 250px;
+    font-family: "Poppins";
+    font-size: 16px;
+  }
+
+  strong {
+    color: #8271c1;
   }
 }
-.poppins-regular {
+.container {
+  display: grid;
+  place-items: center; /* Centraliza horizontalmente e verticalmente */
+  /* height: 100vh; */
+  /* margin: 50px; */
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+#title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Poppins";
+  text-transform: capitalize;
+  color: #8271c1;
+  margin-top: 50px;
+}
+.texto-info {
+  text-align: justify;
+  /* margin: 25px; */
+  font-family: "Poppins";
+}
+
+.display-example {
+  display: flex;
+  padding: 20px;
+  border: 1px solid #8271c1;
+  border-radius: 15px;
+  background-color: #f4f3fb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  overflow-x: auto;
+}
+.display-example-hello {
+  padding: 20px;
+  border: 1px solid #8271c1;
+  border-radius: 15px;
+  background-color: #f4f3fb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  overflow-x: auto;
+  margin-top: 250pz;
+}
+code {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 14px;
+}
+
+strong {
+  color: #8a6ab8;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.line {
+  border: 1px solid #5e42a6;
+  width: 50%;
+  margin-left: 2%;
+  margin-top: 25px;
 }
