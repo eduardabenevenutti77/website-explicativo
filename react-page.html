@@ -9,9 +9,7 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,78 +37,21 @@
           <li><a href="#head">Head</a></li>
           <li><a href="#body">Body</a></li>
           <li><a href="#main">Main</a></li>
-          <li><a href="#react">React</a></li>
         </ul>
       </nav>
     </aside>
-
-    <!-- Conteúdo sobre React -->
+    
     <section id="react" class="content-section">
-      <h2>React</h2>
-      <p>React é uma biblioteca JavaScript de código aberto desenvolvida pelo Facebook, usada para criar interfaces de
-        usuário (UI) dinâmicas e responsivas. React permite a criação de componentes reutilizáveis, tornando o
-        desenvolvimento mais organizado e modular.</p>
-
-      <h3>Principais características:</h3>
-      <ul>
-        <li><strong>Componentização:</strong> Permite dividir a interface em componentes independentes, reutilizáveis e
-          de fácil manutenção.</li>
-        <li><strong>Virtual DOM:</strong> Usa um DOM virtual que melhora o desempenho ao atualizar somente as partes da
-          UI que realmente mudaram.</li>
-        <li><strong>Unidirecional:</strong> A passagem de dados é feita de forma unidirecional, do componente pai para o
-          filho, o que facilita o controle e a depuração do estado da aplicação.</li>
-      </ul>
-
-      <h3>Exemplo de Componente React</h3>
-      <p>O exemplo abaixo mostra um componente simples que exibe uma mensagem:</p>
-      <pre><code class="language-javascript">
-// Exemplo de um componente React
-import React from 'react';
-
-function Saudacao() {
-  return <h1>Bem-vindo ao React!</h1>;
-}
-
-export default Saudacao;
-      </code></pre>
-
-      <h3>Utilização de Estado</h3>
-      <p>O estado permite que o componente responda a interações do usuário e alterações de dados. Com hooks como
-        <code>useState</code>, é possível adicionar estados a componentes funcionais:</p>
-      <pre><code class="language-javascript">
-import React, { useState } from 'react';
-
-
-export default Contador;
-      </code></pre>
-
-      <h3>Integração com APIs</h3>
-      <p>React permite consumir APIs externas de forma eficiente. No exemplo abaixo, o hook <code>useEffect</code> é
-        usado para buscar dados de uma API:</p>
-      <pre><code class="language-javascript">
-import React, { useState, useEffect } from 'react';
-
-function DadosAPI() {
-  const [dados, setDados] = useState([]);
-
-  useEffect(() => {
-    fetch('https://api.exemplo.com/dados')
-      .then(response => response.json())
-      .then(data => setDados(data));
-  }, []);
-
-  return (
-    <ul>
-      {dados.map(item => (
-        <li key={item.id}>{item.nome}</li>
-      ))}
-    </ul>
-  );
-}
-
-export default DadosAPI;
-      </code></pre>
+      <h1>React</h1>
+      <p>React é uma biblioteca JavaScript popular para criar interfaces de usuário dinâmicas e interativas. Ele permite a construção de componentes reutilizáveis e a atualização eficiente da interface com o DOM virtual, facilitando o desenvolvimento de aplicações web complexas e responsivas.</p>
     </section>
+    
+    <section id="node" class="content-section">
+      <h1>Node.js no Backend</h1>
+      <p>Node.js é uma plataforma de execução para JavaScript que permite a criação de servidores backend rápidos e escaláveis. Com um modelo de I/O não-bloqueante, ele lida com várias conexões simultâneas de forma eficiente, tornando-o ideal para aplicativos em tempo real, como chat e sistemas de notificação.</p>
+      <p>Além disso, o Node.js possui um vasto ecossistema de pacotes no npm, que facilita a adição de funcionalidades ao backend, desde autenticação e roteamento até integração com bancos de dados.</p>
+    </section>
+
   </main>
   <script src="./js/sidebar-toggle.js"></script>
 </body>
