@@ -65,7 +65,8 @@
 
         <h2 id="variables">2. Variáveis e Tipos de Dados</h2>
         <p class="texto-info">No JavaScript, você pode criar variáveis usando <code>var</code>, <code>let</code> ou
-          <code>const</code>. Veja o exemplo abaixo:</p>
+          <code>const</code>. Veja o exemplo abaixo:
+        </p>
 
         <div class="display-example">
           <pre><code class="code-example">
@@ -91,7 +92,7 @@
           </code></pre>
         </div>
 
-        <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
+        <!-- <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
         <p class="texto-info">Uma das principais funcionalidades do JavaScript no front-end é a manipulação do DOM
           (Document Object Model), que permite acessar e modificar o conteúdo e a estrutura da página HTML. Exemplo de
           como alterar o conteúdo de um elemento HTML:</p>
@@ -101,6 +102,147 @@
             // Alterar o texto de um elemento com id 'titulo'
             document.getElementById('titulo').innerText = 'Novo Título';
           </code></pre>
+        </div> -->
+
+        <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
+        <p class="texto-info">
+          Uma das principais funcionalidades do JavaScript no front-end é a manipulação do DOM (Document Object Model).
+          O DOM é uma interface de programação que permite que programas e scripts interajam com o conteúdo, a estrutura
+          e os estilos de uma página web. Com a manipulação do DOM, é possível acessar e modificar elementos da página
+          HTML de forma dinâmica.
+        </p>
+        <p class="texto-info">
+          O DOM representa a página como uma árvore de nós, onde cada elemento HTML é um objeto que pode ser manipulado.
+          Cada tag HTML (como <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>) é transformada
+          em um nó, e você pode interagir com esses nós por meio do JavaScript. A manipulação do DOM permite alterar
+          conteúdos, modificar estilos, criar novos elementos e até responder a eventos do usuário.
+        </p>
+        <p class="texto-info">
+          Abaixo estão algumas das operações mais comuns realizadas com a manipulação do DOM:
+        </p>
+
+        <h3>1. Acessar elementos no DOM</h3>
+        <p class="texto-info">
+          Para manipular um elemento, primeiro você precisa acessá-lo. Existem várias maneiras de acessar um elemento,
+          como por id, classe, nome da tag ou até mesmo usando seletores CSS.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Acessar um elemento pelo id</strong>
+            const elementoPorId = document.getElementById('titulo');
+    
+            <strong>// Acessar elementos por classe (retorna uma coleção de elementos)</strong>
+            const elementosPorClasse = document.getElementsByClassName('minha-classe');
+    
+            <strong>// Acessar elementos por tag (retorna uma coleção de elementos)</strong>
+            const elementosPorTag = document.getElementsByTagName('p');
+    
+            <strong>// Acessar um elemento com o seletor CSS (apenas o primeiro encontrado)</strong>
+            const elementoPorSelector = document.querySelector('.minha-classe');
+    
+            <strong>// Acessar todos os elementos que correspondem ao seletor</strong>
+            const todosElementosPorSelector = document.querySelectorAll('.minha-classe');
+  </code></pre>
+        </div>
+
+        <h3>2. Modificar conteúdo de elementos</h3>
+        <p class="texto-info">
+          Depois de acessar um elemento, você pode modificar seu conteúdo, seja o texto, o HTML ou os atributos. Aqui
+          estão algumas formas de alterar o conteúdo de um elemento:
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Alterar o texto de um elemento com id 'titulo'</strong>
+            document.getElementById('titulo').innerText = 'Novo Título';
+    
+            <strong>// Alterar o conteúdo HTML de um elemento</strong>
+            document.getElementById('container').innerHTML = 'Texto <strong>HTML</strong> alterado!';
+    
+            <strong>// Alterar o texto sem formatação</strong>
+            document.getElementById('paragrafo').textContent = 'Texto atualizado sem formatação!';
+  </code></pre>
+        </div>
+
+        <h3>3. Alterar atributos de elementos</h3>
+        <p class="texto-info">
+          Você também pode alterar os atributos de um elemento, como o <code>src</code> de uma imagem ou o
+          <code>href</code> de um link, utilizando os métodos <code>setAttribute</code> e <code>getAttribute</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Alterar o atributo 'src' de uma imagem</strong>
+            document.getElementById('minhaImagem').setAttribute('src', 'novo-caminho-da-imagem.jpg');
+    
+            <strong>// Alterar o atributo 'href' de um link</strong>
+            document.getElementById('meuLink').setAttribute('href', 'https://www.novosite.com');
+    
+            <strong>// Obter o valor do atributo 'href'</strong>
+            const linkHref = document.getElementById('meuLink').getAttribute('href');
+  </code></pre>
+        </div>
+
+        <h3>4. Adicionar e remover elementos</h3>
+        <p class="texto-info">
+          Você pode adicionar novos elementos à página ou remover elementos existentes usando métodos como
+          <code>createElement</code>, <code>appendChild</code>, e <code>removeChild</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Criar um novo elemento </strong></p>
+            const novoParagrafo = document.createElement('p');
+            novoParagrafo.textContent = 'Este é um novo parágrafo!';
+    
+            <strong>// Adicionar o novo parágrafo ao final do body</strong></p>
+            document.body.appendChild(novoParagrafo);
+    
+            <strong>// Remover um elemento</strong>
+            const elementoARemover = document.getElementById('elementoParaRemover');
+            document.body.removeChild(elementoARemover);
+  </code></pre>
+        </div>
+
+        <h3>5. Manipular estilos</h3>
+        <p class="texto-info">
+          A manipulação de estilos também é uma parte importante do DOM. Você pode alterar as propriedades CSS
+          diretamente através da propriedade <code>style</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Alterar a cor de fundo de um elemento</strong>
+            document.getElementById('meuElemento').style.backgroundColor = 'yellow';
+    
+            <strong>// Alterar o tamanho da fonte de um elemento</strong>
+            document.getElementById('meuElemento').style.fontSize = '20px';
+    
+            <strong>// Alterar a cor do texto de um elemento</strong>
+            document.getElementById('meuElemento').style.color = 'red';
+  </code></pre>
+        </div>
+
+        <h3>6. Trabalhando com eventos</h3>
+        <p class="texto-info">
+          Uma das maiores vantagens da manipulação do DOM é a capacidade de interagir com os usuários. Você pode
+          adicionar ouvintes de eventos para detectar ações do usuário, como cliques, movimentos do mouse, teclas
+          pressionadas, etc.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Adicionar um evento de clique a um botão</strong>
+            document.getElementById('meuBotao').addEventListener('click', function() {
+            alert('Botão foi clicado!');
+    });
+    
+          <strong>// Adicionar um evento de mouseover a um elemento</strong>
+          document.getElementById('meuElemento').addEventListener('mouseover', function() {
+          this.style.color = 'blue'; // Mudar a cor do texto quando o mouse passar por cima
+    });
+  </code></pre>
         </div>
 
         <h2 id="events">5. Eventos</h2>
@@ -109,12 +251,13 @@
 
         <div class="display-example">
           <pre><code class="code-example">
-            // Adiciona um evento de clique em um botão
-            document.getElementById('meuBotao').addEventListener('click', function() {
-              alert('Botão clicado!');
-            });
-          </code></pre>
+              <span class="comment">// Adiciona um evento de clique em um botão</span>
+              document.getElementById('meuBotao').addEventListener('click', function() {
+                alert('Botão clicado!');
+              });
+            </code></pre>
         </div>
+
 
         <h2 id="fetch-api">6. Fetch API</h2>
         <p class="texto-info">A <code>Fetch API</code> é usada para fazer requisições HTTP assíncronas (por exemplo,
@@ -130,12 +273,35 @@
               .catch(error => console.error('Erro:', error));
           </code></pre>
         </div>
+
+        <h2 id="promises">7. Promessas</h2>
+        <p class="texto-info">As promessas permitem lidar com operações assíncronas. Elas têm três estados: pendente,
+          cumprida e rejeitada. Veja um exemplo:</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            function obterDados() {
+              return new Promise((resolve, reject) => {
+                let sucesso = true;
+                if (sucesso) {
+                  resolve('Dados recebidos com sucesso!');
+                } else {
+                  reject('Erro ao obter dados');
+                }
+              });
+            }
+
+            obterDados()
+              .then(mensagem => console.log(mensagem))  // Quando a Promise é resolvida
+              .catch(erro => console.error(erro));      // Quando a Promise é rejeitada
+          </code></pre>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Exemplo de elemento para evento de clique
-  <button id="meuBotao">Clique aqui</button> -->
+  <!-- Exemplo de elemento para evento de clique -->
+  <button id="meuBotao">Clique aqui</button>
 
   <script>
     // Exemplo de manipulação de DOM
@@ -152,7 +318,7 @@
       .then(data => console.log(data.slip.advice))
       .catch(error => console.error('Erro ao obter dados:', error));
   </script>
-  
+
   <script src="./js/script.js"></script>
 </body>
 
