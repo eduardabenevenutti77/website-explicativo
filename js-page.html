@@ -52,7 +52,7 @@
           permite adicionar interatividade a páginas web e é amplamente usada no desenvolvimento de front-end e
           back-end, através do Node.js.</p>
 
-        <h2 id="syntax">1. Sintaxe Básica</h2>
+        <!-- <h2 id="syntax">1. Sintaxe Básica</h2>
         <p class="texto-info">A sintaxe do JavaScript é simples, e podemos começar com um exemplo básico que exibe uma
           mensagem no console do navegador:</p>
 
@@ -61,7 +61,158 @@
           <strong>// Exibe uma mensagem no console</strong>
             console.log('Olá, JavaScript!');
           </code></pre>
+        </div> -->
+
+        <h2 id="syntax">1. Sintaxe Básica</h2>
+        <p class="texto-info">A sintaxe do JavaScript é simples, e podemos começar com um exemplo básico que exibe uma
+          mensagem no console do navegador:</p>
+
+        <div class="display-example-hello">
+          <pre><code class="code-example">
+  <strong>// Exibe uma mensagem no console</strong>
+  console.log('Olá, JavaScript!');
+  </code></pre>
         </div>
+
+        <h2 id="variables">2. Variáveis</h2>
+        <p class="texto-info">As variáveis são declaradas com a palavra chave <code>var</code>, como segue:</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  var i;
+  var sum;
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Também é possível declarar várias variáveis com a mesma palavra chave <code>var</code>:
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  var i, sum;
+  </code></pre>
+        </div>
+
+        <p class="texto-info">E pode-se combinar a declaração da variável com sua inicialização:</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  var i = 0, j = 0, k = 0;
+  var nome = "Fulano";
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Antes de usar uma variável em um programa JavaScript, você deve declará-la.</p>
+
+        <h2 id="types">3. Tipos</h2>
+        <p class="texto-info">Os tipos em JavaScript podem ser divididos em duas categorias:</p>
+        <ul>
+          <li>Tipos primitivos</li>
+          <li>Tipos de objeto</li>
+        </ul>
+
+        <p class="texto-info">Os tipos primitivos incluem números, strings e valores booleanos.</p>
+
+        <p class="texto-info">Os valores especiais <code>null</code> e <code>undefined</code> são valores primitivos,
+          mas não são números, nem strings e nem booleanos. Qualquer valor em JavaScript que não seja número, string,
+          booleano, <code>null</code> ou <code>undefined</code> é um objeto.</p>
+
+        <p class="texto-info">O operador <code>typeof</code> é usado para verificar o tipo de uma variável ou valor.</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  typeof "foo"; // 'string'
+  typeof 123;   // 'number'
+  </code></pre>
+        </div>
+
+        <h2 id="numbers">4. Números</h2>
+        <p class="texto-info">Ao contrário de muitas linguagens, JavaScript não faz distinção entre valores inteiros e
+          valores em ponto flutuante. Todos os números em JavaScript são representados como valores em ponto flutuante.
+        </p>
+
+        <p class="texto-info">Exemplos de literais inteiros:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  0
+  1
+  100
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Exemplos de literais em ponto flutuante:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  3.14
+  100.09
+  0.33333
+  </code></pre>
+        </div>
+
+        <h2 id="strings">5. Strings</h2>
+        <p class="texto-info">Para incluir uma string literal em um programa JavaScript, basta colocar os caracteres da
+          string entre aspas simples ou duplas.</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  "testing"
+  'other testing'
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Para concatenar strings, utilizamos o operador <code>+</code>.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  var msg = "Hello " + "world"; // "Hello world"
+  msg = "Welcome to my blog, " + nome;
+  </code></pre>
+        </div>
+
+        <p class="texto-info">A propriedade <code>length</code> determina o tamanho da string.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  "palavra".length // 7
+  </code></pre>
+        </div>
+
+        <h2 id="booleans">6. Booleanos</h2>
+        <p class="texto-info">Os valores booleanos são representados por <code>true</code> e <code>false</code>.</p>
+
+        <h2 id="null-undefined">7. Null e Undefined</h2>
+        <p class="texto-info">A palavra chave <code>null</code> indica a ausência de um valor. Já o valor
+          <code>undefined</code> representa uma ausência mais profunda, sendo o valor de variáveis que não foram
+          inicializadas.</p>
+
+        <h2 id="conversion">8. Conversão</h2>
+        <p class="texto-info">JavaScript é muito flexível quanto aos tipos de valores que exige. As variáveis em
+          JavaScript são não tipadas, permitindo atribuir diferentes tipos de valores a uma mesma variável.</p>
+
+        <p class="texto-info">JavaScript converte valores de um tipo para outro automaticamente, como, por exemplo,
+          números para strings ou valores para booleanos, conforme o contexto.</p>
+
+        <h2 id="conditional-if">9. Condicional - if / else</h2>
+        <div class="display-example">
+          <pre><code class="code-example">
+  if (n == 1) {
+      // executa este bloco if
+  } else if (n == 2) {
+      // executa este bloco else if
+  } else {
+      // executa este bloco else
+  }
+  </code></pre>
+        </div>
+
+        <h2 id="ternary-operator">10. Operador Condicional Ternário</h2>
+        <p class="texto-info">É possível obter resultados semelhantes usando o operador condicional ternário
+          <code>condition ? expr1 : expr2</code>.</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  resultado = (a > b) ? "a é maior que b" : "b é maior que a";
+  </code></pre>
+        </div>
+
 
         <h2 id="variables">2. Variáveis e Tipos de Dados</h2>
         <p class="texto-info">No JavaScript, você pode criar variáveis usando <code>var</code>, <code>let</code> ou
@@ -91,18 +242,6 @@
             console.log(saudacao('Maria'));
           </code></pre>
         </div>
-
-        <!-- <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
-        <p class="texto-info">Uma das principais funcionalidades do JavaScript no front-end é a manipulação do DOM
-          (Document Object Model), que permite acessar e modificar o conteúdo e a estrutura da página HTML. Exemplo de
-          como alterar o conteúdo de um elemento HTML:</p>
-
-        <div class="display-example">
-          <pre><code class="code-example">
-            // Alterar o texto de um elemento com id 'titulo'
-            document.getElementById('titulo').innerText = 'Novo Título';
-          </code></pre>
-        </div> -->
 
         <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
         <p class="texto-info">
