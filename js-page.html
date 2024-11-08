@@ -58,7 +58,7 @@
 
         <div class="display-example-hello">
           <pre><code class="code-example">
-            // Exibe uma mensagem no console
+          <strong>// Exibe uma mensagem no console</strong>
             console.log('Olá, JavaScript!');
           </code></pre>
         </div>
@@ -121,7 +121,7 @@
           Abaixo estão algumas das operações mais comuns realizadas com a manipulação do DOM:
         </p>
 
-        <h3>1. Acessar elementos no DOM</h3>
+        <h3>4.1 Acessar elementos no DOM</h3>
         <p class="texto-info">
           Para manipular um elemento, primeiro você precisa acessá-lo. Existem várias maneiras de acessar um elemento,
           como por id, classe, nome da tag ou até mesmo usando seletores CSS.
@@ -146,7 +146,7 @@
   </code></pre>
         </div>
 
-        <h3>2. Modificar conteúdo de elementos</h3>
+        <h3>4.2 Modificar conteúdo de elementos</h3>
         <p class="texto-info">
           Depois de acessar um elemento, você pode modificar seu conteúdo, seja o texto, o HTML ou os atributos. Aqui
           estão algumas formas de alterar o conteúdo de um elemento:
@@ -165,7 +165,7 @@
   </code></pre>
         </div>
 
-        <h3>3. Alterar atributos de elementos</h3>
+        <h3>4.3 Alterar atributos de elementos</h3>
         <p class="texto-info">
           Você também pode alterar os atributos de um elemento, como o <code>src</code> de uma imagem ou o
           <code>href</code> de um link, utilizando os métodos <code>setAttribute</code> e <code>getAttribute</code>.
@@ -184,7 +184,7 @@
   </code></pre>
         </div>
 
-        <h3>4. Adicionar e remover elementos</h3>
+        <h3>4.4 Adicionar e remover elementos</h3>
         <p class="texto-info">
           Você pode adicionar novos elementos à página ou remover elementos existentes usando métodos como
           <code>createElement</code>, <code>appendChild</code>, e <code>removeChild</code>.
@@ -192,11 +192,11 @@
 
         <div class="display-example">
           <pre><code class="code-example">
-            <strong>// Criar um novo elemento </strong></p>
+            <strong>// Criar um novo elemento </strong>
             const novoParagrafo = document.createElement('p');
             novoParagrafo.textContent = 'Este é um novo parágrafo!';
     
-            <strong>// Adicionar o novo parágrafo ao final do body</strong></p>
+            <strong>// Adicionar o novo parágrafo ao final do body</strong>
             document.body.appendChild(novoParagrafo);
     
             <strong>// Remover um elemento</strong>
@@ -205,7 +205,7 @@
   </code></pre>
         </div>
 
-        <h3>5. Manipular estilos</h3>
+        <h3>4.5 Manipular estilos</h3>
         <p class="texto-info">
           A manipulação de estilos também é uma parte importante do DOM. Você pode alterar as propriedades CSS
           diretamente através da propriedade <code>style</code>.
@@ -224,7 +224,7 @@
   </code></pre>
         </div>
 
-        <h3>6. Trabalhando com eventos</h3>
+        <h3>4.6 Trabalhando com eventos</h3>
         <p class="texto-info">
           Uma das maiores vantagens da manipulação do DOM é a capacidade de interagir com os usuários. Você pode
           adicionar ouvintes de eventos para detectar ações do usuário, como cliques, movimentos do mouse, teclas
@@ -251,7 +251,7 @@
 
         <div class="display-example">
           <pre><code class="code-example">
-              <span class="comment">// Adiciona um evento de clique em um botão</span>
+              <span class="comment"><strong>// Adiciona um evento de clique em um botão</strong></span>
               document.getElementById('meuBotao').addEventListener('click', function() {
                 alert('Botão clicado!');
               });
@@ -266,7 +266,7 @@
 
         <div class="display-example">
           <pre><code class="code-example">
-            // Faz uma requisição GET a uma API
+            <strong>// Faz uma requisição GET a uma API</strong>
             fetch('https://api.example.com/dados')
               .then(response => response.json())
               .then(data => console.log(data))
@@ -292,8 +292,8 @@
             }
 
             obterDados()
-              .then(mensagem => console.log(mensagem))  // Quando a Promise é resolvida
-              .catch(erro => console.error(erro));      // Quando a Promise é rejeitada
+              .then(mensagem => console.log(mensagem))  <strong>// Quando a Promise é resolvida</strong>
+              .catch(erro => console.error(erro));      <strong>// Quando a Promise é rejeitada</strong>
           </code></pre>
         </div>
       </div>
