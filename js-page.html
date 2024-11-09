@@ -191,7 +191,7 @@
   </code></pre>
         </div>
 
-        <h2 id="functions">3. Funções</h2>
+        <!-- <h2 id="functions">3. Funções</h2>
         <p class="texto-info">Funções no JavaScript são blocos de código reutilizáveis que realizam uma ação. Elas podem
           ser declaradas e invocadas conforme necessário:</p>
 
@@ -202,6 +202,104 @@
             }
             console.log(saudacao('Maria'));
           </code></pre>
+        </div> -->
+        <h2 id="functions">3. Funções</h2>
+        <p class="texto-info">Funções no JavaScript são blocos de código reutilizáveis que realizam uma ação. Elas podem
+          ser declaradas e invocadas conforme necessário:</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+        function saudacao(nome) {
+          return 'Olá, ' + nome + '!';
+        }
+        console.log(saudacao('Maria'));
+        </code></pre>
+        </div>
+
+        <h3>3.1 Declaração de Função</h3>
+        <p class="texto-info">As funções podem ser declaradas com a palavra-chave <code>function</code>:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function exemplo() {
+          console.log('Esta é uma função declarada.');
+        }
+        </code></pre>
+        </div>
+
+        <h3>3.2 Funções Anônimas</h3>
+        <p class="texto-info">Funções anônimas são funções sem nome, frequentemente atribuídas a variáveis:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const saudacao = function(nome) {
+          return 'Olá, ' + nome + '!';
+        };
+        console.log(saudacao('Lucas'));
+        </code></pre>
+        </div>
+
+        <h3>3.3 Arrow Functions</h3>
+        <p class="texto-info">Introduzidas no ES6, as <em>arrow functions</em> permitem uma sintaxe mais curta e não têm
+          seu próprio <code>this</code>:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const soma = (a, b) => a + b;
+        console.log(soma(5, 3));
+        </code></pre>
+        </div>
+
+        <h3>3.4 Parâmetros e Argumentos Padrão</h3>
+        <p class="texto-info">Funções podem ter valores padrão para parâmetros, caso nenhum argumento seja passado:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function saudacao(nome = 'Visitante') {
+          return 'Olá, ' + nome + '!';
+        }
+        console.log(saudacao()); <strong>// "Olá, Visitante!"</strong>
+        </code></pre>
+        </div>
+
+        <h3>3.5 Escopo e Contexto (<code>this</code>)</h3>
+        <p class="texto-info">O escopo define a visibilidade das variáveis, e o <code>this</code> refere-se ao contexto
+          em
+          que a função foi chamada. Em <em>arrow functions</em>, o <code>this</code> é herdado do escopo onde a função
+          foi
+          criada.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const pessoa = {
+          nome: 'Ana',
+          saudacao: function() {
+            console.log('Olá, ' + this.nome);
+          }
+        };
+        pessoa.saudacao(); <strong>// "Olá, Ana"</strong>
+        </code></pre>
+        </div>
+
+        <h3>3.6 Funções de Ordem Superior</h3>
+        <p class="texto-info">Funções de ordem superior recebem funções como argumentos ou retornam funções. Exemplo:
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function executar(func) {
+          func();
+        }
+        executar(() => console.log('Executando uma função passada como argumento.'));
+        </code></pre>
+        </div>
+
+        <h3>3.7 Métodos Úteis para Funções</h3>
+        <p class="texto-info">Métodos como <code>call</code>, <code>apply</code> e <code>bind</code> permitem manipular
+          o
+          contexto e invocar funções de maneira flexível:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const pessoa = { nome: 'Carlos' };
+        function apresentar() {
+          console.log('Olá, eu sou ' + this.nome);
+        }
+        apresentar.call(pessoa); <strong>// "Olá, eu sou Carlos"</strong>
+        </code></pre>
         </div>
 
         <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
@@ -358,9 +456,11 @@
             </code></pre>
         </div> -->
 
-                <h2 id="eventos">5. Eventos</h2>
+        <h2 id="eventos">5. Eventos</h2>
         <p class="texto-info">
-          JavaScript permite a criação de páginas interativas respondendo a eventos disparados pelo usuário, como cliques, teclas pressionadas ou o movimento do mouse. Um evento é uma ação que ocorre em uma página, e o JavaScript permite que você escute esses eventos e execute funções em resposta.
+          JavaScript permite a criação de páginas interativas respondendo a eventos disparados pelo usuário, como
+          cliques, teclas pressionadas ou o movimento do mouse. Um evento é uma ação que ocorre em uma página, e o
+          JavaScript permite que você escute esses eventos e execute funções em resposta.
         </p>
 
         <h3>5.1 Manipulação de Eventos</h3>
@@ -403,7 +503,8 @@
         </ul>
 
         <p class="texto-info">
-          Esses eventos, combinados com as funções de manipulação de DOM, permitem que você crie interfaces interativas e dinâmicas.
+          Esses eventos, combinados com as funções de manipulação de DOM, permitem que você crie interfaces interativas
+          e dinâmicas.
         </p>
 
         <h2 id="fetch-api">6. Fetch API</h2>
