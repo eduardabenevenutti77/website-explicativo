@@ -23,7 +23,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.7s ease;
-  flex: 0.08; /* Faz os botões terem o mesmo tamanho */
+  flex: 0.08; 
   text-align: center;
 }
 
@@ -33,8 +33,6 @@ body {
 }
 
 /* SideBar */
-
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans"); */
 
 .svg-icon-sidebar {
   display: flex;
@@ -54,7 +52,7 @@ body {
 }
 
 .sidebar.open {
-  left: 0; /* Mostra o menu quando a classe 'open' é adicionada */
+  left: 0; 
 }
 
 .nav {
@@ -201,10 +199,10 @@ body {
 }
 
 .sections .footer .footer {
-  margin-top: 90%px;
+  margin-top: 90%;
   background-color: #8271c1;
   padding: 20px;
   text-align: center;
   border-top: 1px solid #ddd;
-  margin-top: auto; /* Coloca o footer na parte inferior */
+  margin-top: auto; 
 }

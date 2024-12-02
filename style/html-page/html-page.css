@@ -28,13 +28,11 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #f3f8ff;
+  background-color: #f7f8fa;
   color: #8a6ab8;
 }
 
 /* SideBar */
-
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans"); */
 
 .svg-icon-sidebar {
   display: flex;
@@ -54,7 +52,7 @@ body {
 }
 
 .sidebar.open {
-  left: 0; /* Mostra o menu quando a classe 'open' é adicionada */
+  left: 0; 
 }
 
 .nav {
@@ -206,5 +204,5 @@ body {
   padding: 20px;
   text-align: center;
   border-top: 1px solid #ddd;
-  margin-top: auto; /* Coloca o footer na parte inferior */
+  margin-top: auto; 
 }
