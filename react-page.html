@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
+  <title>React</title>
   <link rel="stylesheet" href="./style/react-page.css">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,37 +23,162 @@
       <a href="/devops-page.html">DEVOPS</a>
     </div>
     <aside class="sidebar">
-      <div class="svg-icon-sidebar">
-        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="17.5" cy="17.5" r="17.5" fill="#5941A4" />
-          <rect x="10" y="12" width="16.125" height="1.75" rx="0.875" fill="white" />
-          <rect x="10" y="17.25" width="16.125" height="1.75" rx="0.875" fill="white" />
-          <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
-        </svg>
-      </div>
       <nav class="nav">
         <ul>
-          <li class="active"><a href="#home">HOME</a></li>
-          <li><a href="#head">Head</a></li>
-          <li><a href="#body">Body</a></li>
-          <li><a href="#main">Main</a></li>
+          <li class="active"><a href="#intro">Introdução</a></li>
+          <li><a href="#components">Componentes</a></li>
+          <li><a href="#hooks">Hooks</a></li>
+          <li><a href="#jsx">JSX</a></li>
+          <li><a href="#router">React Router</a></li>
+          <li><a href="#state-management">Gerenciamento de Estado</a></li>
         </ul>
       </nav>
     </aside>
-    
-    <section id="react" class="content-section">
-      <h1>React</h1>
-      <p>React é uma biblioteca JavaScript popular para criar interfaces de usuário dinâmicas e interativas. Ele permite a construção de componentes reutilizáveis e a atualização eficiente da interface com o DOM virtual, facilitando o desenvolvimento de aplicações web complexas e responsivas.</p>
-    </section>
-    
-    <section id="node" class="content-section">
-      <h1>Node.js no Backend</h1>
-      <p>Node.js é uma plataforma de execução para JavaScript que permite a criação de servidores backend rápidos e escaláveis. Com um modelo de I/O não-bloqueante, ele lida com várias conexões simultâneas de forma eficiente, tornando-o ideal para aplicativos em tempo real, como chat e sistemas de notificação.</p>
-      <p>Além disso, o Node.js possui um vasto ecossistema de pacotes no npm, que facilita a adição de funcionalidades ao backend, desde autenticação e roteamento até integração com bancos de dados.</p>
-    </section>
 
+    <section>
+      <h1 id="title">Introdução ao React</h1>
+      <div class="container">
+        <p class="texto-info">
+          React é uma biblioteca JavaScript de código aberto usada para construir interfaces de usuário, especialmente para aplicações web de página única. Criado pelo Facebook, ele facilita o desenvolvimento de UIs reutilizáveis e escaláveis.
+        </p>
+
+        <!-- Componentes -->
+        <h2 id="components">1. Estrutura de Componentes</h2>
+        <p class="texto-info">
+          Os componentes são as unidades fundamentais do React. Eles podem ser reutilizados para criar interfaces de usuário dinâmicas. Um componente pode ser uma função ou classe que retorna elementos React.
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+function Welcome(props) {
+  return &lt;h1&gt;Olá, {props.name}!&lt;/h1&gt;;
+}
+
+const App = () =&gt; (
+  &lt;div&gt;
+    &lt;Welcome name="Maria" /&gt;
+    &lt;Welcome name="João" /&gt;
+  &lt;/div&gt;
+);
+          </code></pre>
+        </div>
+
+        <!-- Hooks -->
+        <h2 id="hooks">2. Hooks</h2>
+        <p class="texto-info">
+          Hooks permitem adicionar funcionalidades como estado e efeitos colaterais em componentes funcionais. Os mais comuns são <code>useState</code> e <code>useEffect</code>.
+        </p>
+        <p><strong>Exemplo de uso do useState:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import React, { useState } from 'react';
+
+function Contador() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
+      &lt;button onClick={() =&gt; setContador(contador + 1)}&gt;Clique aqui&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+          </code></pre>
+        </div>
+
+        <p><strong>Exemplo de uso do useEffect:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import React, { useState, useEffect } from 'react';
+
+function Relogio() {
+  const [hora, setHora] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setHora(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return &lt;p&gt;Hora atual: {hora.toLocaleTimeString()}&lt;/p&gt;;
+}
+          </code></pre>
+        </div>
+
+        <!-- JSX -->
+        <h2 id="jsx">3. JSX</h2>
+        <p class="texto-info">
+          JSX é uma extensão de sintaxe que permite escrever código similar ao HTML dentro de arquivos JavaScript. Ele facilita a criação de elementos React.
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+const elemento = &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;;
+ReactDOM.render(elemento, document.getElementById('root'));
+          </code></pre>
+        </div>
+
+        <!-- React Router -->
+        <h2 id="router">4. React Router</h2>
+        <p class="texto-info">
+          React Router é uma biblioteca que permite a navegação entre páginas em uma aplicação React. Ela cria rotas para diferentes componentes.
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Switch&gt;
+        &lt;Route path="/" exact component={Home} /&gt;
+        &lt;Route path="/sobre" component={Sobre} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+          </code></pre>
+        </div>
+
+        <!-- Gerenciamento de Estado -->
+        <h2 id="state-management">5. Gerenciamento de Estado</h2>
+        <p class="texto-info">
+          O gerenciamento de estado é essencial para manter a consistência de dados em uma aplicação React. Ferramentas como Redux ou Context API são utilizadas para estados globais.
+        </p>
+        <p><strong>Diferença entre Redux e Context API:</strong></p>
+        <ul>
+          <li><strong>Redux:</strong> Oferece um padrão mais robusto para grandes aplicações, com middlewares como o Redux Thunk.</li>
+          <li><strong>Context API:</strong> Ideal para estados menores, eliminando a necessidade de bibliotecas externas.</li>
+        </ul>
+        <p><strong>Exemplo com Context API:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import React, { createContext, useContext, useState } from 'react';
+
+const TemaContext = createContext();
+
+function App() {
+  const [tema, setTema] = useState('claro');
+
+  return (
+    &lt;TemaContext.Provider value={{ tema, setTema }}&gt;
+      &lt;ComponenteFilho /&gt;
+    &lt;/TemaContext.Provider&gt;
+  );
+}
+
+function ComponenteFilho() {
+  const { tema, setTema } = useContext(TemaContext);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Tema atual: {tema}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setTema(tema === 'claro' ? 'escuro' : 'claro')}&gt;Alternar Tema&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+          </code></pre>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="./js/sidebar-toggle.js"></script>
 </body>
 
 </html>
