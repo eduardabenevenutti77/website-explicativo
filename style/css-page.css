@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, sans-serif; */
+  font-family: Arial, sans-serif;
 }
 .navbar {
   background-color: #8271c1;
@@ -28,7 +28,9 @@ body {
   background-color: #f3f8ff;
   color: #8a6ab8;
 }
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/* SideBar */
+
 .svg-icon-sidebar {
   display: flex;
   margin-top: 12px;
@@ -41,36 +43,35 @@ body {
   height: 100%;
   background-color: #8271c1;
   position: fixed;
-  left: -120px; /* Esconde o menu fora da tela inicialmente */
+  left: -142px; 
   transition: left 0.8s ease;
-  /* margin-top: 72px; */
 }
+
 .sidebar.open {
-  left: 0; /* Mostra o menu quando a classe 'open' é adicionada */
+  left: 0; 
 }
+
 .nav {
   position: relative;
   margin: 0 32px;
   text-align: right;
-  /* margin-top: 62px; */
-  /* transform: translateY(-50%); */
   font-weight: bold;
 }
+
 .nav ul {
   list-style: none;
+
   li {
     position: relative;
-    /* margin: 3.2em 0; */
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 0.2em;
-      /* background: black; */
       left: 0;
+      color: #fff;
       bottom: 0;
-      background-image: linear-gradient(to right, #5e42a6, #b74e91);
-      /* background-color: red; */
+      background-color: rgba(255, 255, 255, 0.5);
     }
     margin-top: 20px;
   }
@@ -95,16 +96,15 @@ body {
 }
 .container {
   display: grid;
-  place-items: center; /* Centraliza horizontalmente e verticalmente */
+  place-items: center; 
   min-height: 100vh;
-  /* margin: 50px; */
   padding-left: 250px;
   padding-right: 250px;
 }
 #title {
   text-align: center;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Poppins";
   text-transform: capitalize;
   color: #8271c1;
@@ -112,7 +112,6 @@ body {
 }
 .texto-info {
   text-align: justify;
-  /* margin: 25px; */
   font-family: "Poppins";
 }
 .poppins-regular {
@@ -158,7 +157,6 @@ strong {
 code {
   font-family: "Poppins";
   font-size: 14px;
-  /* font-weight: 500; */
 }
 .first-example {
   margin-left: 0;
@@ -176,7 +174,6 @@ img {
 }
 .title-selecao {
   font-family: "Poppins";
-  /* text-transform: lowercase; */
   font-weight: 800;
   color: #5e42a6;
 }
@@ -197,7 +194,6 @@ img {
 }
 .title-class {
   font-family: "Poppins";
-  /* text-transform: lowercase; */
   font-weight: 800;
   color: #5e42a6;
 }
