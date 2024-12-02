@@ -1,12 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   font-family: "Poppins";
   /* font-family: Arial, sans-serif; */
-=======
-  font-family: Arial, sans-serif;
->>>>>>> 8010c1bcc422422cd9a7e2484d96f984566922c2
 }
 .navbar {
   background-color: #8271c1;
