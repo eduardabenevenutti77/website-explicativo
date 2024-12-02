@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins";
   /* font-family: Arial, sans-serif; */
 }
 .navbar {
@@ -41,7 +42,7 @@ body {
   height: 100%;
   background-color: #8271c1;
   position: fixed;
-  left: -120px; /* Esconde o menu fora da tela inicialmente */
+  left: -190px; /* Esconde o menu fora da tela inicialmente */
   transition: left 0.8s ease;
   /* margin-top: 72px; */
 }
