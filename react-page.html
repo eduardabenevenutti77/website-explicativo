@@ -156,19 +156,38 @@ function Contador() {
           </code></pre>
         </div>
 
-        <!-- JSX -->
-        <h2 id="jsx">3. JSX</h2>
-        <p class="texto-info">
-          JSX é uma extensão de sintaxe que permite escrever código similar ao HTML dentro de arquivos JavaScript. Ele
-          facilita a criação de elementos React.
-        </p>
-        <p><strong>Exemplo de uso básico de JSX:</strong></p>
-        <div class="display-example">
-          <pre><code class="code-example">
-const elemento = &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;;
-ReactDOM.render(elemento, document.getElementById('root'));
-          </code></pre>
-        </div>
+        <section id="jsx-section" class="content-section">
+          <h2 id="jsx" class="section-title">3. JSX</h2>
+          <p class="texto-info">
+            JSX (JavaScript XML) é uma extensão de sintaxe que combina a simplicidade da escrita de HTML com o poder do
+            JavaScript em arquivos React. Ele permite criar elementos e componentes React de forma clara e intuitiva,
+            tornando o código mais legível e fácil de manter.
+          </p>
+
+          <div class="important-info">
+            <h3 class="sub-title">Por que JSX é importante?</h3>
+            <ul class="reasons-list">
+              <li><strong>Sintaxe Familiar:</strong> Desenvolvedores familiarizados com HTML podem facilmente começar a
+                usar JSX.</li>
+              <li><strong>Integração com JavaScript:</strong> JSX permite a inserção de expressões JavaScript
+                diretamente no código HTML-like, facilitando a personalização de elementos.</li>
+              <li><strong>Código Mais Declarativo:</strong> Ajuda a descrever a estrutura da interface do usuário de
+                forma intuitiva.</li>
+            </ul>
+          </div>
+
+          <div class="example-section2">
+            <p><strong>Exemplo de uso básico de JSX:</strong></p>
+            <div class="display-example">
+              <pre><code class="code-example">
+                  const elemento = &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;;
+                  ReactDOM.render(elemento, document.getElementById('root'));
+      </code></pre>
+            </div>
+          </div>
+        </section>
+
+
 
         <!-- React Router -->
         <h2 id="router">4. React Router</h2>
@@ -178,42 +197,68 @@ ReactDOM.render(elemento, document.getElementById('root'));
         </p>
         <div class="display-example">
           <pre><code class="code-example">
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+<strong>// Componentes de exemplo</strong>
+const Home = () => &lt;h1&gt;Página Inicial&lt;/h1&gt;;
+const Sobre = () => &lt;h1&gt;Sobre Nós&lt;/h1&gt;;
 
 function App() {
   return (
     &lt;Router&gt;
-      &lt;Switch&gt;
-        &lt;Route path="/" exact component={Home} /&gt;
-        &lt;Route path="/sobre" component={Sobre} /&gt;
-      &lt;/Switch&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to="/"&gt;Home&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to="/sobre"&gt;Sobre&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/sobre" element={&lt;Sobre /&gt;} /&gt;
+      &lt;/Routes&gt;
     &lt;/Router&gt;
   );
 }
-          </code></pre>
+
+export default App;
+  </code></pre>
         </div>
 
-<!-- Gerenciamento de Estado -->
-<h2 id="state-management">5. Gerenciamento de Estado</h2>
-<p class="texto-info">
-  O gerenciamento de estado é essencial para manter a consistência de dados em uma aplicação React. Ferramentas
-  como Redux ou Context API são utilizadas para estados globais.
-</p>
 
-<p>
-  O Redux é uma biblioteca de gerenciamento de estado previsível para aplicações JavaScript. Ele centraliza o estado de uma aplicação em um único local, o "store", e fornece uma maneira previsível de gerenciar suas alterações. Em vez de atualizar diretamente o estado, as mudanças são feitas por meio de "actions" e "reducers", facilitando o rastreamento e a depuração da aplicação.
-</p>
-<p>
-  Abaixo, um exemplo de como o Redux pode ser utilizado para gerenciar um contador. O estado é mantido no "store", e as ações de incremento e decremento controlam a modificação desse estado. O componente `App` acessa o estado global por meio do `useSelector` e dispara as ações utilizando o `useDispatch`.
-</p>
+        <!-- Gerenciamento de Estado -->
+        <h2 id="state-management">5. Gerenciamento de Estado</h2>
+        <p class="texto-info">
+          O gerenciamento de estado é essencial para manter a consistência de dados em uma aplicação React. Ferramentas
+          como
+          Redux ou Context API são utilizadas para estados globais.
+        </p>
 
-<p><strong>Exemplo com Redux:</strong></p>
-<div class="display-example">
-  <pre><code class="code-example">
+        <p>
+          O Redux é uma biblioteca de gerenciamento de estado previsível para aplicações JavaScript. Ele centraliza o
+          estado de
+          uma aplicação em um único local, o "store", e fornece uma maneira previsível de gerenciar suas alterações. Em
+          vez de
+          atualizar diretamente o estado, as mudanças são feitas por meio de "actions" e "reducers", facilitando o
+          rastreamento
+          e a depuração da aplicação.
+        </p>
+        <p>
+          Abaixo, um exemplo de como o Redux pode ser utilizado para gerenciar um contador. O estado é mantido no
+          "store", e as
+          ações de incremento e decremento controlam a modificação desse estado. O componente `App` acessa o estado
+          global por
+          meio do `useSelector` e dispara as ações utilizando o `useDispatch`.
+        </p>
+
+        <p><strong>Exemplo com Redux:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
 import { createStore } from 'redux';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 
-<strong>// Reducer</strong>
+// Reducer
 function contador(state = 0, action) {
   switch (action.type) {
     case 'increment': return state + 1;
@@ -225,7 +270,7 @@ function contador(state = 0, action) {
 const store = createStore(contador);
 
 function App() {
-  const contador = useSelector(state =&gt; state);
+  const contador = useSelector(state => state);
   const dispatch = useDispatch();
 
   return (
@@ -237,7 +282,7 @@ function App() {
   );
 }
 
-<strong>// Envolvendo a Aplicação:</strong>
+// Envolvendo a Aplicação:
 export default function Root() {
   return (
     &lt;Provider store={store}&gt;
@@ -246,23 +291,24 @@ export default function Root() {
   );
 }
   </code></pre>
-</div>
+        </div>
 
+        <p><strong>Contextos: Compartilhando Informações Globais</strong></p>
+        <p>
+          Um contexto provê informações através de um provedor (provider), tornando-as acessíveis a todos os elementos
+          filhos
+          por meio de um consumidor (consumer).
+        </p>
 
-<p><strong>Contextos: Compartilhando Informações Globais</strong></p>
-<p>
-  Um contexto provê informações através de um provedor (provider), tornando-as acessíveis a todos os elementos filhos por meio de um consumidor (consumer).
-</p>
-
-<p><strong>Exemplo com Context API:</strong></p>
-<div class="display-example">
-  <pre><code class="code-example">
+        <p><strong>Exemplo com Context API:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
 import React, { createContext, useContext } from 'react';
 
-<strong>// Criando um contexto</strong>
+// Criando um contexto
 const ThemeContext = createContext();
 
-<strong>// Componente provedor do contexto</strong>
+// Componente provedor do contexto
 const ThemeProvider = ({ children }) => {
   const theme = 'dark';
 
@@ -273,14 +319,14 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-<strong>// Componente consumidor do contexto</strong>
+// Componente consumidor do contexto
 const ThemedComponent = () => {
   const theme = useContext(ThemeContext);
 
   return &lt;p style={{ color: theme === 'dark' ? 'white' : 'black' }}&gt;Texto com tema dinâmico&lt;/p&gt;
 };
 
-<strong>// Utilizando o contexto</strong>
+// Utilizando o contexto
 const App = () => {
   return (
     &lt;ThemeProvider&gt;
@@ -288,10 +334,68 @@ const App = () => {
     &lt;/ThemeProvider&gt;
   );
 };
-
-<br>
   </code></pre>
+        </div>
 
-</div>
+        <h3>Diferença entre Redux e Context API</h3>
+        <p>
+          O <strong>Redux</strong> é uma biblioteca externa focada no gerenciamento de estado global e altamente
+          escalável. Ele
+          é ideal para aplicações maiores, com estados complexos que demandam organização, controle previsível e
+          ferramentas
+          para depuração, como o Redux DevTools. Por outro lado, a <strong>Context API</strong>, uma funcionalidade
+          nativa do
+          React, é mais adequada para casos menos complexos ou para compartilhar informações específicas, como temas ou
+          dados
+          de autenticação.
+        </p>
 
-<script src="./js/script.js"></script>
+        <h4>Redux: Quando utilizar?</h4>
+        <ul>
+          <li>Quando há múltiplos componentes que precisam acessar e alterar o estado global.</li>
+          <li>Para aplicações que necessitam de ferramentas robustas para rastrear mudanças de estado.</li>
+          <li>Quando se busca maior previsibilidade no fluxo de dados.</li>
+        </ul>
+
+        <h4>Context API: Quando utilizar?</h4>
+        <ul>
+          <li>Para aplicações pequenas ou médias.</li>
+          <li>Quando o compartilhamento de informações é localizado, sem necessidade de regras elaboradas para
+            atualização do
+            estado.</li>
+          <li>Para manter a simplicidade e evitar dependências externas.</li>
+        </ul>
+        <h4>Comparação Prática</h4>
+        <table style="border-collapse: collapse; width: 100%; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 2px solid #000;">
+              <th style="border: 1px solid #ccc; padding: 8px;">Critério</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Redux</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Context API</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Complexidade</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Alta: Ideal para grandes aplicações.</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Baixa: Melhor para estados simples.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Performance</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Escalável para grande número de componentes.</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Pode impactar renderizações desnecessárias.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Ferramentas</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Dispõe de DevTools para depuração avançada.</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Sem ferramentas externas.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Aprendizado</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Curva de aprendizado maior.</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Mais fácil de aprender e aplicar.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <script src="./js/script.js"></script>
