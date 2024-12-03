@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,11 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <main class="main">
     <div class="navbar">
@@ -44,17 +48,22 @@
     
     <p id="title">Como funciona a estilização por CSS: </p>
     <div class="container">
-        <p class="texto-info">É a linguagem que utilizamos para <strong>modelar a aparência dos elementos</strong> de uma página web por meio de regras semânticas, de tal maneira, está regras são compostas por propriedades que ao serem aplicadas em um elemento HTML alteram suas características visuais. A regra para declarar o objeto de alteração de um elemento, pode ser realizado da seguinte maneira:</p>
-        <ul>
-            <li class="li"> Necessitamos do objeto a ser alterado, suponha que seja um elemento de texto, como: parágrafo "p"</li>
-            <li class="li"> Ao delimitar tal objeto, necessitamos <strong>informar qual vai ser o estilo que será alterado</strong>, neste caso, podemos usar como exemplo a cor de um parágrafo.</li>
-        </ul>
-        <div id="display-teste">
-          <div class="display-example">
-            <button class="toggle-btn">
-              <i class='bx bx-chevron-down'></i>
-            </button>
-            <pre class="code-card" style="display: none;">
+      <p class="texto-info">É a linguagem que utilizamos para <strong>modelar a aparência dos elementos</strong> de uma
+        página web por meio de regras semânticas, de tal maneira, está regras são compostas por propriedades que ao
+        serem aplicadas em um elemento HTML alteram suas características visuais. A regra para declarar o objeto de
+        alteração de um elemento, pode ser realizado da seguinte maneira:</p>
+      <ul>
+        <li class="li"> Necessitamos do objeto a ser alterado, suponha que seja um elemento de texto, como: parágrafo
+          "p"</li>
+        <li class="li"> Ao delimitar tal objeto, necessitamos <strong>informar qual vai ser o estilo que será
+            alterado</strong>, neste caso, podemos usar como exemplo a cor de um parágrafo.</li>
+      </ul>
+      <div id="display-teste">
+        <div class="display-example">
+          <button class="toggle-btn">
+            <i class='bx bx-chevron-down'></i>
+          </button>
+          <pre class="code-card" style="display: none;">
               <code id="first-example">
                 &lt;!DOCTYPE html&gt;
                 &lt;html lang="pt-br"&gt;
@@ -74,17 +83,28 @@
                 &lt;/html&gt;
               </code>
             </pre>
-          </div>          
-          <p class="texto-info">
-            Vale-se ponderar que as propriedades: <strong>color</strong>, <strong>background</strong>, <strong>font</strong>, <strong>display</strong>, <strong>position</strong>, <strong>width</strong>, <strong>height</strong>, <strong>none</strong>, <strong>block</strong>, <strong>inline</strong>, <strong>flex</strong>, <strong>grid</strong>, <strong>absolute</strong>, <strong>relative</strong>, <strong>fixed</strong>, <strong>auto</strong>, <strong>inherit</strong>, <strong>initial</strong>, <strong>transparent</strong>, <strong>red</strong>, <strong>blue</strong>, <strong>green</strong>, <strong>yellow</strong>, entre outras, são palavras de uso restrito do CSS. Então, devemos evitar o uso dessas palavras em outras partes do desenvolvimento para evitar conflitos!
-          </p>                       
         </div>
-        <p class="texto-info">Mas como podemos selecionar um elemento para realizar a sua alteração? Atualmente existe três maneiras para realizar a estilização de um determinado elemento. A seguir iremos demonstrar na prática o uso, por meio de: elemento, classe e identificador.</p>
-        <div id="elemento">
-          <p class="title-selecao">1º - Elemento HTML</p>
-          <p class="texto-elemento">Podemos modelar o visual de um elemento html pela sua própria tag, neste caso suponha-se que há um mini código desenvolvido em HTML e desejamos alterar o estilo da fonte, a cor e o tamanho de uma tag 'p'</p>
-          <div class="display-example-selection">
-            <pre><code class="styles-example">
+        <p class="texto-info">
+          Vale-se ponderar que as propriedades: <strong>color</strong>, <strong>background</strong>,
+          <strong>font</strong>, <strong>display</strong>, <strong>position</strong>, <strong>width</strong>,
+          <strong>height</strong>, <strong>none</strong>, <strong>block</strong>, <strong>inline</strong>,
+          <strong>flex</strong>, <strong>grid</strong>, <strong>absolute</strong>, <strong>relative</strong>,
+          <strong>fixed</strong>, <strong>auto</strong>, <strong>inherit</strong>, <strong>initial</strong>,
+          <strong>transparent</strong>, <strong>red</strong>, <strong>blue</strong>, <strong>green</strong>,
+          <strong>yellow</strong>, entre outras, são palavras de uso restrito do CSS. Então, devemos evitar o uso dessas
+          palavras em outras partes do desenvolvimento para evitar conflitos!
+        </p>
+      </div>
+      <p class="texto-info">Mas como podemos selecionar um elemento para realizar a sua alteração? Atualmente existe
+        três maneiras para realizar a estilização de um determinado elemento. A seguir iremos demonstrar na prática o
+        uso, por meio de: elemento, classe e identificador.</p>
+      <div id="elemento">
+        <p class="title-selecao">1º - Elemento HTML</p>
+        <p class="texto-elemento">Podemos modelar o visual de um elemento html pela sua própria tag, neste caso
+          suponha-se que há um mini código desenvolvido em HTML e desejamos alterar o estilo da fonte, a cor e o tamanho
+          de uma tag 'p'</p>
+        <div class="display-example-selection">
+          <pre><code class="styles-example">
               &lt;!DOCTYPE html&gt;
               &lt;html lang="pt-br"&gt;
               &lt;head&gt;
@@ -104,14 +124,15 @@
               &lt;/body&gt;
               &lt;/html&gt;
               </code></pre>
-            </div>
         </div>
-        <div class="line"></div>
-        <div id="class">
-          <p class="title-class">2º - Class</p>
-          <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p>
-            <div class="display-example-selection">
-              <pre><code class="styles-example">
+      </div>
+      <div class="line"></div>
+      <div id="class">
+        <p class="title-class">2º - Class</p>
+        <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso
+          consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p>
+        <div class="display-example-selection">
+          <pre><code class="styles-example">
                 &lt;!DOCTYPE html&gt;
                 &lt;html lang="pt-br"&gt;
                 &lt;head&gt;
@@ -135,16 +156,19 @@
                 &lt;/body&gt;
                 &lt;/html&gt;
                 </code></pre>
-              </div>
-              <p class="texto-elemento">Todos os elementos que possuírem no HTML a propriedade class 'fix-color' terão sua cor alterada para vermelho. Isso facilitará a vida do programador quando desejar que apenas alguns elementos de sua aplicação tenham determinada estilização.</p>
         </div>
-        <div class="line"></div>
-        <div id="class">
-          <p class="title-class">3º - ID</p>
-          <p class="texto-elemento">Existe também a possibilidade de estilizar apenas um único elemento dentro de uma página, mas como isso ocorre?  </p>
-          <!-- <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p> -->
-          <div class="display-example">
-            <pre><code class="styles-example-selection">
+        <p class="texto-elemento">Todos os elementos que possuírem no HTML a propriedade class 'fix-color' terão sua cor
+          alterada para vermelho. Isso facilitará a vida do programador quando desejar que apenas alguns elementos de
+          sua aplicação tenham determinada estilização.</p>
+      </div>
+      <div class="line"></div>
+      <div id="class">
+        <p class="title-class">3º - ID</p>
+        <p class="texto-elemento">Existe também a possibilidade de estilizar apenas um único elemento dentro de uma
+          página, mas como isso ocorre? </p>
+        <!-- <p class="texto-elemento">A segunda maneira de alterar visualmente um elemento é por meio da sua classe, isso consiste em elementos que possuem como delimitadores o seguinte caractere: '.'</p> -->
+        <div class="display-example">
+          <pre><code class="styles-example-selection">
               &lt;!DOCTYPE html&gt;
               &lt;html lang="pt-br"&gt;
               &lt;head&gt;
@@ -173,57 +197,85 @@
               &lt;/body&gt;
               &lt;/html&gt;
               </code></pre>
-            </div>
-          <p class="texto-elemento">Com o uso de delimitadores por identificação fica <strong>restrito o uso para somente aquele elemento em específico</strong>. Podemos grifar pontos extremamentes importantes do uso de ID na estilização, como: Quando existe conflito em nossa estilização, o <strong>elemento que possuir id será priorizado</strong>. Outro ponto interessante é <strong>desempenho em comparação ao uso de classes</strong>;</p>
         </div>
-        <div>
-          <p id="title">Como funciona a propriedade de texto no CSS: </p>
-          <p class="subtitle-text">1ª - Color: Está propriedade define qual cor o nosso elemento de texto irá possuir. Para utilizar, podemos informar os seguintes valores: O nome da cor <strong>(`red`)</strong>, hexadecimais <strong>(`#ff000`)</strong> e até valores RGB/RGBA<strong>(`rgb(255, 0, 0)`)</strong></p>
-          <p class="subtitle-text">2ª - Font-size: O tamanho que o texto terá, podemos usar: pixels <strong>(`15px`)</strong>, em <strong>(`15em`)</strong>, porcentagem <strong>(`15%`)</strong></p>
-          <p class="subtitle-text">3ª - Font-style: O estilo do texto, podendo ser em negrito, normal, itálico e etc</p>
-          <p class="subtitle-text">4ª - Text-aling: Define o alinhamento do texto dentro da página, podemos definir como: esquerdo -> <strong>left</strong>, direito -> <strong>right</strong>, centralizado -> <strong>center</strong>, justificado -> <strong>justify</strong></p>
-          <p class="subtitle-text">5ª - Text-transform: Controla a capitalização do texto, mas o que é isso? É o estilo em qual as frases estarão. De tal modo, podemos deixar tudo em maiúsculas, minúsculas, cada começo de frase e etc</p>
-        </div>
-        <div>
-          <p id="title">Como funciona a propriedade de layouts no CSS: </p>
-          <p class="subtitle-layouts">Display: Essa propriedade defina a maneira pela qual o nosso elemento será disposto na tela do usuário, dentro dessa propriedade podemos definir em: blocos -> <strong>block</strong>, linha -> <strong>inline</strong>, flexível -> <strong>flex</strong> e em grade -> <strong>grid</strong></p>
-          <p class="subtitle-layouts">Position: A posição de um elemento dentro da página, podemos utilizar o valor padrão -> <strong>static</strong>, relativo -> <strong>relative</strong>, absoluto -> <strong>absolute</strong> e por fim podemos utilizar o valor fixo -> <strong>fixed</strong></p>
-          <p class="subtitle-layouts">Os elementos <strong>top</strong>, <strong>left</strong>, <strong>right</strong>, <strong>bottom</strong> define a posição do elemento filho dentro do seu elemento pai, essa posição é amplamente dependente do position delimitado a ele</p>
-          <p class="subtitle-layouts">Já o elemento <strong>z-index</strong> delimita a ordem de empilhamento dos elementos. Conforme mais alto for o valor informado a ele, mais perto da tela ele estará!</p>
-        </div>
-        <div>
-          <p id="title">Como funciona a propriedade do box model no CSS: </p>
-          <p class="subtitle-model">1ª Margin: Define o espaçamento ao redor do elemento;</p>
-          <p class="subtitle-model">2ª Padding: Define o espaçamento interno do elemento;</p>
-          <p class="subtitle-model">3ª Border: Define a borda de um elemento, podendo ter um estilo, cor e espessura;</p>
-          <p class="subtitle-model">4ª Width e Height: Definem a largura e a altura de um elemento;</p>
-          <p class="subtitle-model">5ª Box-sizing: Define como a largura e a altura de elemento serão calculadas, pode ser utilizado as seguintes opções: <strong>border-box</strong> -> inclui o padding e borda, e o <strong>content-box</strong> -> esse não possui nada junto;</p>
-        </div>
-        <div class="display-background">
-          <p id="title">Como funciona a propriedade de background no CSS: </p>
-          <p class="subtitle-back">Background-color: A cor de fundo do elemento;</p>
-          <p class="subtitle-back">Background-image: Define uma imagem para o fundo;</p>
-          <p class="subtitle-back">Background-size: Define como a imagem irá ocupar o elemento;</p>
-          <p class="subtitle-back">Background-position: Delimita a posição da imagem de fundo;</p>
-          <p class="subtitle-back">Background-repeat: Define se a imagem do fundo será repetida, e a posição: repeat-x -> <strong>linha</strong> e repeat-y -> <strong>coluna</strong></p>
-        </div>
-        <div>
-          <p id="title">Como funciona a propriedade Flexbox no CSS</p>
-          <p class="subtitle-flex">Display: flex | Delimita o container como flexbox, o que permite o alinhamento e distribuição flexíveis dos elementos filhos</p>
-          <p class="subtitle-flex">Justify-content: Delimita a maneira pela qual os elementos filhos serão distribuídos no eixo principal</p>
-          <p class="subtitle-flex">Align-items: O alinhamento dos elementos filhos ao longo do eixo transversal</p>
-          <p class="subtitle-flex">Flex-wrap: Define se os itens devem quebrar para uma nova linha quando não houver espaço suficiente -> <strong>wrap</strong> ou permanecerem em uma linha -> <strong>nowrap</strong></p>
-        </div>
-        <p id="title">Como funciona a propriedade Grid no CSS</p>
-        <div class="display-grid">
-          <p class="subtitle-grid"><strong>Display: grid</strong>  Define um contêiner como um Grid, permitindo criar layouts baseados em colunas e linhas</p>
-          <p class="subtitle-grid"><strong>Grid-template-columns</strong> Define o número de colunas e a largura de cada uma</p>
-          <p class="subtitle-grid"><strong>Grid-template-rows</strong>  Define o número de linhas e a altura de cada uma</p>
-          <p class="subtitle-grid"><strong>Gap</strong>  Define o espaçamento entre colunas e/ou linhas</p>
-        </div>
+        <p class="texto-elemento">Com o uso de delimitadores por identificação fica <strong>restrito o uso para somente
+            aquele elemento em específico</strong>. Podemos grifar pontos extremamentes importantes do uso de ID na
+          estilização, como: Quando existe conflito em nossa estilização, o <strong>elemento que possuir id será
+            priorizado</strong>. Outro ponto interessante é <strong>desempenho em comparação ao uso de classes</strong>;
+        </p>
+      </div>
+      <div id="textoNav">
+        <p id="title">Como funciona a propriedade de texto no CSS: </p>
+        <p class="subtitle-text">1ª - Color: Está propriedade define qual cor o nosso elemento de texto irá possuir.
+          Para utilizar, podemos informar os seguintes valores: O nome da cor <strong>(`red`)</strong>, hexadecimais
+          <strong>(`#ff000`)</strong> e até valores RGB/RGBA<strong>(`rgb(255, 0, 0)`)</strong></p>
+        <p class="subtitle-text">2ª - Font-size: O tamanho que o texto terá, podemos usar: pixels
+          <strong>(`15px`)</strong>, em <strong>(`15em`)</strong>, porcentagem <strong>(`15%`)</strong></p>
+        <p class="subtitle-text">3ª - Font-style: O estilo do texto, podendo ser em negrito, normal, itálico e etc</p>
+        <p class="subtitle-text">4ª - Text-aling: Define o alinhamento do texto dentro da página, podemos definir como:
+          esquerdo -> <strong>left</strong>, direito -> <strong>right</strong>, centralizado -> <strong>center</strong>,
+          justificado -> <strong>justify</strong></p>
+        <p class="subtitle-text">5ª - Text-transform: Controla a capitalização do texto, mas o que é isso? É o estilo em
+          qual as frases estarão. De tal modo, podemos deixar tudo em maiúsculas, minúsculas, cada começo de frase e etc
+        </p>
+      </div>
+      <div id="layoutNav">
+        <p id="title">Como funciona a propriedade de layouts no CSS: </p>
+        <p class="subtitle-layouts">Display: Essa propriedade defina a maneira pela qual o nosso elemento será disposto
+          na tela do usuário, dentro dessa propriedade podemos definir em: blocos -> <strong>block</strong>, linha ->
+          <strong>inline</strong>, flexível -> <strong>flex</strong> e em grade -> <strong>grid</strong></p>
+        <p class="subtitle-layouts">Position: A posição de um elemento dentro da página, podemos utilizar o valor padrão
+          -> <strong>static</strong>, relativo -> <strong>relative</strong>, absoluto -> <strong>absolute</strong> e por
+          fim podemos utilizar o valor fixo -> <strong>fixed</strong></p>
+        <p class="subtitle-layouts">Os elementos <strong>top</strong>, <strong>left</strong>, <strong>right</strong>,
+          <strong>bottom</strong> define a posição do elemento filho dentro do seu elemento pai, essa posição é
+          amplamente dependente do position delimitado a ele</p>
+        <p class="subtitle-layouts">Já o elemento <strong>z-index</strong> delimita a ordem de empilhamento dos
+          elementos. Conforme mais alto for o valor informado a ele, mais perto da tela ele estará!</p>
+      </div>
+      <div id="boxNav">
+        <p id="title">Como funciona a propriedade do box model no CSS: </p>
+        <p class="subtitle-model">1ª Margin: Define o espaçamento ao redor do elemento;</p>
+        <p class="subtitle-model">2ª Padding: Define o espaçamento interno do elemento;</p>
+        <p class="subtitle-model">3ª Border: Define a borda de um elemento, podendo ter um estilo, cor e espessura;</p>
+        <p class="subtitle-model">4ª Width e Height: Definem a largura e a altura de um elemento;</p>
+        <p class="subtitle-model">5ª Box-sizing: Define como a largura e a altura de elemento serão calculadas, pode ser
+          utilizado as seguintes opções: <strong>border-box</strong> -> inclui o padding e borda, e o
+          <strong>content-box</strong> -> esse não possui nada junto;</p>
+      </div>
+      <div class="display-background" id="display-background">
+        <p id="title">Como funciona a propriedade de background no CSS: </p>
+        <p class="subtitle-back">Background-color: A cor de fundo do elemento;</p>
+        <p class="subtitle-back">Background-image: Define uma imagem para o fundo;</p>
+        <p class="subtitle-back">Background-size: Define como a imagem irá ocupar o elemento;</p>
+        <p class="subtitle-back">Background-position: Delimita a posição da imagem de fundo;</p>
+        <p class="subtitle-back">Background-repeat: Define se a imagem do fundo será repetida, e a posição: repeat-x ->
+          <strong>linha</strong> e repeat-y -> <strong>coluna</strong></p>
+      </div>
+      <div id="subtitle-flex">
+        <p id="title">Como funciona a propriedade Flexbox no CSS</p>
+        <p class="subtitle-flex">Display: flex | Delimita o container como flexbox, o que permite o alinhamento e
+          distribuição flexíveis dos elementos filhos</p>
+        <p class="subtitle-flex">Justify-content: Delimita a maneira pela qual os elementos filhos serão distribuídos no
+          eixo principal</p>
+        <p class="subtitle-flex">Align-items: O alinhamento dos elementos filhos ao longo do eixo transversal</p>
+        <p class="subtitle-flex">Flex-wrap: Define se os itens devem quebrar para uma nova linha quando não houver
+          espaço suficiente -> <strong>wrap</strong> ou permanecerem em uma linha -> <strong>nowrap</strong></p>
+      </div>
+      <p id="title">Como funciona a propriedade Grid no CSS</p>
+      <div class="display-grid" id="display-grid">
+        <p class="subtitle-grid"><strong>Display: grid</strong> Define um contêiner como um Grid, permitindo criar
+          layouts baseados em colunas e linhas</p>
+        <p class="subtitle-grid"><strong>Grid-template-columns</strong> Define o número de colunas e a largura de cada
+          uma</p>
+        <p class="subtitle-grid"><strong>Grid-template-rows</strong> Define o número de linhas e a altura de cada uma
+        </p>
+        <p class="subtitle-grid"><strong>Gap</strong> Define o espaçamento entre colunas e/ou linhas</p>
+      </div>
     </div>
   </main>
   <script src="./js/cards-css.js"></script>
   <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,11 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <main class="main">
     <div class="navbar">
@@ -41,8 +45,284 @@
         </ul>
       </nav>
     </aside>
+    <div id="container">
+      <p id="titleDevops">Conheça um pouco sobre o processo de DevOps</p>
+      <div id="lineDevops"></div>
+      <p id="subtitle">É uma combinação de práticas e ferramentas que automotizam o processo entre as equipes de
+        desenvolvimento e operações. Sendo os principais objetivos:</p>
+      <div>
+        <div id="objetivos">
+          <ol>
+            <li>Aumento na eficiência</li>
+            <li>Aumento na qualidade dos produtos</li>
+            <li>Reduzir o tempo de entraga dos projetos</li>
+            <li>Utilização de feedbacks contínuos</li>
+          </ol>
+        </div>
+        <img src="/imgs/devops-page/devops.png" alt="">
+      </div>
+      <p>Além disso, podemos validar a presença dos tópicos a seguir dentro do conceito de DevOps</p>
+      <ul>
+        <li>Automação para facilitar a entrega contínua.</li>
+        <li>Integração e entrega contínuas (CI/CD) para aprimorar o desenvolvimento.</li>
+        <li>Monitoramento e logging para rápida detecção de problemas.</li>
+        <li>Colaboração entre equipes de desenvolvimento e operações.</li>
+        <li>Escalabilidade para ajustar recursos conforme necessário.</li>
+      </ul>
+      <p id="gitHub">Qual é o conceito de GitHub e GitHub Pages: </p>
+      <p>GitHub é uma plataforma que combina <strong>funcionalidades de controle de versão, hospedagem de repositórios e
+          interação social</strong> entre desenvolvedores. Ele permite que equipes colaborem e <strong>compartilhem
+          códigos usando o Git, um sistema de controle de versão distribuído</strong>.</p>
+      <p>GitHub Pages, por outro lado, é uma ferramenta específica do GitHub que <strong>permite a criação e hospedagem
+          de páginas estáticas diretamente de um repositório</strong>.</p>
+      <p>Podemos pensar no <strong>GitHub como uma plataforma para organizar e gerenciar "containers de
+          código"</strong>. Assim como o Docker permite empacotar, compartilhar e gerenciar aplicativos em contêineres
+        padronizados, o GitHub organiza, controla e distribui versões de arquivos de código e texto de maneira
+        centralizada.</p>
+      <ol>
+        <li>GitHub (plataforma principal) é como o Docker Hub (encontra imagens de contêiner prontas para usar), que
+          armazena e compartilha contêineres.</li>
+        <li id="gapLi">GitHub Pages é como executar um contêiner específico. Exemplo: Pense em um contêiner Docker
+          configurado apenas para servir um site estático, como uma imagem do NGINX que hospeda arquivos HTML. O GitHub
+          Pages desempenha esse papel: pega arquivos estáticos do repositório e os "executa" para torná-los acessíveis
+          ao público.</li>
+      </ol>
+      <p id="gitPages">Como utilizar o GitHub Pages?</p>
+      <div class="step">
+        <p class="stepTitle">Passo 1: Criar um Repositório no GitHub</p>
+        <ol>
+          <li>Acesse o GitHub: Entre na sua conta do GitHub ou crie uma, se ainda não tiver.</li>
+          <li>Novo Repositório: Clique no botão de “+” no canto superior direito e selecione “New repository”.</li>
+          <li>Nome do Repositório: Dê um nome ao seu repositório. Para hospedar em <code>username.github.io</code>, o
+            repositório deve ter o nome exatamente igual ao seu nome de usuário.</li>
+          <li>Configurações do Repositório:
+            <ul>
+              <li>Escolha se o repositório será público ou privado (público é necessário para GHPages gratuito).</li>
+              <li>Marque a opção para inicializar com um arquivo README, se desejar.</li>
+            </ul>
+          </li>
+          <li>Criar Repositório: Clique em “Create repository”.</li>
+        </ol>
+      </div>
+      <div class="step">
+        <p class="stepTitle">Passo 2: Adicionar Arquivos do Projeto</p>
+        <ol>
+          <li>Upload dos Arquivos: Na página do repositório, clique em “Add file” e depois em “Upload files”. Você pode
+            arrastar e soltar seus arquivos HTML, CSS, JavaScript e outros.</li>
+          <li>Commit dos Arquivos: Após adicionar os arquivos, role para baixo e clique em “Commit changes” para salvar
+            as alterações.</li>
+        </ol>
+      </div>
+      <div class="step">
+        <p class="stepTitle">Passo 3: Habilitar o GitHub Pages</p>
+        <ol>
+          <li>Configurações do Repositório: Vá para a aba “Settings” do seu repositório.</li>
+          <li>GitHub Pages: Role até encontrar a seção “GitHub Pages”.</li>
+          <li>Fonte: Na seção “Source”, selecione a branch <code>main</code> (ou <code>master</code>, dependendo da
+            configuração) e a pasta onde estão os arquivos (geralmente <code>root</code>).</li>
+          <li>Salvar: Clique em “Save”. Após alguns momentos, você verá um link para acessar seu site.</li>
+        </ol>
+      </div>
+      <div class="step">
+        <p class="stepTitle">Passo 4: Acessar seu Site</p>
+        <p>
+          Após habilitar o GitHub Pages, seu site estará disponível em
+          <a href="https://username.github.io/nome-do-repositorio"
+            target="_blank">https://username.github.io/nome-do-repositorio</a>.
+        </p>
+      </div>
+      <div id="line"></div>
+      <p id="pm2Tiltle">Gerenciamento de Processos Node.js com PM2, passo a passo para a utilização: </p>
+      <div class="stepPM2">
+        <p class="stepTitle">1. Instalar o PM2</p>
+        <p>Instale o PM2 globalmente usando o seguinte comando:</p>
+        <div class="command">
+          <code>npm install -g pm2</code>
+        </div>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">2. Iniciar a Aplicação com PM2</p>
+        <p>Inicie sua aplicação Node.js com o comando abaixo:</p>
+        <div class="command">
+          <code>pm2 start app.js --name "minha-app"</code>
+        </div>
+        <p><strong>Explicação:</strong> O parâmetro <code>--name</code> define um nome para o processo.</p>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">3. Monitorar Processos</p>
+        <p>Use o seguinte comando para visualizar os processos gerenciados pelo PM2:</p>
+        <div class="command">
+          <code>pm2 list</code>
+        </div>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">4. Reinicialização Automática</p>
+        <p>O PM2 irá reiniciar automaticamente o processo se ele cair. Para garantir que ele reinicie após o servidor
+          reiniciar, execute o comando:</p>
+        <div class="command">
+          <code>pm2 startup</code>
+        </div>
+        <p>Isso configurará o PM2 para iniciar automaticamente após um reboot.</p>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">5. Configurar Watch para Auto-Restart</p>
+        <p>Ative a reinicialização automática com o comando abaixo, que monitora alterações nos arquivos:</p>
+        <div class="command">
+          <code>pm2 start app.js --watch --name "minha-app"</code>
+        </div>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">6. Monitoramento Avançado</p>
+        <p>Para monitoramento em tempo real dos processos, use o comando:</p>
+        <div class="command">
+          <code>pm2 monit</code>
+        </div>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">7. Ver Logs em Tempo Real</p>
+        <p>Veja os logs da sua aplicação com o comando:</p>
+        <div class="command">
+          <code>pm2 logs minha-app</code>
+        </div>
+      </div>
+      <div class="stepPM2">
+        <p class="stepTitle">8. Usar o Ecosystem File</p>
+        <p>Para múltiplas aplicações, você pode usar o arquivo de configuração <code>ecosystem.config.js</code>. Isso
+          facilita o gerenciamento de várias instâncias do PM2 em um único arquivo. Veja um exemplo básico:</p>
+        <pre>
+          module.exports = {
+            apps : [{
+              name: 'minha-app',
+              script: 'app.js',
+              watch: true,
+              instances: 'max',
+              exec_mode: 'cluster'
+            }]
+          };
+        </pre>
+      </div>
+      <div id="line"></div>
+      <p id="titleImagemDocker">Como criar uma imagem docker do APP criado com o PM2 e Node.js</p>
+      <div class="stepDocker">
+        <p class="stepTitleDocker">1. Criar o Dockerfile</p>
+        <p>O primeiro passo é criar um arquivo chamado <code>Dockerfile</code> no diretório raiz do seu projeto com o
+          seguinte conteúdo:</p>
+        <pre>
+          FROM node:16
+          WORKDIR /app
+          COPY package*.json ./
+          RUN npm install
+          COPY . .
+          EXPOSE 3000
+          CMD ["npm", "start"]
+        </pre>
+        <p>Isso define como a imagem Docker será construída para sua aplicação Node.js.</p>
+      </div>
+      <div class="stepDocker">
+        <p class="stepTitleDocker">2. Construir a Imagem Docker</p>
+        <p>Agora, você pode construir a imagem Docker com o seguinte comando:</p>
+        <div class="command">
+          <code>docker build -t minha-app .</code>
+        </div>
+        <p>Esse comando cria a imagem a partir do Dockerfile que você criou.</p>
+      </div>
+      <div class="stepDocker">
+        <p class="stepTitleDocker">3. Rodar o Contêiner</p>
+        <p>Para rodar a aplicação dentro de um contêiner, execute:</p>
+        <div class="command">
+          <code>docker run -p 3000:3000 minha-app</code>
+        </div>
+        <p>Isso mapeia a porta 3000 do contêiner para a porta 3000 da máquina local.</p>
+      </div>
+      <div class="benefit">
+        <p class="benefitTitle">Benefícios da Containerização com Docker:</p>
+        <ul>
+          <li>Portabilidade <strong> -> </strong> A aplicação pode ser executada em qualquer lugar, desde que o Docker
+            esteja instalado.</li>
+          <li>Isolamento <strong> -> </strong> Cada contêiner roda em seu próprio ambiente, evitando conflitos de
+            dependências.</li>
+          <li>Escalabilidade <strong> -> </strong> É fácil escalar sua aplicação rodando múltiplos contêineres.</li>
+          <li>Facilidade de Implantação <strong> -> </strong> A implantação em diferentes ambientes se torna muito mais
+            simples e confiável.</li>
+          <li>Desempenho <strong> -> </strong> Os contêineres são mais leves e rápidos do que máquinas virtuais.</li>
+          <li>Facilidade de Manutenção <strong> -> </strong> Com contêineres, atualizar e gerenciar sua aplicação é mais
+            fácil.</li>
+          <li>Segurança <strong> -> </strong> O isolamento de contêineres aumenta a segurança, limitando a exposição de
+            falhas.</li>
+        </ul>
+      </div>
+      <div id="line"></div>
+      <p id="dockerTitle">Veja como utilizar o dockerfile e o docker compose em múltiplos contêiners</p>
+      <div class="section">
+        <p>1. Dockerfile</p>
+        <p class="subtitleDocker">O <code>Dockerfile</code> define como a aplicação será configurada dentro do
+          contêiner. A seguir está o exemplo para uma aplicação Node.js.</p>
+        <pre>
+          FROM node:16
+          # Definir o diretório de trabalho dentro do contêiner
+          WORKDIR /usr/src/app
+
+          # Copiar os arquivos de package.json e package-lock.json para instalar as dependências
+          COPY package*.json ./
+
+          # Instalar as dependências da aplicação
+          RUN npm install
+
+          # Copiar o restante dos arquivos da aplicação
+          COPY . .
+
+          # Expor a porta que a aplicação vai rodar
+          EXPOSE 3000
+
+          # Comando para rodar a aplicação
+          CMD ["npm", "start"]
+          </pre>
+      </div>
+      <div class="section">
+        <p>2. docker-compose.yml</p>
+        <p class="subtitleDocker">O <code>docker-compose.yml</code> define e configura múltiplos contêineres para
+          orquestrar o ambiente de desenvolvimento ou produção.</p>
+        <pre>
+            version: '3.8'
+
+            services:
+            app:
+              build: .
+              ports:
+                - "3000:3000"
+              environment:
+                - MYSQL_HOST=db
+                - MYSQL_USER=root
+                - MYSQL_PASSWORD=my-secret-pw
+                - MYSQL_DATABASE=mydb
+              depends_on:
+                - db
+
+                  db:
+                  image: mysql:8
+                  environment:
+                    MYSQL_ROOT_PASSWORD: my-secret-pw
+                    MYSQL_DATABASE: mydb
+                  ports:
+                    - "3306:3306"
+          </pre>
+      </div>
+      <div class="section">
+        <p>3. Como usar</p>
+        <!-- <p class="subtitleDocker">Siga os passos abaixo para configurar e rodar os contêineres:</p> -->
+        <ol>
+          <li>Crie o arquivo <code>Dockerfile</code> no diretório do seu projeto.</li>
+          <li>Crie o arquivo <code>docker-compose.yml</code> no mesmo diretório.</li>
+          <li>Construa os contêineres:</li>
+          <pre>docker-compose build</pre>
+          <li>Suba os contêineres:</li>
+          <pre>docker-compose up</pre>
+          <p>A aplicação Node.js estará disponível na URL <code>http://localhost:3000</code> e poderá se conectar ao
+            banco de dados MySQL.</p>
+        </ol>
+      </div>
+    </div>
   </main>
-  <script src="./js/sidebar-toggle.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
