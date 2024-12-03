@@ -1,70 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NODE</title>
+    <link rel="stylesheet" href="./style/node-page/node-page.css" />
+    <link rel="stylesheet" href="./style/html-page/card.css">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
-  <link rel="stylesheet" href="./style/node-page/node-page.css">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <main class="main">
-    <div class="navbar">
-      <a href="/html-page.html">HTML</a>
-      <a href="/css-page.html">CSS</a>
-      <a href="/js-page.html">JS</a>
-      <a href="/react-page.html">REACT</a>
-      <a href="/node-page.html">NODE</a>
-      <a href="/devops-page.html">DEVOPS</a>
-    </div>
-
-    <aside class="sidebar">
-      <div class="svg-icon-sidebar">
-        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="17.5" cy="17.5" r="17.5" fill="#5941A4" />
-          <rect x="10" y="12" width="16.125" height="1.75" rx="0.875" fill="white" />
-          <rect x="10" y="17.25" width="16.125" height="1.75" rx="0.875" fill="white" />
-          <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
-        </svg>
+  <body>
+    <main class="main">
+      <div class="navbar">
+        <a href="/html-page.html">HTML</a>
+        <a href="/css-page.html">CSS</a>
+        <a href="/js-page.html">JS</a>
+        <a href="/react-page.html">REACT</a>
+        <a href="/node-page.html">NODE</a>
+        <a href="/devops-page.html">DEVOPS</a>
       </div>
 
-      <nav class="nav">
-        <ul>
-          <li class="active"><a href="#home">HOME</a></li>
-          <li><a href="/html-page.html">HTML</a></li>
-          <li><a href="/css-page.html">CSS</a></li>
-          <li><a href="/js-page.html">JS</a></li>
-          <li><a href="/react-page.html">React</a></li>
-          <li><a href="#node">Node</a></li>
-          <li><a href="/devops-page.html">DevOps</a></li>
-        </ul>
-      </nav>
-    </aside>
+      <aside class="sidebar">
+        <div class="svg-icon-sidebar">
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="17.5" cy="17.5" r="17.5" fill="#5941A4" />
+            <rect
+              x="10"
+              y="12"
+              width="16.125"
+              height="1.75"
+              rx="0.875"
+              fill="white"
+            />
+            <rect
+              x="10"
+              y="17.25"
+              width="16.125"
+              height="1.75"
+              rx="0.875"
+              fill="white"
+            />
+            <rect
+              x="10"
+              y="22.5"
+              width="16.125"
+              height="1.75"
+              rx="0.875"
+              fill="white"
+            />
+          </svg>
+        </div>
 
-    <section id="html" class="sections">
-      <!-- INTRO -->
-      <div>
-        <p id="title">Como Funciona o Node:</p>
+        <nav class="nav">
+          <ul>
+            <li class="active"><a href="#home">HOME</a></li>
+            <li><a href="/html-page.html">HTML</a></li>
+            <li><a href="/css-page.html">CSS</a></li>
+            <li><a href="/js-page.html">JS</a></li>
+            <li><a href="/react-page.html">React</a></li>
+            <li><a href="#node">Node</a></li>
+            <li><a href="/devops-page.html">DevOps</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-        <p class="texto-info">Node.js é uma plataforma de execução de JavaScript no lado do servidor. Ele permite que desenvolvedores utilizem JavaScript para construir aplicações backend, o que antes era feito apenas no navegador. Node.js é baseado no motor V8 do Google Chrome, que compila o JavaScript para código de máquina, tornando-o rápido e eficiente.</p>
+      <section id="node" class="sections">
+        <!-- INTRO -->
+        <div>
+          <p id="title">Como Funciona o Node:</p>
 
-        <p class="texto-info">Uma das principais características do Node.js é sua arquitetura orientada a eventos e seu modelo de I/O (entrada/saída) não bloqueante, o que o torna ideal para aplicações que exigem alta escalabilidade e trabalham com muitas requisições simultâneas, como servidores de aplicativos em tempo real, APIs, e sistemas de streaming de dados.</p>
+          <p class="texto-info">
+            Node.js é uma plataforma de execução de JavaScript no lado do
+            servidor. Ele permite que desenvolvedores utilizem JavaScript para
+            construir aplicações backend, o que antes era feito apenas no
+            navegador. Node.js é baseado no motor V8 do Google Chrome, que
+            compila o JavaScript para código de máquina, tornando-o rápido e
+            eficiente.
+          </p>
 
-        <p class="texto-info">Com um grande ecossistema de bibliotecas disponíveis através do npm (Node Package Manager), Node.js é amplamente utilizado para desenvolver aplicações modernas e escaláveis, incluindo sistemas web e serviços baseados em microservices.</p>
-      </div>
+          <p class="texto-info">
+            Uma das principais características do Node.js é sua arquitetura
+            orientada a eventos e seu modelo de I/O (entrada/saída) não
+            bloqueante, o que o torna ideal para aplicações que exigem alta
+            escalabilidade e trabalham com muitas requisições simultâneas, como
+            servidores de aplicativos em tempo real, APIs, e sistemas de
+            streaming de dados.
+          </p>
 
+          <p class="texto-info">
+            Com um grande ecossistema de bibliotecas disponíveis através do npm
+            (Node Package Manager), Node.js é amplamente utilizado para
+            desenvolver aplicações modernas e escaláveis, incluindo sistemas web
+            e serviços baseados em microservices. Ele fornece uma vasta
+            biblioteca de módulos para criar aplicações, incluindo
+            funcionalidades como servidores HTTP, manipulação de arquivos e
+            integração com bancos de dados.
+          </p>
+        </div>
 
-    </section>
-  </main>
+        <!-- EXEMPLOS -->
+        <div>
+          <p class="sub-title">Utilização de Módulos Principais:</p>
+          <p class="texto-info">
+            Os módulos principais do Node.js, como <strong>http, fs, e path,</strong> permitem
+            criar funcionalidades básicas.
+          </p>
 
-  <script src="./js/html-page/funcao-copy.js"></script>
-  <script src="./js/html-page/resultado-5.js"></script>
-  <script src="./js/script.js"></script>
-</body>
+          <p class="texto-info">
+            O módulo <strong>http</strong> é usado para criar servidores web e lidar com
+            requisições HTTP. Ele fornece uma interface para construir
+            aplicativos baseados em protocolos HTTP, como APIs ou páginas web.
+          </p>
 
+          <p class="texto-info">Os principais recursos são:</p>
+
+          <div>
+            <li>Criar servidores HTTP ou HTTPS.</li><br>
+            <li>Processar métodos HTTP como GET, POST, PUT, DELETE.</li><br>
+            <li>Manipular cabeçalhos e status de resposta.</li>
+          </div>
+
+          <p class="texto-info">Aqui esta um exemplo de como funciona:</p>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Para copiar, clique no ícone ao lado</h3>
+              <button class="copy-btn" onclick="copyCode('code-27')">
+                <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+              </button>
+            </div>
+            <div class="code-block" id="code-http-node">
+              <span class="line-number">1</span> const http = require('http');
+              <span class="line-number">2</span> 
+              <span class="line-number">3</span> const server = http.createServer((req, res) => {
+              <span class="line-number">4</span> &nbsp;&nbsp;&nbsp;&nbsp;if (req.method === 'GET') {
+              <span class="line-number">5</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.writeHead(200, { 'Content-Type': 'text/plain' });
+              <span class="line-number">6</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.end('Resposta para uma requisição GET');
+              <span class="line-number">7</span> &nbsp;&nbsp;&nbsp;&nbsp;} else {
+              <span class="line-number">8</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.writeHead(405);
+              <span class="line-number">9</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.end('Método não permitido');
+              <span class="line-number">10</span> &nbsp;&nbsp;&nbsp;&nbsp;}
+              <span class="line-number">11</span> });
+              <span class="line-number">12</span> 
+              <span class="line-number">13</span> server.listen(3000, () => {
+              <span class="line-number">14</span> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Servidor rodando em http://localhost:3000');
+              <span class="line-number">15</span> });
+            </div>
+          </div>
+          
+
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/html-page/funcao-copy.js"></script>
+    <script src="./js/html-page/resultado-5.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

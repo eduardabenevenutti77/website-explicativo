@@ -31,7 +31,6 @@
           <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
         </svg>
       </div>
-
       <nav class="nav">
         <ul>
           <li class="active"><a href="#home">HOME</a></li>
@@ -191,18 +190,6 @@
   </code></pre>
         </div>
 
-        <!-- <h2 id="functions">3. Funções</h2>
-        <p class="texto-info">Funções no JavaScript são blocos de código reutilizáveis que realizam uma ação. Elas podem
-          ser declaradas e invocadas conforme necessário:</p>
-
-        <div class="display-example">
-          <pre><code class="code-example">
-            function saudacao(nome) {
-              return 'Olá, ' + nome + '!';
-            }
-            console.log(saudacao('Maria'));
-          </code></pre>
-        </div> -->
         <h2 id="functions">3. Funções</h2>
         <p class="texto-info">Funções no JavaScript são blocos de código reutilizáveis que realizam uma ação. Elas podem
           ser declaradas e invocadas conforme necessário:</p>
@@ -443,18 +430,17 @@
   </code></pre>
         </div>
 
-        <!-- <h2 id="events">5. Eventos</h2>
-        <p class="texto-info">Eventos são ações que ocorrem no navegador (como cliques, mudanças de valor de input,
-          etc.). Você pode "escutar" eventos e definir o que deve acontecer quando eles ocorrerem. Exemplo:</p>
-
+        <h3>4.7 Trabalhando com eventos</h3>
+        <h4> id="reduce">reduce()</h4>
+        <p class="texto-info">O método <code>reduce()</code> aplica uma função em um acumulador e em cada elemento de um
+          array para reduzi-lo a um único valor.</p>
         <div class="display-example">
           <pre><code class="code-example">
-              <span class="comment"><strong>// Adiciona um evento de clique em um botão</strong></span>
-              document.getElementById('meuBotao').addEventListener('click', function() {
-                alert('Botão clicado!');
-              });
-            </code></pre>
-        </div> -->
+const numeros = [1, 2, 3, 4];
+const soma = numeros.reduce((acumulador, num) => acumulador + num, 0);
+console.log(soma); <strong>// 10</strong>
+  </code></pre>
+        </div>
 
         <h2 id="eventos">5. Eventos</h2>
         <p class="texto-info">
@@ -495,17 +481,35 @@
           Alguns dos eventos mais comuns em JavaScript incluem:
         </p>
         <ul>
-          <li><code>click</code>: Disparado quando o usuário clica em um elemento.</li>
-          <li><code>mouseover</code>: Disparado quando o usuário passa o mouse sobre um elemento.</li>
-          <li><code>mouseout</code>: Disparado quando o usuário move o mouse para fora de um elemento.</li>
-          <li><code>keydown</code>: Disparado quando o usuário pressiona uma tecla.</li>
-          <li><code>load</code>: Disparado quando a página termina de carregar.</li>
+          <li><code><strong>click</strong></code>: Disparado quando o usuário clica em um elemento.</li>
+          <li><code><strong>mouseover</strong></code>: Disparado quando o usuário passa o mouse sobre um elemento.</li>
+          <li><code><strong>mouseout</strong></code>: Disparado quando o usuário move o mouse para fora de um elemento.</li>
+          <li><code><strong>keydown</strong></code>: Disparado quando o usuário pressiona uma tecla.</li>
+          <li><code><strong>load</strong></code>: Disparado quando a página termina de carregar.</li>
         </ul>
 
         <p class="texto-info">
           Esses eventos, combinados com as funções de manipulação de DOM, permitem que você crie interfaces interativas
           e dinâmicas.
         </p>
+
+        <h3>5.3 Async/Await</h3>
+        <p class="texto-info">Você pode usar <code>async/await</code> para tornar o código assíncrono mais legível e
+          fácil de entender.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+async function obterDados() {
+  try {
+    const resposta = await fetch('https://api.exemplo.com/dados');
+    const dados = await resposta.json();
+    console.log(dados);
+  } catch (erro) {
+    console.error('Erro:', erro);
+  }
+}
+obterDados();
+  </code></pre>
+        </div>
 
         <h2 id="fetch-api">6. Fetch API</h2>
         <p class="texto-info">A <code>Fetch API</code> é usada para fazer requisições HTTP assíncronas (por exemplo,
