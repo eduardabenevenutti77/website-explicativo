@@ -23,14 +23,23 @@
       <a href="/devops-page.html">DEVOPS</a>
     </div>
     <aside class="sidebar">
+      <div class="svg-icon-sidebar">
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="17.5" cy="17.5" r="17.5" fill="#5941A4" />
+          <rect x="10" y="12" width="16.125" height="1.75" rx="0.875" fill="white" />
+          <rect x="10" y="17.25" width="16.125" height="1.75" rx="0.875" fill="white" />
+          <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
+        </svg>
+      </div>
       <nav class="nav">
         <ul>
-          <li class="active"><a href="#intro">Introdução</a></li>
-          <li><a href="#components">Componentes</a></li>
-          <li><a href="#hooks">Hooks</a></li>
-          <li><a href="#jsx">JSX</a></li>
-          <li><a href="#router">React Router</a></li>
-          <li><a href="#state-management">Gerenciamento de Estado</a></li>
+          <li class="active"><a href="#home">HOME</a></li>
+          <li><a href="/html-page.html">HTML</a></li>
+          <li><a href="/css-page.html">CSS</a></li>
+          <li><a href="/js-page.html">JS</a></li>
+          <li><a href="/react-page.html">React</a></li>
+          <li><a href="/node-page.html">Node</a></li>
+          <li><a href="/devops-page.html">DevOps</a></li>
         </ul>
       </nav>
     </aside>
@@ -39,14 +48,18 @@
       <h1 id="title">Introdução ao React</h1>
       <div class="container">
         <p class="texto-info">
-          React é uma biblioteca JavaScript de código aberto usada para construir interfaces de usuário, especialmente para aplicações web de página única. Criado pelo Facebook, ele facilita o desenvolvimento de UIs reutilizáveis e escaláveis.
+          React é uma biblioteca JavaScript de código aberto usada para construir interfaces de usuário, especialmente
+          para aplicações web de página única. Criado pelo Facebook, ele facilita o desenvolvimento de UIs reutilizáveis
+          e escaláveis.
         </p>
 
         <!-- Componentes -->
         <h2 id="components">1. Estrutura de Componentes</h2>
         <p class="texto-info">
-          Os componentes são as unidades fundamentais do React. Eles podem ser reutilizados para criar interfaces de usuário dinâmicas. Um componente pode ser uma função ou classe que retorna elementos React.
+          Os componentes são as unidades fundamentais do React. Eles podem ser reutilizados para criar interfaces de
+          usuário dinâmicas. Um componente pode ser uma função ou classe que retorna elementos React.
         </p>
+        <p><strong>Exemplo com componente funcional:</strong></p>
         <div class="display-example">
           <pre><code class="code-example">
 function Welcome(props) {
@@ -61,11 +74,26 @@ const App = () =&gt; (
 );
           </code></pre>
         </div>
+        <p><strong>Exemplo com componente de classe:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import React, { Component } from 'react';
+
+class Saudacao extends Component {
+  render() {
+    return &lt;h1&gt;Olá, {this.props.name}!&lt;/h1&gt;;
+  }
+}
+
+export default Saudacao;
+          </code></pre>
+        </div>
 
         <!-- Hooks -->
         <h2 id="hooks">2. Hooks</h2>
         <p class="texto-info">
-          Hooks permitem adicionar funcionalidades como estado e efeitos colaterais em componentes funcionais. Os mais comuns são <code>useState</code> e <code>useEffect</code>.
+          Hooks permitem adicionar funcionalidades como estado e efeitos colaterais em componentes funcionais. Os mais
+          comuns são <code>useState</code> e <code>useEffect</code>.
         </p>
         <p><strong>Exemplo de uso do useState:</strong></p>
         <div class="display-example">
@@ -84,7 +112,6 @@ function Contador() {
 }
           </code></pre>
         </div>
-
         <p><strong>Exemplo de uso do useEffect:</strong></p>
         <div class="display-example">
           <pre><code class="code-example">
@@ -102,12 +129,40 @@ function Relogio() {
 }
           </code></pre>
         </div>
+        <p><strong>Exemplo de uso do useReducer:</strong></p>
+        <div class="display-example">
+          <pre><code class="code-example">
+import React, { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment': return { count: state.count + 1 };
+    case 'decrement': return { count: state.count - 1 };
+    default: return state;
+  }
+}
+
+function Contador() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Contagem: {state.count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'increment' })}&gt;+&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'decrement' })}&gt;-&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+          </code></pre>
+        </div>
 
         <!-- JSX -->
         <h2 id="jsx">3. JSX</h2>
         <p class="texto-info">
-          JSX é uma extensão de sintaxe que permite escrever código similar ao HTML dentro de arquivos JavaScript. Ele facilita a criação de elementos React.
+          JSX é uma extensão de sintaxe que permite escrever código similar ao HTML dentro de arquivos JavaScript. Ele
+          facilita a criação de elementos React.
         </p>
+        <p><strong>Exemplo de uso básico de JSX:</strong></p>
         <div class="display-example">
           <pre><code class="code-example">
 const elemento = &lt;h1&gt;Bem-vindo ao React!&lt;/h1&gt;;
@@ -118,7 +173,8 @@ ReactDOM.render(elemento, document.getElementById('root'));
         <!-- React Router -->
         <h2 id="router">4. React Router</h2>
         <p class="texto-info">
-          React Router é uma biblioteca que permite a navegação entre páginas em uma aplicação React. Ela cria rotas para diferentes componentes.
+          React Router é uma biblioteca que permite a navegação entre páginas em uma aplicação React. Ela cria rotas
+          para diferentes componentes.
         </p>
         <div class="display-example">
           <pre><code class="code-example">
@@ -137,48 +193,105 @@ function App() {
           </code></pre>
         </div>
 
-        <!-- Gerenciamento de Estado -->
-        <h2 id="state-management">5. Gerenciamento de Estado</h2>
-        <p class="texto-info">
-          O gerenciamento de estado é essencial para manter a consistência de dados em uma aplicação React. Ferramentas como Redux ou Context API são utilizadas para estados globais.
-        </p>
-        <p><strong>Diferença entre Redux e Context API:</strong></p>
-        <ul>
-          <li><strong>Redux:</strong> Oferece um padrão mais robusto para grandes aplicações, com middlewares como o Redux Thunk.</li>
-          <li><strong>Context API:</strong> Ideal para estados menores, eliminando a necessidade de bibliotecas externas.</li>
-        </ul>
-        <p><strong>Exemplo com Context API:</strong></p>
-        <div class="display-example">
-          <pre><code class="code-example">
-import React, { createContext, useContext, useState } from 'react';
+<!-- Gerenciamento de Estado -->
+<h2 id="state-management">5. Gerenciamento de Estado</h2>
+<p class="texto-info">
+  O gerenciamento de estado é essencial para manter a consistência de dados em uma aplicação React. Ferramentas
+  como Redux ou Context API são utilizadas para estados globais.
+</p>
 
-const TemaContext = createContext();
+<p>
+  O Redux é uma biblioteca de gerenciamento de estado previsível para aplicações JavaScript. Ele centraliza o estado de uma aplicação em um único local, o "store", e fornece uma maneira previsível de gerenciar suas alterações. Em vez de atualizar diretamente o estado, as mudanças são feitas por meio de "actions" e "reducers", facilitando o rastreamento e a depuração da aplicação.
+</p>
+<p>
+  Abaixo, um exemplo de como o Redux pode ser utilizado para gerenciar um contador. O estado é mantido no "store", e as ações de incremento e decremento controlam a modificação desse estado. O componente `App` acessa o estado global por meio do `useSelector` e dispara as ações utilizando o `useDispatch`.
+</p>
 
-function App() {
-  const [tema, setTema] = useState('claro');
+<p><strong>Exemplo com Redux:</strong></p>
+<div class="display-example">
+  <pre><code class="code-example">
+import { createStore } from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 
-  return (
-    &lt;TemaContext.Provider value={{ tema, setTema }}&gt;
-      &lt;ComponenteFilho /&gt;
-    &lt;/TemaContext.Provider&gt;
-  );
+<strong>// Reducer</strong>
+function contador(state = 0, action) {
+  switch (action.type) {
+    case 'increment': return state + 1;
+    case 'decrement': return state - 1;
+    default: return state;
+  }
 }
 
-function ComponenteFilho() {
-  const { tema, setTema } = useContext(TemaContext);
+const store = createStore(contador);
+
+function App() {
+  const contador = useSelector(state =&gt; state);
+  const dispatch = useDispatch();
 
   return (
     &lt;div&gt;
-      &lt;p&gt;Tema atual: {tema}&lt;/p&gt;
-      &lt;button onClick={() =&gt; setTema(tema === 'claro' ? 'escuro' : 'claro')}&gt;Alternar Tema&lt;/button&gt;
+      &lt;p&gt;Contador: {contador}&lt;/p&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'increment' })}&gt;+&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'decrement' })}&gt;-&lt;/button&gt;
     &lt;/div&gt;
   );
 }
-          </code></pre>
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
 
-</html>
+<strong>// Envolvendo a Aplicação:</strong>
+export default function Root() {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;App /&gt;
+    &lt;/Provider&gt;
+  );
+}
+  </code></pre>
+</div>
+
+
+<p><strong>Contextos: Compartilhando Informações Globais</strong></p>
+<p>
+  Um contexto provê informações através de um provedor (provider), tornando-as acessíveis a todos os elementos filhos por meio de um consumidor (consumer).
+</p>
+
+<p><strong>Exemplo com Context API:</strong></p>
+<div class="display-example">
+  <pre><code class="code-example">
+import React, { createContext, useContext } from 'react';
+
+<strong>// Criando um contexto</strong>
+const ThemeContext = createContext();
+
+<strong>// Componente provedor do contexto</strong>
+const ThemeProvider = ({ children }) => {
+  const theme = 'dark';
+
+  return (
+    &lt;ThemeContext.Provider value={theme}&gt;
+      {children}
+    &lt;/ThemeContext.Provider&gt;
+  );
+};
+
+<strong>// Componente consumidor do contexto</strong>
+const ThemedComponent = () => {
+  const theme = useContext(ThemeContext);
+
+  return &lt;p style={{ color: theme === 'dark' ? 'white' : 'black' }}&gt;Texto com tema dinâmico&lt;/p&gt;
+};
+
+<strong>// Utilizando o contexto</strong>
+const App = () => {
+  return (
+    &lt;ThemeProvider&gt;
+      &lt;ThemedComponent /&gt;
+    &lt;/ThemeProvider&gt;
+  );
+};
+
+<br>
+  </code></pre>
+
+</div>
+
+<script src="./js/script.js"></script>
