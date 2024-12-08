@@ -20,6 +20,7 @@
   <body>
     <main class="main">
       <div class="navbar">
+        <a href="/home.html">HOME</a>
         <a href="/html-page.html">HTML</a>
         <a href="/css-page.html">CSS</a>
         <a href="/js-page.html">JS</a>
@@ -67,7 +68,7 @@
 
         <nav class="nav">
           <ul>
-            <li class="active"><a href="#home">HOME</a></li>
+            <li><a href="/home.html">HOME</a></li>
             <li><a href="/html-page.html">HTML</a></li>
             <li><a href="/css-page.html">CSS</a></li>
             <li><a href="/js-page.html">JS</a></li>
@@ -110,6 +111,61 @@
             funcionalidades como servidores HTTP, manipulação de arquivos e
             integração com bancos de dados.
           </p>
+
+          <div class="curiosidadesNode">
+            <p class="sub-title">Curiosidades</p>
+            <ol>
+              <p><li>Node.js nasceu da frustração com problemas de desempenho em servidores tradicionais como o <strong>Apache.</strong></li>
+              <p><li>O primeiro exemplo público do <strong>Node.js</strong> foi um servidor HTTP simples.</li>
+              <p><li>O nome "Node" representa um ponto em um grafo que conecta partes de uma aplicação.</li>
+              <p><li>O módulo <strong>cluster</strong> permite usar todos os núcleos do processador para melhorar o desempenho.</li>
+              <p><li>É ideal para lidar com grandes streams de dados, como upload de vídeos ou arquivos.</li>
+              <p><li>O <strong>npm</strong> é um dos maiores repositórios de software do mundo, com milhões de pacotes.</li>
+              <p><li>A <strong>NASA</strong> usou Node.js para melhorar sistemas espaciais de transporte humano.</li>
+              <p><li>É amplamente usado em geradores de sites estáticos e sistemas de automação.</li> 
+              <p><li>Está entre os runtimes mais usados em pesquisas de tecnologia.</li>
+              <p><li>Empresas como <strong>Netflix, PayPal, Walmart e eBay</strong> utilizam o Node.js.</li></p>
+            </ol>
+        </div>
+
+          <p class="sub-title">Requisitos para usar Node.js</p>
+
+          <div class="requisitos">
+            <p class="texto-info"><strong>Instalar o Node.js</strong></p>
+            <ul>
+              <li>Faça o download do instalador no site oficial: <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>.</li>
+              <li>O instalador inclui o npm (Node Package Manager).</li>
+            </ul>
+            
+            <p class="texto-info"><strong>Ambiente de Desenvolvimento</strong></p>
+            <ul>
+              <li>Um editor de código, como <strong>Visual Studio Code</strong>, é recomendado.</li>
+            </ul>
+            
+            <p class="texto-info"><strong>Terminal de Linha de Comando</strong></p>
+            <ul>
+              <li>Acesse o terminal do sistema (Prompt de Comando, PowerShell, ou Terminal no Linux/macOS).</li>
+            </ul>
+            
+            <p class="texto-info"><strong>Conhecimento Básico de JavaScript</strong></p>
+            <ul>
+              <li>É essencial para programar no ambiente Node.js.</li>
+            </ul>
+            
+            <p class="texto-info"><strong>Configuração do Caminho</strong></p>
+            <ul>
+              <li>Após a instalação, certifique-se de que o comando <strong>node -v</strong> funciona no terminal, indicando que o Node.js está no PATH do sistema.</li>
+            </ul>
+            
+            <p class="texto-info"><strong>Opcional: Banco de Dados</strong></p>
+            <ul>
+              <li>Caso sua aplicação precise armazenar dados, um banco de dados como <strong>MySQL</strong>, <strong>MongoDB</strong> ou outros pode ser necessário.</li>
+            </ul>
+          </div>
+          
+          
+          
+
         </div>
 
         <!-- EXEMPLOS -->
@@ -143,7 +199,7 @@
                 <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
               </button>
             </div>
-            <div class="code-block" id="code-http-node">
+            <div class="code-block" id="code-27">
               <span class="line-number">1</span> const http = require('http');
               <span class="line-number">2</span> 
               <span class="line-number">3</span> const server = http.createServer((req, res) => {
@@ -162,7 +218,190 @@
             </div>
           </div>
           
+          <p class="texto-info">No exemplo acima o código cria um servidor HTTP com módulo http do Node.js. Ele Processar
+            requisições na porta 3000 e responde de forma diferente dependendo do método HTTP:</p>
 
+            <div>
+              <ul>
+                <li>
+                  Para requisições <strong>GET</strong>, retorna uma mensagem de sucesso com status <strong>200</strong>: "Resposta para uma requisição GET".
+                </li><br>
+                <li>
+                  Para outros métodos, retorna o status <strong>405</strong>: "Método não permitido".
+                </li>
+              </ul>
+            </div>
+
+            <p class="texto-info">O servidor começa a rodar e exibe a mensagem: "Servidor rodando em http://localhost:3000".</p>
+
+            <p class="sub-title">Exemplo de estrutura express.js:</p>
+            <p class="texto-info">O Express.js é um framework para simplificar a criação de aplicações Node.js.</p>
+
+            <div class="card">
+              <div class="card-header">
+                <h3>Para copiar, clique no ícone ao lado</h3>
+                <button class="copy-btn" onclick="copyCode('code-28')">
+                  <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+                </button>
+              </div>
+              <div class="code-block" id="code-28">
+                <span class="line-number">1</span> const express = require('express');
+                <span class="line-number">2</span> const app = express();
+                <span class="line-number">3</span> 
+                <span class="line-number">4</span> app.use(express.json()); // Middleware para JSON
+                <span class="line-number">5</span> 
+                <span class="line-number">6</span> // Rota Principal
+                <span class="line-number">7</span> app.get('/', (req, res) => {
+                <span class="line-number">8</span> &nbsp;&nbsp;&nbsp;&nbsp;res.send('Bem-vindo ao servidor Express!');
+                <span class="line-number">9</span> });
+                <span class="line-number">10</span> 
+                <span class="line-number">11</span> // Rota de exemplo para POST
+                <span class="line-number">12</span> app.post('/dados', (req, res) => {
+                <span class="line-number">13</span> &nbsp;&nbsp;&nbsp;&nbsp;const dados = req.body;
+                <span class="line-number">14</span> &nbsp;&nbsp;&nbsp;&nbsp;res.json({ mensagem: 'Dados recebidos!', dados });
+                <span class="line-number">15</span> });
+                <span class="line-number">16</span> 
+                <span class="line-number">17</span> // Iniciando o servidor
+                <span class="line-number">18</span> app.listen(3000, () => {
+                <span class="line-number">19</span> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Servidor rodando em http://localhost:3000');
+                <span class="line-number">20</span> });               
+              </div>
+            </div>
+
+            <p class="texto-info">O que ele faz?</p>
+            <div>
+              <ul>
+                <li>
+                  Configura rotas para manipular diferentes requisições HTTP <strong>(GET, POST, etc.).</strong>
+                </li><br>
+                <li>
+                  Usa middlewares para processar dados, como <strong>JSON.</strong>
+                </li>
+              </ul>
+            </div>
+
+            <p class="sub-title">Integração com Banco de Dados</p>
+
+            <p class="texto-info">A integração com bancos de dados pode ser feita usando bibliotecas como 
+              Mongoose (para MongoDB) ou Sequelize (para PostgreSQL e outros).</p>
+
+              <p class="texto-info">Exemplo com Sequelize e PostgreSQL</p>
+
+              <div class="card">
+                <div class="card-header">
+                    <h3>Para copiar, clique no ícone ao lado</h3>
+                    <button class="copy-btn" onclick="copyCode('code-29')">
+                        <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+                    </button>
+                </div>
+                <div class="code-block" id="code-29">
+                    <span class="line-number">1</span>const { Sequelize, DataTypes } = require('sequelize');
+                    <span class="line-number">2</span>
+                    <span class="line-number">3</span>// Conexão com o banco de dados PostgreSQL
+                    <span class="line-number">4</span>const sequelize = new Sequelize('meuBanco', 'usuario', 'senha', {
+                    <span class="line-number">5</span> &nbsp;&nbsp;&nbsp;&nbsp;host: 'localhost',
+                    <span class="line-number">6</span> &nbsp;&nbsp;&nbsp;&nbsp;dialect: 'postgres',
+                    <span class="line-number">7</span>});
+                    <span class="line-number">8</span>
+                    <span class="line-number">9</span>// Definição do modelo de "Usuario"
+                    <span class="line-number">10</span>const Usuario = sequelize.define('Usuario', {
+                    <span class="line-number">11</span> &nbsp;&nbsp;&nbsp;&nbsp;nome: {
+                    <span class="line-number">12</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type: DataTypes.STRING,
+                    <span class="line-number">13</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allowNull: false,
+                    <span class="line-number">14</span> &nbsp;&nbsp;&nbsp;&nbsp;},
+                    <span class="line-number">15</span>});
+                    <span class="line-number">16</span>
+                    <span class="line-number">17</span>// Função para criar um novo usuário
+                    <span class="line-number">18</span>async function criarUsuario() {
+                    <span class="line-number">19</span> &nbsp;&nbsp;&nbsp;&nbsp;try {
+                    <span class="line-number">20</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Sincroniza o modelo com o banco de dados
+                    <span class="line-number">21</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await sequelize.sync();
+                    <span class="line-number">22</span>
+                    <span class="line-number">23</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Criação de um novo usuário
+                    <span class="line-number">24</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const novoUsuario = await Usuario.create({
+                    <span class="line-number">25</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nome: 'João',
+                    <span class="line-number">26</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email: 'joao@email.com',
+                    <span class="line-number">27</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;senha: '12345',
+                    <span class="line-number">28</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                    <span class="line-number">29</span>
+                    <span class="line-number">30</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Usuário criado:', novoUsuario.toJSON());
+                    <span class="line-number">31</span> &nbsp;&nbsp;&nbsp;&nbsp;} catch (erro) {
+                    <span class="line-number">32</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.error('Erro ao criar o usuário:', erro);
+                    <span class="line-number">33</span> &nbsp;&nbsp;&nbsp;&nbsp;}
+                    <span class="line-number">34</span>}
+                    <span class="line-number">35</span>
+                    <span class="line-number">36</span>criarUsuario();
+                </div>
+            </div>
+            
+            
+
+              <p class="sub-title">Práticas de Segurança</p>
+
+              <p class="texto-info"><strong>Middleware para Autenticação e Autorização</strong></p>
+              <p class="texto-info">Autenticação é o processo de verificar a identidade do usuário. Autorização define quais recursos ele pode acessar.</p>
+
+              <div class="card">
+              <div class="card-header">
+                <h3>Para copiar, clique no ícone ao lado</h3>
+                <button class="copy-btn" onclick="copyCode('code-30')">
+                  <img class="icon" src="https://img.icons8.com/ios-filled/20/000000/copy.png" alt="Copiar">
+                </button>
+              </div>
+              <div class="code-block" id="code-30">
+                <span class="line-number">1</span>const express = require('express');
+                <span class="line-number">2</span>const jwt = require('jsonwebtoken'); // Biblioteca para autenticação com tokens
+                <span class="line-number">3</span> 
+                <span class="line-number">4</span>const app = express();
+                <span class="line-number">5</span>const SECRET = 'chave-secreta'; 
+                <span class="line-number">6</span> 
+                <span class="line-number">7</span>// Middleware de autenticação 
+                <span class="line-number">8</span>function autenticarToken(req, res, next) {
+                <span class="line-number">9</span> &nbsp;&nbsp;&nbsp;&nbsp;const token = req.headers['authorization'];
+                <span class="line-number">10</span> &nbsp;&nbsp;&nbsp;&nbsp; if (!token) return res.sendStatus(401);
+                <span class="line-number">11</span> 
+                <span class="line-number">12</span> &nbsp;&nbsp;&nbsp;&nbsp; jwt.verify(token, SECRET, (err, usuario) => {
+                <span class="line-number">13</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (err) return res.sendStatus(403);
+                <span class="line-number">14</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; req.usuario = usuario;
+                <span class="line-number">15</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; next();
+                <span class="line-number">16</span> &nbsp;&nbsp;&nbsp;&nbsp;});
+                <span class="line-number">17</span>} 
+                <span class="line-number">18</span>
+                <span class="line-number">19</span>// Rota protegida
+                <span class="line-number">20</span>app.get('/protegido', autenticarToken, (req, res) => {
+                <span class="line-number">21</span> &nbsp;&nbsp;&nbsp;&nbsp;res.send(`Olá, ${req.usuario.nome}, você acessou uma rota protegida!`);
+                <span class="line-number">21</span>});
+                <span class="line-number">22</span> app.listen(3000, () => {
+                <span class="line-number">23</span> &nbsp;&nbsp;&nbsp;&nbsp;console.log('Servidor rodando em http://localhost:3000');
+                <span class="line-number">24</span>});               
+              </div>
+            </div>
+
+            <p class="texto-info">O que ele faz?</p>
+            <div>
+              <ul>
+                <li>
+                  Protege rotas com <strong>JWT</strong> (JSON Web Token).
+                </li><br>
+                <li>
+                  Usa um middleware para verificar a presença e validade do token. 
+                </li>
+              </ul>
+            </div>
+            
+            <p class="texto-info">O <strong>Node.js</strong> é uma plataforma para desenvolvimento backend que permite criar <strong>servidores rápidos e escaláveis utilizando JavaScript.</strong></p>
+            <p class="texto-info">Seu principal diferencial é o <strong>modelo não bloqueante e assíncrono</strong>, o que significa que ele pode <strong>processar múltiplas requisições simultaneamente</strong> sem esperar que uma 
+              operação termine para começar outra.</p>
+
+            <p class="texto-info">Isso faz com que o Node.js seja extremamente <strong>em aplicações que exigem alta performance</strong>, como sistemas em tempo real e 
+              APIs com grande volume de usuários. Além disso, com seu motor <strong>V8 e arquitetura single-threaded</strong>, o Node.js oferece alta performance ao mesmo tempo em que utiliza poucos 
+              recursos, tornando-o uma excelente opção para <strong>criar servidores ágeis e escaláveis.</strong></p>
+            
+              <div class="link-container">
+                <p class="texto-info">Para saber mais sobre o Node.js, consulte a documentação oficial:</p>
+                <a href="https://nodejs.org/en/docs/" target="_blank" class="link-doc">Documentação Oficial do Node.js</a>
+                <p class="texto-info">Lá você encontrará guias, tutoriais e toda a referência necessária para se aprofundar no uso do Node.js em seus projetos.</p>
+            </div>
         </div>
       </section>
     </main>
