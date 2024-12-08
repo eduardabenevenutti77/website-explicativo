@@ -206,3 +206,25 @@ body {
   border-top: 1px solid #ddd;
   margin-top: auto; 
 }
+
+.link-doc {
+  font-size: 1.1rem;
+  color: #9649d1;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #9649d1;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+}
+
+.link-doc:hover {
+  background-color: #9649d1;
+  color: #fff;
+  transform: scale(1.09);
+}
+
+.link-doc:focus {
+  outline: none;
+  box-shadow: 0 0 3px 3px rgba(150, 73, 209, 0.6);
+}

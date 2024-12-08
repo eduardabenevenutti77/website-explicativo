@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #8271c1;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.intro {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.intro .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.technologies {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.technologies .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.technologies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tech-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tech-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #9649d1;
+}
+
+.tech-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer {
+    background-color: #8271c1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #8271c1;
+    padding: 22px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #a786de;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.7s ease;
+    flex: 0.08; 
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: #f7f8fa;
+    color: #8a6ab8;
+  }
