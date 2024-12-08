@@ -15,6 +15,7 @@
 <body>
   <main class="main">
     <div class="navbar">
+      <a href="/home.html">HOME</a>
       <a href="/html-page.html">HTML</a>
       <a href="/css-page.html">CSS</a>
       <a href="/js-page.html">JS</a>
@@ -31,7 +32,6 @@
           <rect x="10" y="22.5" width="16.125" height="1.75" rx="0.875" fill="white" />
         </svg>
       </div>
-
       <nav class="nav">
         <ul>
           <li class="active"><a href="#home">HOME</a></li>
@@ -58,14 +58,15 @@
 
         <div class="display-example-hello">
           <pre><code class="code-example">
-            // Exibe uma mensagem no console
-            console.log('Olá, JavaScript!');
-          </code></pre>
+  <strong>// Exibe uma mensagem no console</strong>
+  console.log('Olá, JavaScript!');
+  </code></pre>
         </div>
 
         <h2 id="variables">2. Variáveis e Tipos de Dados</h2>
         <p class="texto-info">No JavaScript, você pode criar variáveis usando <code>var</code>, <code>let</code> ou
-          <code>const</code>. Veja o exemplo abaixo:</p>
+          <code>const</code>. Veja o exemplo abaixo:
+        </p>
 
         <div class="display-example">
           <pre><code class="code-example">
@@ -78,42 +79,437 @@
         <p class="texto-info">As variáveis podem armazenar diferentes tipos de dados, como números, strings, arrays, e
           objetos. </p>
 
+
+        <h2 id="types">2.1 Tipos</h2>
+        <p class="texto-info">Os tipos em JavaScript podem ser divididos em duas categorias:</p>
+        <ul>
+          <li>Tipos primitivos</li>
+          <li>Tipos de objeto</li>
+        </ul>
+
+        <p class="texto-info">Os tipos primitivos incluem números, strings e valores booleanos.</p>
+
+        <p class="texto-info">Os valores especiais <code>null</code> e <code>undefined</code> são valores primitivos,
+          mas não são números, nem strings e nem booleanos. Qualquer valor em JavaScript que não seja número, string,
+          booleano, <code>null</code> ou <code>undefined</code> é um objeto.</p>
+
+        <p class="texto-info">O operador <code>typeof</code> é usado para verificar o tipo de uma variável ou valor.</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  typeof "foo";<strong> // 'string' </strong> 
+  typeof 123;<strong> // 'number' </strong>   
+  </code></pre>
+        </div>
+
+        <h2 id="numbers">2.2 Números</h2>
+        <p class="texto-info">Ao contrário de muitas linguagens, JavaScript não faz distinção entre valores inteiros e
+          valores em ponto flutuante. Todos os números em JavaScript são representados como valores em ponto flutuante.
+        </p>
+
+        <p class="texto-info">Exemplos de literais inteiros:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  0
+  1
+  100
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Exemplos de literais em ponto flutuante:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  3.14
+  100.09
+  0.33333
+  </code></pre>
+        </div>
+
+        <h2 id="strings">2.3 Strings</h2>
+        <p class="texto-info">Para incluir uma string literal em um programa JavaScript, basta colocar os caracteres da
+          string entre aspas simples ou duplas.</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  "testing"
+  'other testing'
+  </code></pre>
+        </div>
+
+        <p class="texto-info">Para concatenar strings, utilizamos o operador <code>+</code>.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  var msg = "Hello " + "world";<strong>// "Hello world"</strong>
+  msg = "Welcome to my blog, " + nome;
+  </code></pre>
+        </div>
+
+        <p class="texto-info">A propriedade <code>length</code> determina o tamanho da string.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  "palavra".length <strong>// 7</strong>
+  </code></pre>
+        </div>
+
+        <h2 id="booleans">2.4 Booleanos</h2>
+        <p class="texto-info">Os valores booleanos são representados por <code>true</code> e <code>false</code>.</p>
+
+        <h2 id="null-undefined">2.5 Null e Undefined</h2>
+        <p class="texto-info">A palavra chave <code>null</code> indica a ausência de um valor. Já o valor
+          <code>undefined</code> representa uma ausência mais profunda, sendo o valor de variáveis que não foram
+          inicializadas.
+        </p>
+
+        <h2 id="conversion">2.6 Conversão</h2>
+        <p class="texto-info">JavaScript é muito flexível quanto aos tipos de valores que exige. As variáveis em
+          JavaScript são não tipadas, permitindo atribuir diferentes tipos de valores a uma mesma variável.</p>
+
+        <p class="texto-info">JavaScript converte valores de um tipo para outro automaticamente, como, por exemplo,
+          números para strings ou valores para booleanos, conforme o contexto.</p>
+
+        <h2 id="conditional-if">2.7 Condicional - if / else</h2>
+        <div class="display-example">
+          <pre><code class="code-example">
+  if (n == 1) {
+     <strong> // executa este bloco if </strong>
+  } else if (n == 2) {
+    <strong> // executa este bloco else if </strong>
+  } else {
+    <strong> // executa este bloco else </strong>
+  }
+  </code></pre>
+        </div>
+
+        <h2 id="ternary-operator">2.8 Operador Condicional Ternário</h2>
+        <p class="texto-info">É possível obter resultados semelhantes usando o operador condicional ternário
+          <code>condition ? expr1 : expr2</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+  resultado = (a > b) ? "a é maior que b" : "b é maior que a";
+  </code></pre>
+        </div>
+
         <h2 id="functions">3. Funções</h2>
         <p class="texto-info">Funções no JavaScript são blocos de código reutilizáveis que realizam uma ação. Elas podem
           ser declaradas e invocadas conforme necessário:</p>
 
         <div class="display-example">
           <pre><code class="code-example">
-            function saudacao(nome) {
-              return 'Olá, ' + nome + '!';
-            }
-            console.log(saudacao('Maria'));
-          </code></pre>
+        function saudacao(nome) {
+          return 'Olá, ' + nome + '!';
+        }
+        console.log(saudacao('Maria'));
+        </code></pre>
+        </div>
+
+        <h3>3.1 Declaração de Função</h3>
+        <p class="texto-info">As funções podem ser declaradas com a palavra-chave <code>function</code>:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function exemplo() {
+          console.log('Esta é uma função declarada.');
+        }
+        </code></pre>
+        </div>
+
+        <h3>3.2 Funções Anônimas</h3>
+        <p class="texto-info">Funções anônimas são funções sem nome, frequentemente atribuídas a variáveis:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const saudacao = function(nome) {
+          return 'Olá, ' + nome + '!';
+        };
+        console.log(saudacao('Lucas'));
+        </code></pre>
+        </div>
+
+        <h3>3.3 Arrow Functions</h3>
+        <p class="texto-info">Introduzidas no ES6, as <em>arrow functions</em> permitem uma sintaxe mais curta e não têm
+          seu próprio <code>this</code>:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const soma = (a, b) => a + b;
+        console.log(soma(5, 3));
+        </code></pre>
+        </div>
+
+        <h3>3.4 Parâmetros e Argumentos Padrão</h3>
+        <p class="texto-info">Funções podem ter valores padrão para parâmetros, caso nenhum argumento seja passado:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function saudacao(nome = 'Visitante') {
+          return 'Olá, ' + nome + '!';
+        }
+        console.log(saudacao()); <strong>// "Olá, Visitante!"</strong>
+        </code></pre>
+        </div>
+
+        <h3>3.5 Escopo e Contexto (<code>this</code>)</h3>
+        <p class="texto-info">O escopo define a visibilidade das variáveis, e o <code>this</code> refere-se ao contexto
+          em
+          que a função foi chamada. Em <em>arrow functions</em>, o <code>this</code> é herdado do escopo onde a função
+          foi
+          criada.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const pessoa = {
+          nome: 'Ana',
+          saudacao: function() {
+            console.log('Olá, ' + this.nome);
+          }
+        };
+        pessoa.saudacao(); <strong>// "Olá, Ana"</strong>
+        </code></pre>
+        </div>
+
+        <h3>3.6 Funções de Ordem Superior</h3>
+        <p class="texto-info">Funções de ordem superior recebem funções como argumentos ou retornam funções. Exemplo:
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        function executar(func) {
+          func();
+        }
+        executar(() => console.log('Executando uma função passada como argumento.'));
+        </code></pre>
+        </div>
+
+        <h3>3.7 Métodos Úteis para Funções</h3>
+        <p class="texto-info">Métodos como <code>call</code>, <code>apply</code> e <code>bind</code> permitem manipular
+          o
+          contexto e invocar funções de maneira flexível:</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+        const pessoa = { nome: 'Carlos' };
+        function apresentar() {
+          console.log('Olá, eu sou ' + this.nome);
+        }
+        apresentar.call(pessoa); <strong>// "Olá, eu sou Carlos"</strong>
+        </code></pre>
         </div>
 
         <h2 id="dom-manipulation">4. Manipulação de DOM</h2>
-        <p class="texto-info">Uma das principais funcionalidades do JavaScript no front-end é a manipulação do DOM
-          (Document Object Model), que permite acessar e modificar o conteúdo e a estrutura da página HTML. Exemplo de
-          como alterar o conteúdo de um elemento HTML:</p>
+        <p class="texto-info">
+          Uma das principais funcionalidades do JavaScript no front-end é a manipulação do DOM (Document Object Model).
+          O DOM é uma interface de programação que permite que programas e scripts interajam com o conteúdo, a estrutura
+          e os estilos de uma página web. Com a manipulação do DOM, é possível acessar e modificar elementos da página
+          HTML de forma dinâmica.
+        </p>
+        <p class="texto-info">
+          O DOM representa a página como uma árvore de nós, onde cada elemento HTML é um objeto que pode ser manipulado.
+          Cada tag HTML (como <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>) é transformada
+          em um nó, e você pode interagir com esses nós por meio do JavaScript. A manipulação do DOM permite alterar
+          conteúdos, modificar estilos, criar novos elementos e até responder a eventos do usuário.
+        </p>
+        <p class="texto-info">
+          Abaixo estão algumas das operações mais comuns realizadas com a manipulação do DOM:
+        </p>
+
+        <h3>4.1 Acessar elementos no DOM</h3>
+        <p class="texto-info">
+          Para manipular um elemento, primeiro você precisa acessá-lo. Existem várias maneiras de acessar um elemento,
+          como por id, classe, nome da tag ou até mesmo usando seletores CSS.
+        </p>
 
         <div class="display-example">
           <pre><code class="code-example">
-            // Alterar o texto de um elemento com id 'titulo'
-            document.getElementById('titulo').innerText = 'Novo Título';
-          </code></pre>
+            <strong>// Acessar um elemento pelo id</strong>
+            const elementoPorId = document.getElementById('titulo');
+    
+            <strong>// Acessar elementos por classe (retorna uma coleção de elementos)</strong>
+            const elementosPorClasse = document.getElementsByClassName('minha-classe');
+    
+            <strong>// Acessar elementos por tag (retorna uma coleção de elementos)</strong>
+            const elementosPorTag = document.getElementsByTagName('p');
+    
+            <strong>// Acessar um elemento com o seletor CSS (apenas o primeiro encontrado)</strong>
+            const elementoPorSelector = document.querySelector('.minha-classe');
+    
+            <strong>// Acessar todos os elementos que correspondem ao seletor</strong>
+            const todosElementosPorSelector = document.querySelectorAll('.minha-classe');
+  </code></pre>
         </div>
 
-        <h2 id="events">5. Eventos</h2>
-        <p class="texto-info">Eventos são ações que ocorrem no navegador (como cliques, mudanças de valor de input,
-          etc.). Você pode "escutar" eventos e definir o que deve acontecer quando eles ocorrerem. Exemplo:</p>
+        <h3>4.2 Modificar conteúdo de elementos</h3>
+        <p class="texto-info">
+          Depois de acessar um elemento, você pode modificar seu conteúdo, seja o texto, o HTML ou os atributos. Aqui
+          estão algumas formas de alterar o conteúdo de um elemento:
+        </p>
 
         <div class="display-example">
           <pre><code class="code-example">
-            // Adiciona um evento de clique em um botão
+            <strong>// Alterar o texto de um elemento com id 'titulo'</strong>
+            document.getElementById('titulo').innerText = 'Novo Título';
+    
+            <strong>// Alterar o conteúdo HTML de um elemento</strong>
+            document.getElementById('container').innerHTML = 'Texto <strong>HTML</strong> alterado!';
+    
+            <strong>// Alterar o texto sem formatação</strong>
+            document.getElementById('paragrafo').textContent = 'Texto atualizado sem formatação!';
+  </code></pre>
+        </div>
+
+        <h3>4.3 Alterar atributos de elementos</h3>
+        <p class="texto-info">
+          Você também pode alterar os atributos de um elemento, como o <code>src</code> de uma imagem ou o
+          <code>href</code> de um link, utilizando os métodos <code>setAttribute</code> e <code>getAttribute</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Alterar o atributo 'src' de uma imagem</strong>
+            document.getElementById('minhaImagem').setAttribute('src', 'novo-caminho-da-imagem.jpg');
+    
+            <strong>// Alterar o atributo 'href' de um link</strong>
+            document.getElementById('meuLink').setAttribute('href', 'https://www.novosite.com');
+    
+            <strong>// Obter o valor do atributo 'href'</strong>
+            const linkHref = document.getElementById('meuLink').getAttribute('href');
+  </code></pre>
+        </div>
+
+        <h3>4.4 Adicionar e remover elementos</h3>
+        <p class="texto-info">
+          Você pode adicionar novos elementos à página ou remover elementos existentes usando métodos como
+          <code>createElement</code>, <code>appendChild</code>, e <code>removeChild</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Criar um novo elemento </strong>
+            const novoParagrafo = document.createElement('p');
+            novoParagrafo.textContent = 'Este é um novo parágrafo!';
+    
+            <strong>// Adicionar o novo parágrafo ao final do body</strong>
+            document.body.appendChild(novoParagrafo);
+    
+            <strong>// Remover um elemento</strong>
+            const elementoARemover = document.getElementById('elementoParaRemover');
+            document.body.removeChild(elementoARemover);
+  </code></pre>
+        </div>
+
+        <h3>4.5 Manipular estilos</h3>
+        <p class="texto-info">
+          A manipulação de estilos também é uma parte importante do DOM. Você pode alterar as propriedades CSS
+          diretamente através da propriedade <code>style</code>.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Alterar a cor de fundo de um elemento</strong>
+            document.getElementById('meuElemento').style.backgroundColor = 'yellow';
+    
+            <strong>// Alterar o tamanho da fonte de um elemento</strong>
+            document.getElementById('meuElemento').style.fontSize = '20px';
+    
+            <strong>// Alterar a cor do texto de um elemento</strong>
+            document.getElementById('meuElemento').style.color = 'red';
+  </code></pre>
+        </div>
+
+        <h3>4.6 Trabalhando com eventos</h3>
+        <p class="texto-info">
+          Uma das maiores vantagens da manipulação do DOM é a capacidade de interagir com os usuários. Você pode
+          adicionar ouvintes de eventos para detectar ações do usuário, como cliques, movimentos do mouse, teclas
+          pressionadas, etc.
+        </p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            <strong>// Adicionar um evento de clique a um botão</strong>
             document.getElementById('meuBotao').addEventListener('click', function() {
-              alert('Botão clicado!');
-            });
-          </code></pre>
+            alert('Botão foi clicado!');
+    });
+    
+          <strong>// Adicionar um evento de mouseover a um elemento</strong>
+          document.getElementById('meuElemento').addEventListener('mouseover', function() {
+          this.style.color = 'blue'; // Mudar a cor do texto quando o mouse passar por cima
+    });
+  </code></pre>
+        </div>
+
+        <h3>4.7 Trabalhando com eventos</h3>
+        <h4> id="reduce">reduce()</h4>
+        <p class="texto-info">O método <code>reduce()</code> aplica uma função em um acumulador e em cada elemento de um
+          array para reduzi-lo a um único valor.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+const numeros = [1, 2, 3, 4];
+const soma = numeros.reduce((acumulador, num) => acumulador + num, 0);
+console.log(soma); <strong>// 10</strong>
+  </code></pre>
+        </div>
+
+        <h2 id="eventos">5. Eventos</h2>
+        <p class="texto-info">
+          JavaScript permite a criação de páginas interativas respondendo a eventos disparados pelo usuário, como
+          cliques, teclas pressionadas ou o movimento do mouse. Um evento é uma ação que ocorre em uma página, e o
+          JavaScript permite que você escute esses eventos e execute funções em resposta.
+        </p>
+
+        <h3>5.1 Manipulação de Eventos</h3>
+        <p class="texto-info">
+          Abaixo estão alguns exemplos de como manipular eventos em JavaScript:
+        </p>
+        <div class="display-example">
+          <pre><code class="code-example">
+  <strong>// Exemplo de evento de clique em um botão</strong>
+  const botao = document.getElementById('meuBotao');
+  botao.addEventListener('click', function() {
+    alert('Botão clicado!');
+  });
+  
+  <strong>// Exemplo de evento de mouse sobre um elemento</strong>
+  const elemento = document.getElementById('meuElemento');
+  elemento.addEventListener('mouseover', function() {
+    elemento.style.backgroundColor = 'yellow';
+  });
+  
+  <strong>// Exemplo de evento de tecla pressionada</strong>
+  document.addEventListener('keydown', function(evento) {
+    if (evento.key === 'Enter') {
+      console.log('Tecla Enter pressionada');
+    }
+  });
+  </code></pre>
+        </div>
+
+        <h3>5.2 Eventos Comuns</h3>
+        <p class="texto-info">
+          Alguns dos eventos mais comuns em JavaScript incluem:
+        </p>
+        <ul>
+          <li><code><strong>click</strong></code>: Disparado quando o usuário clica em um elemento.</li>
+          <li><code><strong>mouseover</strong></code>: Disparado quando o usuário passa o mouse sobre um elemento.</li>
+          <li><code><strong>mouseout</strong></code>: Disparado quando o usuário move o mouse para fora de um elemento.</li>
+          <li><code><strong>keydown</strong></code>: Disparado quando o usuário pressiona uma tecla.</li>
+          <li><code><strong>load</strong></code>: Disparado quando a página termina de carregar.</li>
+        </ul>
+
+        <p class="texto-info">
+          Esses eventos, combinados com as funções de manipulação de DOM, permitem que você crie interfaces interativas
+          e dinâmicas.
+        </p>
+
+        <h3>5.3 Async/Await</h3>
+        <p class="texto-info">Você pode usar <code>async/await</code> para tornar o código assíncrono mais legível e
+          fácil de entender.</p>
+        <div class="display-example">
+          <pre><code class="code-example">
+async function obterDados() {
+  try {
+    const resposta = await fetch('https://api.exemplo.com/dados');
+    const dados = await resposta.json();
+    console.log(dados);
+  } catch (erro) {
+    console.error('Erro:', erro);
+  }
+}
+obterDados();
+  </code></pre>
         </div>
 
         <h2 id="fetch-api">6. Fetch API</h2>
@@ -123,19 +519,42 @@
 
         <div class="display-example">
           <pre><code class="code-example">
-            // Faz uma requisição GET a uma API
+            <strong>// Faz uma requisição GET a uma API</strong>
             fetch('https://api.example.com/dados')
               .then(response => response.json())
               .then(data => console.log(data))
               .catch(error => console.error('Erro:', error));
           </code></pre>
         </div>
+
+        <h2 id="promises">7. Promessas</h2>
+        <p class="texto-info">As promessas permitem lidar com operações assíncronas. Elas têm três estados: pendente,
+          cumprida e rejeitada. Veja um exemplo:</p>
+
+        <div class="display-example">
+          <pre><code class="code-example">
+            function obterDados() {
+              return new Promise((resolve, reject) => {
+                let sucesso = true;
+                if (sucesso) {
+                  resolve('Dados recebidos com sucesso!');
+                } else {
+                  reject('Erro ao obter dados');
+                }
+              });
+            }
+
+            obterDados()
+              .then(mensagem => console.log(mensagem))  <strong>// Quando a Promise é resolvida</strong>
+              .catch(erro => console.error(erro));      <strong>// Quando a Promise é rejeitada</strong>
+          </code></pre>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Exemplo de elemento para evento de clique
-  <button id="meuBotao">Clique aqui</button> -->
+  <!-- Exemplo de elemento para evento de clique -->
+  <button id="meuBotao">Clique aqui</button>
 
   <script>
     // Exemplo de manipulação de DOM
@@ -152,7 +571,7 @@
       .then(data => console.log(data.slip.advice))
       .catch(error => console.error('Erro ao obter dados:', error));
   </script>
-  
+
   <script src="./js/script.js"></script>
 </body>
 
